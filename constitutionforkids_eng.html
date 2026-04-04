@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>India's Constitution for Kids 🇮🇳</title>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FFF8F0; --peach:#FFE4CC; --mint:#D4F5E4; --sky:#D4EAFF;
+  --lavender:#EAD4FF; --blush:#FFD4E8; --butter:#FFF5C0;
+  --deep1:#5C2A00; --deep2:#003D1F; --deep3:#003366; --deep4:#3A006F; --deep5:#6B0036;
+  --accent-o:#E8650A; --accent-g:#1A7A3A; --accent-b:#1455A0; --accent-p:#6B21A8; --accent-r:#B5005A;
+  --shadow:#33333355; --border:#444;
+  --card-r:20px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DynaPuff',cursive;font-size:16px;background:var(--cream);color:#2D2D2D;overflow-x:hidden;line-height:1.5;}
+
+/* ── STARS ── */
+.star-bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+.star{position:absolute;font-size:1.1rem;opacity:.1;animation:floatS 8s ease-in-out infinite;}
+@keyframes floatS{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-20px) rotate(180deg)}}
+
+/* ── HERO ── */
+.hero{
+  background:linear-gradient(150deg,#FFB347 0%,#FF8FAB 40%,#C084FC 72%,#7EB8F7 100%);
+  padding:46px 20px 62px;text-align:center;position:relative;overflow:hidden;
+  border-bottom:6px dashed #fff;
+}
+.hero-dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.2) 2px,transparent 2px);background-size:26px 26px;pointer-events:none;}
+.hero h1{font-family:'DynaPuff',cursive;font-size:clamp(2rem,7vw,4.2rem);font-weight:700;
+  color:#fff;text-shadow:3px 3px 0 #B35A00,5px 5px 0 rgba(0,0,0,.15);
+  line-height:1.2;margin:10px 0 12px;animation:wiggle 3.5s ease-in-out infinite;}
+@keyframes wiggle{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(1deg)}}
+.hero-sub{color:#4A1000;font-size:1rem;max-width:500px;margin:0 auto 18px;
+  background:rgba(255,255,255,.5);border-radius:50px;padding:9px 22px;
+  border:2px solid rgba(255,255,255,.7);display:inline-block;font-weight:500;}
+.hero-flags{font-size:2rem;letter-spacing:6px;animation:pulse 2s ease-in-out infinite;display:block;margin-bottom:14px;}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.scroll-hint{color:#4A1000;font-size:.95rem;font-weight:600;margin-top:14px;animation:bD 1.2s ease-in-out infinite;background:rgba(255,255,255,.4);border-radius:30px;display:inline-block;padding:5px 18px;}
+@keyframes bD{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+
+/* ── WHEEL ── */
+.wheel-wrap{width:100px;height:100px;margin:0 auto 14px;filter:drop-shadow(0 0 14px rgba(255,255,255,.7));}
+.wheel-wrap svg{animation:spinW 7s linear infinite;}
+@keyframes spinW{to{transform:rotate(360deg)}}
+
+/* ── TICKER ── */
+.ticker-band{background:#3A2060;color:#FFE8A0;padding:12px 0;overflow:hidden;border-top:3px solid #FFE8A0;border-bottom:3px solid #FFE8A0;position:relative;z-index:2;}
+.ticker-inner{display:inline-flex;gap:60px;animation:tick 30s linear infinite;white-space:nowrap;}
+.ticker-inner span{font-size:.9rem;font-weight:500;}
+.ticker-inner span::before{content:"⭐ ";}
+@keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ── SECTIONS ── */
+.sec{max-width:960px;margin:0 auto;padding:28px 16px 46px;position:relative;z-index:1;}
+.sec-h{text-align:center;font-size:clamp(1.6rem,4vw,2.3rem);font-weight:700;margin-bottom:6px;line-height:1.2;}
+.sec-s{text-align:center;font-size:1rem;color:#555;margin-bottom:26px;font-weight:500;}
+
+/* ── MYSTERY BOXES ── */
+.m-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px;margin-bottom:36px;}
+.mbox{border-radius:22px;border:3px solid var(--border);overflow:hidden;cursor:pointer;
+  box-shadow:5px 5px 0 var(--border);transition:transform .15s,box-shadow .15s;position:relative;min-height:200px;}
+.mbox:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--border);}
+.mbox:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--border);}
+.mbox-front{padding:26px 18px;text-align:center;min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .3s;}
+.mbox-front .big-e{font-size:3.8rem;margin-bottom:10px;animation:jig 2.5s ease-in-out infinite;}
+@keyframes jig{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+.mbox-front h3{font-size:1.1rem;font-weight:700;margin-bottom:6px;}
+.tap-me{font-size:.82rem;background:rgba(255,255,255,.5);border:2px dashed rgba(0,0,0,.25);border-radius:20px;padding:4px 14px;margin-top:10px;color:#333;font-weight:500;}
+.lock{position:absolute;top:10px;right:12px;font-size:1.5rem;transition:transform .3s;}
+.mbox-back{position:absolute;inset:0;padding:18px 16px;display:flex;flex-direction:column;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s;overflow-y:auto;}
+.mbox-back h3{font-size:1.05rem;font-weight:700;margin-bottom:8px;}
+.mbox-back p{font-size:.93rem;line-height:1.65;}
+.mbox-back .ex{margin-top:10px;padding:8px 12px;background:rgba(255,255,255,.45);border-radius:12px;border:2px dashed rgba(0,0,0,.2);font-size:.84rem;color:#222;}
+.mbox.open .mbox-front{opacity:0;pointer-events:none;}
+.mbox.open .mbox-back{opacity:1;pointer-events:all;}
+.mbox.open .lock{transform:rotate(25deg);}
+.cburst{position:absolute;top:50%;left:50%;pointer-events:none;}
+.cp{position:absolute;width:8px;height:8px;border-radius:2px;animation:bOut .55s ease-out forwards;}
+@keyframes bOut{0%{transform:translate(-50%,-50%) scale(0);opacity:1}100%{transform:translate(var(--tx),var(--ty)) scale(1);opacity:0}}
+
+/* ── FLIP CARDS (FIXED) ── */
+.flip-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;margin-bottom:36px;}
+.fcard{height:260px;perspective:900px;cursor:pointer;}
+.finner{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.4,0,.2,1);border-radius:20px;border:3px solid var(--border);box-shadow:5px 5px 0 var(--border);}
+.fcard:hover .finner,.fcard.flipped .finner{transform:rotateY(180deg);}
+.ffront,.fback{position:absolute;inset:0;backface-visibility:hidden;border-radius:17px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px 16px;text-align:center;overflow:hidden;}
+.fback{transform:rotateY(180deg);overflow-y:auto;justify-content:flex-start;padding-top:18px;}
+.ffront .fe{font-size:3rem;margin-bottom:8px;flex-shrink:0;}
+.ffront h3{font-size:1rem;font-weight:700;color:#2D2D2D;line-height:1.3;}
+.ffront .fhint{font-size:.73rem;margin-top:8px;color:rgba(0,0,0,.45);font-weight:500;background:rgba(255,255,255,.5);border-radius:20px;padding:3px 10px;}
+.fback .be{font-size:1.8rem;margin-bottom:6px;flex-shrink:0;}
+.fback h4{font-size:.9rem;font-weight:700;margin-bottom:5px;line-height:1.3;}
+.fback p{font-size:.85rem;line-height:1.6;font-weight:500;}
+
+/* ── PREAMBLE ── */
+.pream-zone{border-radius:24px;border:3px solid #5A2080;box-shadow:6px 6px 0 #5A2080;padding:28px 22px;margin-bottom:36px;text-align:center;background:linear-gradient(135deg,#3A1060,#5A1880,#3A1060);color:white;}
+.pream-zone h2{font-size:1.7rem;color:#FFE49A;margin-bottom:4px;}
+.pream-zone .psub{color:rgba(255,255,255,.8);font-size:.95rem;margin-bottom:18px;font-weight:400;}
+.wpills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+.wpill{background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.3);border-radius:50px;padding:9px 18px;font-size:1rem;font-weight:600;cursor:pointer;transition:all .2s;color:white;}
+.wpill:hover{background:rgba(255,230,120,.3);border-color:#FFE49A;transform:scale(1.08) rotate(-2deg);}
+.wpill.active{background:#FFE49A;color:#3A1060;border-color:#FFE49A;transform:scale(1.1);}
+.wmean{margin-top:18px;background:rgba(255,255,255,.1);border-radius:16px;padding:16px;min-height:90px;transition:all .3s;border:2px dashed rgba(255,255,255,.3);}
+.wmean.hide{opacity:.2;}
+.wmean .we{font-size:2.8rem;margin-bottom:6px;}
+.wmean h3{font-size:1.15rem;color:#FFE49A;margin-bottom:5px;}
+.wmean p{font-size:.92rem;line-height:1.65;color:rgba(255,255,255,.9);font-weight:400;}
+
+/* ── ACCORDION ── */
+.acc-wrap{display:flex;flex-direction:column;gap:14px;margin-bottom:36px;}
+.aitem{border:3px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:4px 4px 0 var(--border);transition:transform .15s,box-shadow .15s;}
+.aitem:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--border);}
+.abtn{width:100%;padding:16px 18px;display:flex;align-items:center;gap:12px;cursor:pointer;background:transparent;border:none;text-align:left;font-family:'DynaPuff',cursive;font-size:1.05rem;font-weight:600;color:#2D2D2D;}
+.aico{font-size:1.9rem;flex-shrink:0;}
+.atitle{flex:1;}
+.aarr{font-size:1.3rem;transition:transform .3s;flex-shrink:0;}
+.aitem.open .aarr{transform:rotate(180deg);}
+.abody{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;padding:0 18px;background:rgba(255,255,255,.35);}
+.aitem.open .abody{max-height:500px;padding:14px 18px 18px;}
+.abody p{font-size:.95rem;line-height:1.75;color:#333;margin-bottom:8px;font-weight:400;}
+.pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+.pill-item{background:rgba(255,255,255,.7);border:2px solid rgba(0,0,0,.15);border-radius:50px;padding:5px 13px;font-size:.84rem;display:flex;align-items:center;gap:5px;font-weight:500;color:#2D2D2D;}
+
+/* ── TIMELINE ── */
+.tl{position:relative;padding:0 0 0 52px;margin-bottom:36px;}
+.tl::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:5px;background:linear-gradient(to bottom,#FFB347,#C084FC,#7EB8F7);border-radius:3px;}
+.titem{position:relative;margin-bottom:22px;}
+.tdot{position:absolute;left:-38px;top:10px;width:26px;height:26px;border-radius:50%;border:3px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.62rem;box-shadow:3px 3px 0 var(--border);}
+.tbox{border:3px solid var(--border);border-radius:18px;padding:14px 18px;box-shadow:4px 4px 0 var(--border);transition:transform .2s;}
+.tbox:hover{transform:translateX(6px);}
+.tyr{font-size:1.05rem;font-weight:700;margin-bottom:4px;}
+.tbox p{font-size:.93rem;line-height:1.65;color:#333;font-weight:400;}
+
+/* ── PILLARS ── */
+.pillars{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin-bottom:36px;}
+.pillar{border:3px solid var(--border);border-radius:22px;padding:22px 16px;text-align:center;box-shadow:5px 5px 0 var(--border);cursor:pointer;transition:transform .2s,box-shadow .2s;position:relative;}
+.pillar:hover{transform:translate(-3px,-4px);box-shadow:8px 9px 0 var(--border);}
+.pillar-e{font-size:3.8rem;display:block;margin-bottom:10px;animation:bob 3s ease-in-out infinite;}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.pillar h3{font-size:1.1rem;font-weight:700;margin-bottom:6px;}
+.pillar p{font-size:.9rem;line-height:1.6;color:#333;font-weight:400;}
+.p-badge{position:absolute;top:10px;right:10px;background:#3A2060;color:#FFE49A;border-radius:50px;padding:3px 9px;font-size:.65rem;font-weight:600;}
+
+/* ── FACTS ── */
+.facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:14px;margin-bottom:36px;}
+.fact{border:3px solid var(--border);border-radius:18px;padding:18px 12px;text-align:center;box-shadow:4px 4px 0 var(--border);transition:transform .2s;}
+.fact:hover{transform:scale(1.05) rotate(-1deg);}
+.fact .fn{font-size:2rem;font-weight:700;line-height:1;}
+.fact p{font-size:.8rem;margin-top:6px;font-weight:500;color:#333;}
+
+/* ── AMBEDKAR ── */
+.ambed{border:4px solid var(--border);border-radius:26px;background:linear-gradient(135deg,#FFEACC,#FFD4A8);box-shadow:7px 7px 0 var(--border);padding:30px 22px;text-align:center;margin-bottom:36px;position:relative;overflow:hidden;}
+.ambed::before{content:'✨';position:absolute;font-size:7rem;top:-15px;right:-10px;opacity:.1;}
+.ambed-e{font-size:5rem;margin-bottom:10px;display:block;animation:bob 2.5s ease-in-out infinite;}
+.ambed h2{font-size:1.7rem;font-weight:700;color:#5C2A00;margin-bottom:8px;}
+.ambed p{font-size:.95rem;line-height:1.75;color:#4A1800;max-width:560px;margin:0 auto 12px;font-weight:400;}
+.quote{background:rgba(0,0,0,.07);border-radius:14px;padding:12px 16px;border:2px dashed rgba(0,0,0,.2);font-size:.92rem;color:#3A1000;font-style:italic;max-width:500px;margin:0 auto;font-weight:400;}
+
+/* ── QUIZ ── */
+.quiz-wrap{border:4px solid var(--border);border-radius:28px;box-shadow:8px 8px 0 var(--border);overflow:hidden;margin-bottom:40px;}
+.quiz-hdr{background:linear-gradient(135deg,#FFB347,#FF8FAB);padding:24px;text-align:center;border-bottom:4px solid var(--border);}
+.quiz-hdr h2{font-size:1.8rem;color:#3A1000;font-weight:700;margin-bottom:6px;}
+.quiz-hdr p{color:#5A2000;font-size:.95rem;font-weight:500;}
+.qprog{background:#3A2060;padding:10px 20px;display:flex;align-items:center;gap:10px;border-bottom:3px solid var(--border);}
+.qpbw{flex:1;background:rgba(255,255,255,.2);border-radius:50px;height:14px;border:2px solid rgba(255,255,255,.3);}
+.qpb{height:100%;background:linear-gradient(90deg,#FFE49A,#FFB347);border-radius:50px;transition:width .4s ease;width:0%;}
+.qpt{color:#FFE49A;font-size:.84rem;font-weight:600;white-space:nowrap;}
+.qsl{color:#A8F0C0;font-size:.88rem;font-weight:600;}
+.q-area{padding:28px 24px;background:var(--cream);position:relative;}
+.q-num{font-size:.84rem;font-weight:700;color:var(--accent-o);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px;}
+.q-illo{font-size:3.5rem;text-align:center;margin:10px 0;animation:jig 2s ease-in-out infinite;}
+.q-txt{font-size:1.15rem;font-weight:700;color:#2D2D2D;margin-bottom:6px;line-height:1.4;}
+.q-opts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px;}
+.qo{padding:13px 14px;border:3px solid var(--border);border-radius:16px;background:#fff;cursor:pointer;font-family:'DynaPuff',cursive;font-size:.93rem;font-weight:500;text-align:center;transition:transform .15s,box-shadow .15s,background .2s;box-shadow:3px 3px 0 var(--border);color:#2D2D2D;}
+.qo:hover:not(.locked){transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--border);background:#FFF5C0;}
+.qo.correct{background:#C8F5D8;border-color:#2E7D32;color:#1B3D20;}
+.qo.wrong{background:#FFD4D4;border-color:#B71C1C;color:#4E0000;}
+.qo.locked{cursor:default;}
+.qfb{margin-top:16px;padding:14px 18px;border-radius:16px;border:2px solid var(--border);font-size:.93rem;font-weight:600;text-align:center;display:none;box-shadow:3px 3px 0 var(--border);line-height:1.6;}
+.qfb.show{display:block;}
+.qfb.ok{background:#D4F5E4;color:#1B3D20;}
+.qfb.no{background:#FFE4CC;color:#4E0000;}
+.qnxt{margin-top:16px;padding:12px 30px;background:#FFB347;color:#3A1000;border:3px solid var(--border);border-radius:14px;font-family:'DynaPuff',cursive;font-size:1rem;font-weight:600;cursor:pointer;display:none;box-shadow:4px 4px 0 var(--border);transition:transform .15s,box-shadow .15s;}
+.qnxt:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--border);}
+.qnxt.show{display:inline-block;}
+.res-scr{padding:36px 24px;text-align:center;background:var(--cream);display:none;}
+.res-scr.show{display:block;}
+.res-t{font-size:6rem;animation:bob 2s ease-in-out infinite;display:block;}
+.res-s{font-size:3.5rem;font-weight:700;margin:10px 0;color:var(--accent-o);}
+.res-m{font-size:1.15rem;font-weight:600;color:#2D2D2D;margin-bottom:18px;}
+.res-b{display:inline-block;padding:11px 26px;border:3px solid var(--border);border-radius:20px;font-size:1rem;font-weight:700;margin-bottom:20px;box-shadow:5px 5px 0 var(--border);}
+.stars-r{font-size:2.2rem;letter-spacing:4px;margin:10px 0;}
+.retry-btn{padding:13px 34px;background:var(--sky);color:var(--deep3);border:3px solid var(--border);border-radius:18px;font-family:'DynaPuff',cursive;font-size:1rem;font-weight:700;cursor:pointer;box-shadow:5px 5px 0 var(--border);transition:transform .15s,box-shadow .15s;}
+.retry-btn:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--border);}
+.rev-list{text-align:left;margin:20px 0 0;display:flex;flex-direction:column;gap:10px;}
+.rvi{padding:12px 14px;border:2px solid var(--border);border-radius:14px;font-size:.9rem;box-shadow:3px 3px 0 var(--border);}
+.rvi.ok{background:#D4F5E4;}
+.rvi.no{background:#FFE4CC;}
+.rvi .rvq{font-weight:700;margin-bottom:4px;font-size:.95rem;}
+.rvi .rva{color:#555;font-weight:400;}
+
+/* ── BG ZONES ── */
+.z1{background:linear-gradient(160deg,#FFF5C0 0%,#FFEACC 100%);}
+.z2{background:linear-gradient(160deg,#D4F5E4 0%,#C4EED8 100%);}
+.z3{background:linear-gradient(160deg,#D4EAFF 0%,#C0DEFF 100%);}
+.z4{background:linear-gradient(160deg,#FFD4E8 0%,#FCCAE0 100%);}
+.z5{background:linear-gradient(160deg,#EAD4FF 0%,#DEC4F8 100%);}
+.zd{background:#3A2060;}
+.pad{padding:28px 0 8px;}
+.wave-sep svg{display:block;margin-bottom:-2px;}
+
+/* ── FOOTER ── */
+footer{background:#3A2060;color:#FFE49A;text-align:center;padding:28px 20px;border-top:4px solid #FFE49A;position:relative;z-index:1;}
+footer .ff{font-size:2.5rem;animation:pulse 2s infinite;display:block;margin-bottom:8px;}
+footer p{color:rgba(255,255,255,.7);font-size:.84rem;margin-top:5px;}
+
+@media(max-width:600px){
+  .m-grid,.flip-grid,.pillars,.q-opts{grid-template-columns:1fr;}
+  .facts{grid-template-columns:repeat(2,1fr);}
+  .fcard{height:auto;min-height:260px;}
+}
+</style>
+</head>
+<body>
+<div class="star-bg" id="starBg"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-dots"></div>
+  <div class="hero-flags">🇮🇳 🌟 🇮🇳 🌟 🇮🇳</div>
+  <div class="wheel-wrap"><svg id="ashokaW" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg></div>
+  <h1>India's SUPER<br>Constitution! 📖</h1>
+  <div class="hero-sub">The world's biggest rulebook — made FUN for kids! 🎉<br>Click boxes · Flip cards · Take the Big Quiz!</div>
+  <div class="scroll-hint">👇 Scroll down to unlock all secrets! 👇</div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-band">
+  <div class="ticker-inner">
+    <span>World's longest written Constitution</span><span>448 Articles inside!</span>
+    <span>Took 2 years 11 months to write</span><span>Came to life: 26 Jan 1950</span>
+    <span>Written by Dr. B.R. Ambedkar</span><span>25 Parts and 12 Schedules</span>
+    <span>Republic Day celebrates this!</span><span>299 members wrote it together</span>
+    <span>World's longest written Constitution</span><span>448 Articles inside!</span>
+    <span>Took 2 years 11 months to write</span><span>Came to life: 26 Jan 1950</span>
+    <span>Written by Dr. B.R. Ambedkar</span><span>25 Parts and 12 Schedules</span>
+    <span>Republic Day celebrates this!</span><span>299 members wrote it together</span>
+  </div>
+</div>
+
+<!-- WHAT IS IT -->
+<div class="z1 pad">
+<div class="sec">
+  <div class="sec-h" style="color:#7A2800;">📚 What is the Constitution?</div>
+  <div class="sec-s">👆 Click each mystery box to unlock the secret inside!</div>
+  <div class="m-grid">
+    <div class="mbox" style="background:#FFDDB8;" onclick="openBox(this)">
+      <div class="lock">🔒</div>
+      <div class="mbox-front"><div class="big-e">📖</div><h3 style="color:#5C2A00;">India's Big Rulebook?</h3><div class="tap-me">👆 TAP ME!</div></div>
+      <div class="mbox-back" style="background:#FFEACC;">
+        <h3 style="color:#7A2800;">🏫 India's School Rulebook!</h3>
+        <p style="color:#3E1000;">Just like your school has rules — <em>"no bullying, be kind"</em> — India has rules for EVERYBODY, even the Government! That rulebook is the Constitution!</p>
+        <div class="ex">🎯 If the government breaks rules, the Constitution says they must be stopped!</div>
+      </div>
+    </div>
+    <div class="mbox" style="background:#E8D4FF;" onclick="openBox(this)">
+      <div class="lock">🔒</div>
+      <div class="mbox-front"><div class="big-e">🗓️</div><h3 style="color:#3A006F;">When was it born?</h3><div class="tap-me">👆 TAP ME!</div></div>
+      <div class="mbox-back" style="background:#EAD4FF;">
+        <h3 style="color:#3A006F;">🎉 26 January 1950!</h3>
+        <p style="color:#2A0050;">On this day India became a Republic — meaning <strong>the PEOPLE are the real bosses!</strong> The Constitution gave power to every citizen!</p>
+        <div class="ex">🥳 That's why we celebrate <strong>Republic Day</strong> every year with the big parade in Delhi!</div>
+      </div>
+    </div>
+    <div class="mbox" style="background:#C8EEF8;" onclick="openBox(this)">
+      <div class="lock">🔒</div>
+      <div class="mbox-front"><div class="big-e">🏆</div><h3 style="color:#003366;">A World Record?</h3><div class="tap-me">👆 TAP ME!</div></div>
+      <div class="mbox-back" style="background:#D4EAFF;">
+        <h3 style="color:#003366;">🌍 #1 in the WORLD!</h3>
+        <p style="color:#002244;">India's is the <strong>longest written constitution</strong> in the world — 448 articles, 25 parts, 12 schedules!</p>
+        <div class="ex">✍️ 299 brilliant people worked for <strong>2 yrs, 11 months & 18 days</strong> to write it!</div>
+      </div>
+    </div>
+    <div class="mbox" style="background:#C8F0D8;" onclick="openBox(this)">
+      <div class="lock">🔒</div>
+      <div class="mbox-front"><div class="big-e">🧑‍⚖️</div><h3 style="color:#003D1F;">Who wrote it?</h3><div class="tap-me">👆 TAP ME!</div></div>
+      <div class="mbox-back" style="background:#D4F5E4;">
+        <h3 style="color:#003D1F;">👨‍⚖️ Dr. B.R. Ambedkar!</h3>
+        <p style="color:#002A12;">He was a brilliant scholar who led the team that wrote the Constitution. He fought for the rights of poor people and became India's first Law Minister!</p>
+        <div class="ex">🌟 He is called the <strong>"Father of the Indian Constitution!"</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-h" style="font-size:1.4rem;color:#4A006F;margin-bottom:14px;">🌟 Super Cool Facts!</div>
+  <div class="facts">
+    <div class="fact" style="background:#FFF5C0;"><div class="fn" style="color:#7A5800;">448</div><p>Articles (rules)</p></div>
+    <div class="fact" style="background:#FFD4E8;"><div class="fn" style="color:#6B0036;">25</div><p>Parts & Chapters</p></div>
+    <div class="fact" style="background:#C8EEF8;"><div class="fn" style="color:#003366;">12</div><p>Schedules</p></div>
+    <div class="fact" style="background:#C8F0D8;"><div class="fn" style="color:#003D1F;">299</div><p>People who wrote it</p></div>
+    <div class="fact" style="background:#EAD4FF;"><div class="fn" style="color:#3A006F;font-size:1.5rem;">2y<br>11m</div><p>Time to write</p></div>
+    <div class="fact" style="background:#FFDDB8;"><div class="fn" style="color:#7A2800;">#1</div><p>Longest ever!</p></div>
+  </div>
+</div>
+</div>
+
+<!-- PREAMBLE -->
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,55 1000,-5 1440,25 L1440,50 L0,50Z" fill="#3A1060"/></svg></div>
+<div style="background:#3A1060;padding:20px 0;position:relative;z-index:1;">
+<div class="sec">
+  <div class="sec-h" style="color:#FFE49A;">🌈 The Preamble — India's Promise!</div>
+  <div class="sec-s" style="color:rgba(255,255,255,.7);">👆 Click each golden word to discover what it really means for YOU!</div>
+  <div class="pream-zone">
+    <h2>✨ What does India promise its people?</h2>
+    <div class="psub">The very first lines of the Constitution — India's superhero oath! 🦸</div>
+    <div class="wpills">
+      <div class="wpill" onclick="showMean('justice')">⚖️ Justice</div>
+      <div class="wpill" onclick="showMean('liberty')">🕊️ Liberty</div>
+      <div class="wpill" onclick="showMean('equality')">🤝 Equality</div>
+      <div class="wpill" onclick="showMean('fraternity')">💛 Fraternity</div>
+      <div class="wpill" onclick="showMean('dignity')">👑 Dignity</div>
+      <div class="wpill" onclick="showMean('unity')">🇮🇳 Unity</div>
+    </div>
+    <div class="wmean hide" id="meanBox">
+      <div class="we" id="mE">🌟</div>
+      <h3 id="mT">Click a golden word above!</h3>
+      <p id="mP">Each word is a big promise India makes to every citizen — including YOU!</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,-5 1000,55 1440,25 L1440,50 L0,50Z" fill="#D4F5E4"/></svg></div>
+
+<!-- FUNDAMENTAL RIGHTS (FLIP CARDS) -->
+<div class="z2 pad">
+<div class="sec">
+  <div class="sec-h" style="color:#003D1F;">🛡️ Your 6 Superpowers!</div>
+  <div class="sec-s">These are your Fundamental Rights! 🔄 Hover or tap each card to flip and discover!</div>
+  <div class="flip-grid">
+    <div class="fcard" onclick="this.classList.toggle('flipped')">
+      <div class="finner">
+        <div class="ffront" style="background:#FFF5C0;"><div class="fe">⚖️</div><h3 style="color:#5C3800;">Right to Equality</h3><div class="fhint">🔄 Hover or tap!</div></div>
+        <div class="fback" style="background:#FFEACC;"><div class="be">👦👧</div><h4 style="color:#5C2A00;">Everyone is Equal!</h4><p style="color:#3E1800;">A girl has the same rights as a boy. No one can be treated differently because of religion, caste or gender!</p></div>
+      </div>
+    </div>
+    <div class="fcard" onclick="this.classList.toggle('flipped')">
+      <div class="finner">
+        <div class="ffront" style="background:#D4EAFF;"><div class="fe">🗣️</div><h3 style="color:#003366;">Right to Freedom</h3><div class="fhint">🔄 Hover or tap!</div></div>
+        <div class="fback" style="background:#C8EEF8;"><div class="be">🐦</div><h4 style="color:#003366;">You Are FREE!</h4><p style="color:#002244;">Speak your mind, choose any job, move anywhere in India! Your thoughts belong to YOU! 🕊️</p></div>
+      </div>
+    </div>
+    <div class="fcard" onclick="this.classList.toggle('flipped')">
+      <div class="finner">
+        <div class="ffront" style="background:#FFD4E8;"><div class="fe">🚫</div><h3 style="color:#6B0036;">Right Against Exploitation</h3><div class="fhint">🔄 Hover or tap!</div></div>
+        <div class="fback" style="background:#FCCAE0;"><div class="be">👶</div><h4 style="color:#6B0036;">No Child Labour!</h4><p style="color:#4A0026;">No child can be forced to work in factories! Child labour is <strong>illegal</strong>. Every child deserves to study and play! 🎮</p></div>
+      </div>
+    </div>
+    <div class="fcard" onclick="this.classList.toggle('flipped')">
+      <div class="finner">
+        <div class="ffront" style="background:#EAD4FF;"><div class="fe">🕌</div><h3 style="color:#3A006F;">Right to Religion</h3><div class="fhint">🔄 Hover or tap!</div></div>
+        <div class="fback" style="background:#E0C8F8;"><div class="be">🛕🕌⛪</div><h4 style="color:#3A006F;">All Faiths Welcome!</h4><p style="color:#2A0050;">Follow ANY religion freely — Hindu, Muslim, Christian, Sikh or any other. India respects ALL faiths equally!</p></div>
+      </div>
+    </div>
+    <div class="fcard" onclick="this.classList.toggle('flipped')">
+      <div class="finner">
+        <div class="ffront" style="background:#D4F5E4;"><div class="fe">📚</div><h3 style="color:#003D1F;">Cultural & Education Rights</h3><div class="fhint">🔄 Hover or tap!</div></div>
+        <div class="fback" style="background:#C4EED8;"><div class="be">🌏</div><h4 style="color:#003D1F;">Your Culture Lives!</h4><p style="color:#002A12;">Tamil, Bengali, Marathi — ALL Indian languages are protected! Your culture and heritage will survive! 🌺</p></div>
+      </div>
+    </div>
+    <div class="fcard" onclick="this.classList.toggle('flipped')">
+      <div class="finner">
+        <div class="ffront" style="background:#FFDDB8;"><div class="fe">🏛️</div><h3 style="color:#5C2A00;">Right to Constitutional Remedies</h3><div class="fhint">🔄 Hover or tap!</div></div>
+        <div class="fback" style="background:#FFEACC;"><div class="be">❤️</div><h4 style="color:#5C2A00;">Heart &amp; Soul!</h4><p style="color:#3E1000;">If any right is broken, go straight to the Supreme Court! Ambedkar called this the <strong>"Heart and Soul"</strong> of the Constitution!</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#D4F5E4;border-radius:20px;border:3px solid #2E7D32;padding:22px;text-align:center;box-shadow:5px 5px 0 #2E7D32;">
+    <div style="font-size:3rem;margin-bottom:8px;animation:jig 2s infinite;">🎒</div>
+    <h3 style="color:#003D1F;font-size:1.2rem;margin-bottom:8px;">BONUS Superpower — Right to Education!</h3>
+    <p style="color:#1B3D20;font-size:.93rem;max-width:480px;margin:0 auto;line-height:1.7;font-weight:400;">Every child aged <strong>6 to 14</strong> gets FREE education by law! Schools must keep 25% seats for children from poorer families. <strong>YOUR right to study is protected! 📖</strong></p>
+  </div>
+</div>
+</div>
+
+<!-- DIRECTIVE PRINCIPLES -->
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,55 1000,-5 1440,25 L1440,50 L0,50Z" fill="#FFF5C0"/></svg></div>
+<div style="background:#FFF5C0;padding:24px 0 8px;position:relative;z-index:1;">
+<div class="sec">
+  <div class="sec-h" style="color:#5C3800;">🎯 Government's Big To-Do List!</div>
+  <div class="sec-s" style="color:#4A2800;">Directive Principles — goals the Government MUST work towards. Click to expand!</div>
+  <div class="acc-wrap">
+    <div class="aitem" style="border-color:#B05800;box-shadow:4px 4px 0 #B05800;background:#FFEACC;">
+      <button class="abtn" onclick="toggleAcc(this)" style="color:#5C2A00;"><span class="aico">🏥</span><span class="atitle">Healthcare for Every Indian!</span><span class="aarr">🔽</span></button>
+      <div class="abody"><p style="color:#3E1000;">The government must make sure everyone can see doctors and get medicines — even the poorest families!</p><div class="pill-row"><div class="pill-item">🏥 Free hospitals</div><div class="pill-item">💊 Cheap medicines</div><div class="pill-item">🩺 Ayushman Bharat</div></div></div>
+    </div>
+    <div class="aitem" style="border-color:#005F70;box-shadow:4px 4px 0 #005F70;background:#D4EAFF;">
+      <button class="abtn" onclick="toggleAcc(this)" style="color:#003366;"><span class="aico">💰</span><span class="atitle">Equal Pay for Equal Work!</span><span class="aarr">🔽</span></button>
+      <div class="abody"><p style="color:#002244;">A man and a woman doing the same job must be paid the SAME amount! No gender discrimination in salaries!</p><div class="pill-row"><div class="pill-item">👩‍🏫 Female = 👨‍🏫 Male salary</div><div class="pill-item">⚖️ Fair wages</div></div></div>
+    </div>
+    <div class="aitem" style="border-color:#2E7D32;box-shadow:4px 4px 0 #2E7D32;background:#D4F5E4;">
+      <button class="abtn" onclick="toggleAcc(this)" style="color:#003D1F;"><span class="aico">🌿</span><span class="atitle">Protect Mother Nature!</span><span class="aarr">🔽</span></button>
+      <div class="abody"><p style="color:#002A12;">The government must protect forests, rivers, animals, and the environment for YOU — the future generation!</p><div class="pill-row"><div class="pill-item">🐯 Project Tiger</div><div class="pill-item">🌳 National Parks</div><div class="pill-item">🚯 Plastic Ban</div></div></div>
+    </div>
+    <div class="aitem" style="border-color:#6B21A8;box-shadow:4px 4px 0 #6B21A8;background:#EAD4FF;">
+      <button class="abtn" onclick="toggleAcc(this)" style="color:#3A006F;"><span class="aico">👵</span><span class="atitle">Help the Old, Poor &amp; Disabled!</span><span class="aarr">🔽</span></button>
+      <div class="abody"><p style="color:#2A0050;">Old people, disabled people, and very poor people need extra care. The government must look after them!</p><div class="pill-row"><div class="pill-item">👴 Old Age Pension</div><div class="pill-item">🍚 Free Ration</div><div class="pill-item">♿ Disability support</div></div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- FUNDAMENTAL DUTIES -->
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,-5 1000,55 1440,25 L1440,50 L0,50Z" fill="#D4EAFF"/></svg></div>
+<div class="z3 pad">
+<div class="sec">
+  <div class="sec-h" style="color:#003366;">🤲 Your Duties to India!</div>
+  <div class="sec-s" style="color:#002244;">Rights come with responsibilities! Click each box to reveal your duty!</div>
+  <div class="m-grid">
+    <div class="mbox" style="background:#C8EEF8;" onclick="openBox(this)">
+      <div class="lock">🔒</div>
+      <div class="mbox-front"><div class="big-e">🇮🇳</div><h3 style="color:#003366;">Duty #1 — Mystery!</h3><div class="tap-me">👆 TAP!</div></div>
+      <div class="mbox-back" style="background:#D4EAFF;"><h3 style="color:#003366;">🇮🇳 Respect the Flag &amp; Anthem!</h3><p style="color:#002244;">Always stand up for the National Anthem. Treat the Tricolour with love — it represents a billion Indians and centuries of struggle!</p></div>
+    </div>
+    <div class="mbox" style="background:#FFD4E8;" onclick="openBox(this)">
+      <div class="lock">🔒</div>
+      <div class="mbox-front"><div class="big-e">🌿</div><h3 style="color:#6B0036;">Duty #2 — Mystery!</h3><div class="tap-me">👆 TAP!</div></div>
+      <div class="mbox-back" style="background:#FCCAE0;"><h3 style="color:#6B0036;">🌿 Protect Nature!</h3><p style="color:#4A0026;">Don't litter! Plant trees! Save water! Protect animals. The environment belongs to all of us — including future generations 🌍</p></div>
+    </div>
+    <div class="mbox" style="background:#D4F5E4;" onclick="openBox(this)">
+      <div class="lock">🔒</div>
+      <div class="mbox-front"><div class="big-e">🔬</div><h3 style="color:#003D1F;">Duty #3 — Mystery!</h3><div class="tap-me">👆 TAP!</div></div>
+      <div class="mbox-back" style="background:#C4EED8;"><h3 style="color:#003D1F;">🔬 Think Scientifically!</h3><p style="color:#002A12;">Ask questions! Don't believe in superstitions. Be curious and ask "Why?" — A scientific mind makes India stronger 🚀</p></div>
+    </div>
+    <div class="mbox" style="background:#EAD4FF;" onclick="openBox(this)">
+      <div class="lock">🔒</div>
+      <div class="mbox-front"><div class="big-e">🎒</div><h3 style="color:#3A006F;">Duty #4 — Mystery!</h3><div class="tap-me">👆 TAP!</div></div>
+      <div class="mbox-back" style="background:#E0C8F8;"><h3 style="color:#3A006F;">🎒 Go to School!</h3><p style="color:#2A0050;">Parents must send children aged 6–14 to school. Education is not just a right — it's a DUTY for every family! ✏️</p></div>
+    </div>
+  </div>
+  <div style="background:#3A2060;border-radius:18px;padding:16px 22px;border:3px solid #FFE49A;box-shadow:5px 5px 0 #FFE49A;text-align:center;">
+    <p style="color:#FFE49A;font-size:.93rem;font-weight:600;">📋 There are 11 Fundamental Duties in total — protect unity, preserve culture, defend India, and promote harmony among all people! 🤝🇮🇳</p>
+  </div>
+</div>
+</div>
+
+<!-- 3 PILLARS -->
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,55 1000,-5 1440,25 L1440,50 L0,50Z" fill="#D4F5E4"/></svg></div>
+<div class="z2 pad">
+<div class="sec">
+  <div class="sec-h" style="color:#003D1F;">🏛️ India's 3 Power Teams!</div>
+  <div class="sec-s" style="color:#1B3D20;">Three teams run India — they balance each other so nobody gets too powerful!</div>
+  <div class="pillars">
+    <div class="pillar" style="background:#FFF5C0;">
+      <div class="p-badge">LAW MAKERS</div>
+      <span class="pillar-e">🏛️</span><h3 style="color:#5C3800;">Legislature</h3>
+      <p><strong>Parliament = Lok Sabha + Rajya Sabha.</strong> Like India's student council — elected by YOU to make new laws! 550+ members from all over India! 🗳️</p>
+    </div>
+    <div class="pillar" style="background:#D4F5E4;">
+      <div class="p-badge">THE DOERS</div>
+      <span class="pillar-e">⚙️</span><h3 style="color:#003D1F;">Executive</h3>
+      <p><strong>Prime Minister + Cabinet + Officers.</strong> Like the school principal — they run India day-to-day and carry out all the laws! 🏃</p>
+    </div>
+    <div class="pillar" style="background:#D4EAFF;">
+      <div class="p-badge">THE JUDGES</div>
+      <span class="pillar-e">⚖️</span><h3 style="color:#003366;">Judiciary</h3>
+      <p><strong>Supreme Court + High Courts.</strong> Like the referee in a football match — they make sure EVERYONE follows the rules, even the government! 🧑‍⚖️</p>
+    </div>
+  </div>
+  <div style="background:linear-gradient(135deg,#FFB347,#C084FC);border-radius:18px;padding:20px;text-align:center;border:3px solid var(--border);box-shadow:5px 5px 0 var(--border);">
+    <div style="font-size:2rem;margin-bottom:6px;">🔁</div>
+    <strong style="color:#2D0060;font-size:1rem;">These three ALWAYS check and balance each other — no single person can become too powerful!</strong><br>
+    <span style="font-size:.88rem;color:#3A1060;">This genius idea is called "Separation of Powers"!</span>
+  </div>
+</div>
+</div>
+
+<!-- TIMELINE -->
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,-5 1000,55 1440,25 L1440,50 L0,50Z" fill="#FFF8F0"/></svg></div>
+<div style="background:var(--cream);padding:28px 0 8px;position:relative;z-index:1;">
+<div class="sec">
+  <div class="sec-h" style="color:#4A006F;">📅 The Constitution's Big Journey!</div>
+  <div class="sec-s">From a dream to the world's biggest rulebook — in just 3 years!</div>
+  <div class="tl">
+    <div class="titem">
+      <div class="tdot" style="background:#FFB347;">🗳️</div>
+      <div class="tbox" style="background:#FFF5C0;"><div class="tyr" style="color:#7A3800;">1946 — The Dream Team Forms!</div><p>🏛️ 299 brilliant people from all over India came together with ONE goal: to write the rulebook for our brand-new country!</p></div>
+    </div>
+    <div class="titem">
+      <div class="tdot" style="background:#FF8FAB;">🎆</div>
+      <div class="tbox" style="background:#FFD4E8;"><div class="tyr" style="color:#6B0036;">15 Aug 1947 — FREEDOM!</div><p>🇮🇳 India became FREE from British rule! Now it was time to write OUR OWN rules — no more following someone else's laws!</p></div>
+    </div>
+    <div class="titem">
+      <div class="tdot" style="background:#C084FC;">✍️</div>
+      <div class="tbox" style="background:#EAD4FF;"><div class="tyr" style="color:#3A006F;">1948–49 — Writing Time!</div><p>📝 Dr. B.R. Ambedkar led the Drafting Committee. Long debates, thousands of ideas, nearly 3 whole years of hard work!</p></div>
+    </div>
+    <div class="titem">
+      <div class="tdot" style="background:#7EB8F7;">✅</div>
+      <div class="tbox" style="background:#D4EAFF;"><div class="tyr" style="color:#003366;">26 Nov 1949 — Adopted!</div><p>🎊 The Constitution was officially <strong>adopted!</strong> This is now celebrated as <strong>Constitution Day</strong> every 26th November!</p></div>
+    </div>
+    <div class="titem">
+      <div class="tdot" style="background:#FFE49A;">🎉</div>
+      <div class="tbox" style="background:#FFEACC;border-left:4px solid #B05800;"><div class="tyr" style="color:#7A2800;">26 Jan 1950 — REPUBLIC DAY! 🎊</div><p>🥁 The Constitution came to LIFE! India became a <strong>Republic</strong> — the PEOPLE became the real rulers! We celebrate this with the big parade in New Delhi every year!</p></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- DR AMBEDKAR -->
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,55 1000,-5 1440,25 L1440,50 L0,50Z" fill="#FFEACC"/></svg></div>
+<div style="background:#FFEACC;padding:8px 0;position:relative;z-index:1;">
+<div class="sec">
+  <div class="ambed">
+    <span class="ambed-e">👨‍⚖️</span>
+    <h2>Dr. B.R. Ambedkar — Father of the Constitution!</h2>
+    <p>Dr. Bhimrao Ramji Ambedkar was one of India's greatest scholars. He studied at the best universities in the world. Even though people discriminated against him, he rose up and became the architect of the Constitution — giving EVERY Indian equal rights, justice, and dignity! 🌟</p>
+    <div class="quote">✏️ "The Constitution is not a mere lawyers' document. It is a vehicle of Life, and its spirit is always the spirit of Age." — Dr. B.R. Ambedkar</div>
+  </div>
+</div>
+</div>
+
+<!-- QUIZ -->
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,-5 1000,55 1440,25 L1440,50 L0,50Z" fill="#3A2060"/></svg></div>
+<div class="zd pad" style="position:relative;z-index:1;">
+<div class="sec">
+  <div class="sec-h" style="color:#FFE49A;">🧠 Constitution Quiz Time!</div>
+  <div class="sec-s" style="color:rgba(255,255,255,.7);">Test everything you learned! Can you score 10/10 and win the Champion badge? 🏆</div>
+  <div class="quiz-wrap">
+    <div class="quiz-hdr">
+      <h2>🎯 Constitution Challenge!</h2>
+      <p>10 questions · Pick the right answer · Win a Champion badge! 🏅</p>
+    </div>
+    <div class="qprog" id="qProg">
+      <div class="qpbw"><div class="qpb" id="qpb"></div></div>
+      <span class="qpt" id="qpt">Q 1 / 10</span>
+      <span class="qsl" id="qsl">⭐ 0</span>
+    </div>
+    <div class="q-area" id="qArea">
+      <div class="q-num" id="qNum">Question 1 of 10</div>
+      <div class="q-illo" id="qIllo">📖</div>
+      <div class="q-txt" id="qTxt">Loading…</div>
+      <div class="q-opts" id="qOpts"></div>
+      <div class="qfb" id="qFb"></div>
+      <button class="qnxt" id="qNxt" onclick="nextQ()">Next ➡️</button>
+    </div>
+    <div class="res-scr" id="resSrc">
+      <span class="res-t" id="resTrp">🏆</span>
+      <div class="res-s" id="resSco">10/10</div>
+      <div class="stars-r" id="resStar">⭐⭐⭐</div>
+      <div class="res-m" id="resMsg">Amazing! You are a Constitution Champion!</div>
+      <div class="res-b" id="resBdg" style="background:#FFF5C0;">🥇 Constitution Champion!</div>
+      <br><br>
+      <button class="retry-btn" onclick="restartQ()">🔄 Play Again!</button>
+      <div class="rev-list" id="revList"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,55 1000,-5 1440,25 L1440,50 L0,50Z" fill="#3A2060"/></svg></div>
+<footer>
+  <span class="ff">🇮🇳</span>
+  <div style="font-size:1.3rem;margin-bottom:6px;font-weight:700;">जय हिन्द! — Jai Hind! 🙏</div>
+  <p style="font-size:.93rem;margin-bottom:18px;">Constitution of India — 26 January 1950 · Made with ❤️ for every Indian child</p>
+  <div style="max-width:520px;margin:0 auto 10px;background:rgba(255,255,255,.08);border:2px solid rgba(255,228,154,.5);border-radius:18px;padding:18px 22px;">
+    <div style="font-size:.95rem;color:#FFE49A;font-weight:700;margin-bottom:10px;letter-spacing:.5px;">© Copyright — All Rights Reserved</div>
+    <div style="font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:6px;">⚖️ Advocate Ajinkya Ashok Dhende</div>
+    <div style="font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.8;font-weight:400;">
+    </div>
+    <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+      <a href="tel:8149135283" style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,228,154,.15);border:2px solid rgba(255,228,154,.4);color:#FFE49A;border-radius:50px;padding:6px 16px;font-size:.88rem;font-weight:600;text-decoration:none;" onmouseover="this.style.background='rgba(255,228,154,.3)'" onmouseout="this.style.background='rgba(255,228,154,.15)'">📞 8149135283</a>
+      <a href="mailto:ajinkya.dhende@gmail.com" style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,228,154,.15);border:2px solid rgba(255,228,154,.4);color:#FFE49A;border-radius:50px;padding:6px 16px;font-size:.88rem;font-weight:600;text-decoration:none;" onmouseover="this.style.background='rgba(255,228,154,.3)'" onmouseout="this.style.background='rgba(255,228,154,.15)'">✉️ ajinkya.dhende@gmail.com</a>
+    </div>
+  </div>
+  <p style="margin-top:10px;opacity:.4;font-size:.76rem;">Learn it · Live it · Love it 🇮🇳</p>
+</footer>
+
+<script>
+// ASHOKA WHEEL — 24 equally spaced spokes
+(function(){
+  const svg=document.getElementById('ashokaW');
+  const ns='http://www.w3.org/2000/svg';
+  const mk=(t,a)=>{const e=document.createElementNS(ns,t);Object.entries(a).forEach(([k,v])=>e.setAttribute(k,v));return e;};
+  svg.appendChild(mk('circle',{cx:50,cy:50,r:44,fill:'none',stroke:'white','stroke-width':4}));
+  for(let i=0;i<24;i++){
+    const a=(i*15-90)*Math.PI/180;
+    svg.appendChild(mk('line',{x1:(50+9*Math.cos(a)).toFixed(2),y1:(50+9*Math.sin(a)).toFixed(2),x2:(50+42*Math.cos(a)).toFixed(2),y2:(50+42*Math.sin(a)).toFixed(2),stroke:'white','stroke-width':1.8,'stroke-linecap':'round'}));
+  }
+  svg.appendChild(mk('circle',{cx:50,cy:50,r:9,fill:'white'}));
+  svg.appendChild(mk('circle',{cx:50,cy:50,r:4,fill:'#000080'}));
+})();
+
+// FLOATING STARS
+(function(){
+  const bg=document.getElementById('starBg');
+  ['⭐','✨','🌟','💫','🌈','🎈','🎉','🌺','🎊'].forEach((e,i)=>{
+    const s=document.createElement('div');s.className='star';s.textContent=e;
+    s.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;animation-delay:${Math.random()*8}s;animation-duration:${6+Math.random()*6}s`;
+    bg.appendChild(s);
+  });
+})();
+
+// MYSTERY BOX
+const CC=['#FFB347','#C084FC','#7EB8F7','#6BCB77','#FF8FAB','#FFE49A'];
+function openBox(el){
+  if(el.classList.contains('open'))return;
+  el.classList.add('open');el.querySelector('.lock').textContent='🔓';
+  const b=document.createElement('div');b.className='cburst';
+  for(let i=0;i<14;i++){
+    const p=document.createElement('div');p.className='cp';
+    p.style.background=CC[i%CC.length];
+    const a=Math.random()*360,d=60+Math.random()*60;
+    p.style.setProperty('--tx',Math.cos(a*Math.PI/180)*d+'px');
+    p.style.setProperty('--ty',Math.sin(a*Math.PI/180)*d+'px');
+    b.appendChild(p);
+  }
+  el.appendChild(b);setTimeout(()=>b.remove(),700);
+}
+
+// ACCORDION
+function toggleAcc(btn){
+  const item=btn.closest('.aitem'),was=item.classList.contains('open');
+  document.querySelectorAll('.aitem').forEach(i=>i.classList.remove('open'));
+  if(!was)item.classList.add('open');
+}
+
+// PREAMBLE
+const M={
+  justice:{e:'⚖️',t:'Justice — Fair Treatment!',p:"India promises that everyone will be treated FAIRLY! Like in cricket — the rules apply equally to ALL players, whether rich or poor, famous or ordinary! 🏏"},
+  liberty:{e:'🕊️',t:'Liberty — You Are FREE!',p:"You are free to think, speak, write and choose your own life! Like a bird that can fly anywhere — your mind and your choices are YOUR own! 🐦"},
+  equality:{e:'🤝',t:'Equality — Everyone is Equal!',p:"Every single person in India is equal — no one is 'more important' because of religion, caste, money or gender. You have the same rights as everyone else! 👫"},
+  fraternity:{e:'💛',t:'Fraternity — We Are Family!',p:"India has 1.4 billion people and 100+ languages — but we are ALL one big family! Brothers and sisters who look after each other! 🫂🇮🇳"},
+  dignity:{e:'👑',t:'Dignity — Respect for All!',p:"Every person deserves to be treated with respect — no one should be humiliated or looked down upon. EVERY human life has value! 🌺"},
+  unity:{e:'🇮🇳',t:'Unity — Together We Stand!',p:"Even with so many languages, religions and cultures — we are ONE India! Unity in Diversity is India's greatest superpower! 🌈🇮🇳"}
+};
+function showMean(k){
+  const m=M[k],box=document.getElementById('meanBox');
+  document.getElementById('mE').textContent=m.e;
+  document.getElementById('mT').textContent=m.t;
+  document.getElementById('mP').textContent=m.p;
+  box.classList.remove('hide');
+  document.querySelectorAll('.wpill').forEach(p=>p.classList.toggle('active',p.getAttribute('onclick')&&p.getAttribute('onclick').includes("'"+k+"'")));
+}
+
+// QUIZ
+const Qs=[
+  {q:"What is the Constitution of India?",e:"📖",opts:["India's rulebook for everyone","A recipe book for Indian food","A list of cricket champions","A collection of folk stories"],ans:0,exp:"✅ The Constitution is India's RULEBOOK — it tells everyone, including the government, how to behave and what rights they have!"},
+  {q:"On which date did India's Constitution come into effect?",e:"🗓️",opts:["15 August 1947","26 January 1950","2 October 1869","26 November 1949"],ans:1,exp:"✅ 26 January 1950 — that's why we celebrate REPUBLIC DAY on this date every year with the big parade in Delhi!"},
+  {q:"Who is called the 'Father of the Indian Constitution'?",e:"🧑‍⚖️",opts:["Mahatma Gandhi","Jawaharlal Nehru","Dr. B.R. Ambedkar","Sardar Patel"],ans:2,exp:"✅ Dr. B.R. Ambedkar was the chairman of the Drafting Committee and is proudly called the Father of the Constitution!"},
+  {q:"How many Fundamental Rights does the Constitution give every Indian?",e:"🛡️",opts:["3 rights","6 rights","11 rights","12 rights"],ans:1,exp:"✅ There are 6 Fundamental Rights — including Right to Equality, Right to Freedom, Right to Education and more!"},
+  {q:"The Right to Education says every child aged ___ to ___ gets free education!",e:"🎒",opts:["3 to 10","6 to 14","8 to 16","4 to 12"],ans:1,exp:"✅ Every child aged 6 to 14 has the right to FREE education by law — that includes YOU!"},
+  {q:"What are Fundamental Duties?",e:"🤲",opts:["Things only the government must do","Responsibilities every citizen must follow","Rules only for police officers","Extra holiday rights"],ans:1,exp:"✅ Fundamental Duties are responsibilities WE must fulfil for our country — like respecting the flag and protecting nature!"},
+  {q:"The Preamble is like India's…",e:"📜",opts:["Shopping list","Superhero oath and promise to citizens","Weather forecast","School timetable"],ans:1,exp:"✅ The Preamble is India's promise to its people — pledging justice, liberty, equality, fraternity, dignity and unity!"},
+  {q:"Which court can you approach if your Fundamental Rights are violated?",e:"⚖️",opts:["District Court","The Police Station","The Supreme Court","The Mayor's Office"],ans:2,exp:"✅ You can go directly to the Supreme Court! This right is called the Right to Constitutional Remedies — the 'Heart and Soul' of the Constitution!"},
+  {q:"India's Constitution is famous for being the ___ written constitution in the world!",e:"🏆",opts:["Shortest","Oldest","Longest","Smallest"],ans:2,exp:"✅ India's Constitution is the LONGEST written constitution in the world — with 448 articles, 25 parts, and 12 schedules!"},
+  {q:"India's three pillars of power are Legislature, Judiciary, and…?",e:"🏛️",opts:["Military","Executive","Media","Police"],ans:1,exp:"✅ Legislature (makes laws), Executive (runs the country), and Judiciary (ensures justice) — they check and balance each other!"}
+];
+let qi=0,score=0,answered=false,userAns=[];
+function renderQ(){
+  const q=Qs[qi];
+  document.getElementById('qNum').textContent=`Question ${qi+1} of ${Qs.length}`;
+  document.getElementById('qIllo').textContent=q.e;
+  document.getElementById('qTxt').textContent=q.q;
+  document.getElementById('qpb').style.width=(qi/Qs.length*100)+'%';
+  document.getElementById('qpt').textContent=`Q ${qi+1} / ${Qs.length}`;
+  document.getElementById('qsl').textContent=`⭐ ${score}`;
+  const fb=document.getElementById('qFb');fb.className='qfb';fb.textContent='';
+  document.getElementById('qNxt').classList.remove('show');
+  answered=false;
+  const oc=document.getElementById('qOpts');oc.innerHTML='';
+  q.opts.forEach((o,i)=>{
+    const b=document.createElement('button');b.className='qo';b.textContent=o;
+    b.onclick=()=>pick(i,b,q);oc.appendChild(b);
+  });
+}
+function pick(i,btn,q){
+  if(answered)return;answered=true;
+  document.querySelectorAll('.qo').forEach(b=>b.classList.add('locked'));
+  const fb=document.getElementById('qFb');
+  if(i===q.ans){
+    btn.classList.add('correct');score++;
+    document.getElementById('qsl').textContent=`⭐ ${score}`;
+    fb.textContent='🎉 '+q.exp;fb.className='qfb ok show';
+    userAns.push({q:q.q,ok:true,ya:q.opts[i],ra:q.opts[q.ans]});
+    burst();
+  }else{
+    btn.classList.add('wrong');
+    document.querySelectorAll('.qo')[q.ans].classList.add('correct');
+    fb.textContent='😅 Oops! '+q.exp;fb.className='qfb no show';
+    userAns.push({q:q.q,ok:false,ya:q.opts[i],ra:q.opts[q.ans]});
+  }
+  const nxt=document.getElementById('qNxt');
+  nxt.textContent=qi<Qs.length-1?'Next Question ➡️':'See My Score! 🏆';
+  nxt.classList.add('show');
+}
+function nextQ(){qi++;if(qi>=Qs.length){showResult();return;}renderQ();}
+function showResult(){
+  document.getElementById('qArea').style.display='none';
+  document.getElementById('qProg').style.display='none';
+  const rs=document.getElementById('resSrc');rs.classList.add('show');
+  const pct=score/Qs.length;
+  let t,m,b,bg,st;
+  if(pct===1){t='🏆';m='PERFECT SCORE! You are a Constitution GENIUS! 🤩';b='🥇 Constitution Champion!';bg='#FFF5C0';st='⭐⭐⭐';}
+  else if(pct>=.8){t='🥇';m='Amazing! You know the Constitution really well! 😄';b='🥈 Constitution Expert!';bg='#D4EAFF';st='⭐⭐⭐';}
+  else if(pct>=.6){t='🥈';m="Great effort! Keep learning and you'll be a champion! 📖";b='🥉 Constitution Learner!';bg='#D4F5E4';st='⭐⭐';}
+  else if(pct>=.4){t='📖';m="Good try! Read the page again and try once more! 💪";b='📚 Keep Reading!';bg='#FFDDB8';st='⭐';}
+  else{t='💪';m="Don't give up! Read the page carefully and try again! 🌱";b='🌱 Keep Growing!';bg='#FFD4E8';st='⭐';}
+  document.getElementById('resTrp').textContent=t;
+  document.getElementById('resSco').textContent=score+'/'+Qs.length;
+  document.getElementById('resMsg').textContent=m;
+  document.getElementById('resBdg').textContent=b;
+  document.getElementById('resBdg').style.background=bg;
+  document.getElementById('resStar').textContent=st;
+  document.getElementById('qpb').style.width='100%';
+  const rl=document.getElementById('revList');
+  rl.innerHTML='<h3 style="margin-bottom:10px;font-size:.95rem;color:#2D2D2D;">📋 Review your answers:</h3>';
+  userAns.forEach((a,i)=>{
+    const d=document.createElement('div');d.className='rvi '+(a.ok?'ok':'no');
+    d.innerHTML=`<div class="rvq">${a.ok?'✅':'❌'} Q${i+1}: ${a.q}</div><div class="rva">${a.ok?'Correct: '+a.ra:'Your answer: '+a.ya+' · Correct: '+a.ra}</div>`;
+    rl.appendChild(d);
+  });
+}
+function restartQ(){
+  qi=0;score=0;answered=false;userAns=[];
+  document.getElementById('qArea').style.display='block';
+  document.getElementById('qProg').style.display='flex';
+  document.getElementById('resSrc').classList.remove('show');
+  renderQ();
+}
+function burst(){
+  const area=document.getElementById('qArea');
+  const b=document.createElement('div');
+  b.style.cssText='position:absolute;top:50%;left:50%;pointer-events:none;z-index:99;';
+  for(let i=0;i<18;i++){
+    const p=document.createElement('div');
+    const a=Math.random()*360,d=80+Math.random()*80;
+    p.style.cssText=`position:absolute;width:9px;height:9px;border-radius:2px;background:${CC[i%CC.length]};animation:bOut .7s ease-out forwards;`;
+    p.style.setProperty('--tx',Math.cos(a*Math.PI/180)*d+'px');
+    p.style.setProperty('--ty',Math.sin(a*Math.PI/180)*d+'px');
+    b.appendChild(p);
+  }
+  area.style.position='relative';area.appendChild(b);setTimeout(()=>b.remove(),800);
+}
+renderQ();
+</script>
+</body>
+</html>

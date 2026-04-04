@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>भारताचे संविधान — मुलांसाठी 🇮🇳</title>
+<link href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FFF8F0;--peach:#FFE4CC;--mint:#D4F5E4;--sky:#D4EAFF;
+  --lavender:#EAD4FF;--blush:#FFD4E8;--butter:#FFF5C0;
+  --border:#444;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Laila','Noto Sans Devanagari',sans-serif;font-size:17px;background:var(--cream);color:#2D2D2D;overflow-x:hidden;line-height:1.6;}
+
+.star-bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+.star{position:absolute;font-size:1.1rem;opacity:.1;animation:floatS 8s ease-in-out infinite;}
+@keyframes floatS{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+
+/* HERO */
+.hero{background:linear-gradient(150deg,#FFB347 0%,#FF8FAB 40%,#C084FC 72%,#7EB8F7 100%);
+  padding:46px 20px 62px;text-align:center;position:relative;overflow:hidden;border-bottom:6px dashed #fff;}
+.hero-dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.2) 2px,transparent 2px);background-size:26px 26px;pointer-events:none;}
+.hero h1{font-family:'Laila',sans-serif;font-size:clamp(2rem,6vw,3.8rem);font-weight:700;
+  color:#fff;text-shadow:3px 3px 0 #B35A00,5px 5px 0 rgba(0,0,0,.15);
+  line-height:1.3;margin:10px 0 12px;animation:wiggle 3.5s ease-in-out infinite;}
+@keyframes wiggle{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(1deg)}}
+.hero-sub{color:#4A1000;font-size:1rem;max-width:500px;margin:0 auto 18px;
+  background:rgba(255,255,255,.5);border-radius:50px;padding:9px 22px;
+  border:2px solid rgba(255,255,255,.7);display:inline-block;font-weight:500;}
+.hero-flags{font-size:2rem;letter-spacing:6px;animation:pulse 2s ease-in-out infinite;display:block;margin-bottom:14px;}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.scroll-hint{color:#4A1000;font-size:.93rem;font-weight:600;margin-top:14px;animation:bD 1.2s ease-in-out infinite;background:rgba(255,255,255,.4);border-radius:30px;display:inline-block;padding:5px 18px;}
+@keyframes bD{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+
+.wheel-wrap{width:100px;height:100px;margin:0 auto 14px;filter:drop-shadow(0 0 14px rgba(255,255,255,.7));}
+.wheel-wrap svg{animation:spinW 7s linear infinite;}
+@keyframes spinW{to{transform:rotate(360deg)}}
+
+/* TICKER */
+.ticker-band{background:#3A2060;color:#FFE8A0;padding:12px 0;overflow:hidden;border-top:3px solid #FFE8A0;border-bottom:3px solid #FFE8A0;position:relative;z-index:2;}
+.ticker-inner{display:inline-flex;gap:60px;animation:tick 35s linear infinite;white-space:nowrap;}
+.ticker-inner span{font-size:.9rem;font-weight:500;}
+.ticker-inner span::before{content:"⭐ ";}
+@keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* SECTION */
+.sec{max-width:960px;margin:0 auto;padding:28px 16px 46px;position:relative;z-index:1;}
+.sec-h{text-align:center;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:700;margin-bottom:6px;line-height:1.3;}
+.sec-s{text-align:center;font-size:1rem;color:#555;margin-bottom:26px;font-weight:400;}
+
+/* MYSTERY BOX */
+.m-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px;margin-bottom:36px;}
+.mbox{border-radius:22px;border:3px solid var(--border);overflow:hidden;cursor:pointer;box-shadow:5px 5px 0 var(--border);transition:transform .15s,box-shadow .15s;position:relative;min-height:200px;}
+.mbox:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--border);}
+.mbox-front{padding:26px 18px;text-align:center;min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .3s;}
+.mbox-front .big-e{font-size:3.8rem;margin-bottom:10px;animation:jig 2.5s ease-in-out infinite;}
+@keyframes jig{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+.mbox-front h3{font-size:1.1rem;font-weight:700;margin-bottom:6px;}
+.tap-me{font-size:.82rem;background:rgba(255,255,255,.5);border:2px dashed rgba(0,0,0,.25);border-radius:20px;padding:4px 14px;margin-top:10px;color:#333;}
+.lock{position:absolute;top:10px;right:12px;font-size:1.5rem;transition:transform .3s;}
+.mbox-back{position:absolute;inset:0;padding:18px 16px;display:flex;flex-direction:column;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s;overflow-y:auto;}
+.mbox-back h3{font-size:1.05rem;font-weight:700;margin-bottom:8px;}
+.mbox-back p{font-size:.93rem;line-height:1.7;}
+.mbox-back .ex{margin-top:10px;padding:8px 12px;background:rgba(255,255,255,.45);border-radius:12px;border:2px dashed rgba(0,0,0,.2);font-size:.84rem;color:#222;}
+.mbox.open .mbox-front{opacity:0;pointer-events:none;}
+.mbox.open .mbox-back{opacity:1;pointer-events:all;}
+.mbox.open .lock{transform:rotate(25deg);}
+.cburst{position:absolute;top:50%;left:50%;pointer-events:none;}
+.cp{position:absolute;width:8px;height:8px;border-radius:2px;animation:bOut .55s ease-out forwards;}
+@keyframes bOut{0%{transform:translate(-50%,-50%) scale(0);opacity:1}100%{transform:translate(var(--tx),var(--ty)) scale(1);opacity:0}}
+
+/* FLIP CARDS */
+.flip-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;margin-bottom:36px;}
+.fcard{height:270px;perspective:900px;cursor:pointer;}
+.finner{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.4,0,.2,1);border-radius:20px;border:3px solid var(--border);box-shadow:5px 5px 0 var(--border);}
+.fcard:hover .finner,.fcard.flipped .finner{transform:rotateY(180deg);}
+.ffront,.fback{position:absolute;inset:0;backface-visibility:hidden;border-radius:17px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px 16px;text-align:center;overflow:hidden;}
+.fback{transform:rotateY(180deg);overflow-y:auto;justify-content:flex-start;padding-top:16px;}
+.ffront .fe{font-size:3rem;margin-bottom:8px;flex-shrink:0;}
+.ffront h3{font-size:1rem;font-weight:700;color:#2D2D2D;line-height:1.35;}
+.ffront .fhint{font-size:.73rem;margin-top:8px;color:rgba(0,0,0,.45);background:rgba(255,255,255,.5);border-radius:20px;padding:3px 10px;}
+.fback .be{font-size:1.8rem;margin-bottom:6px;flex-shrink:0;}
+.fback h4{font-size:.9rem;font-weight:700;margin-bottom:5px;line-height:1.3;}
+.fback p{font-size:.84rem;line-height:1.6;font-weight:400;}
+
+/* PREAMBLE */
+.pream-zone{border-radius:24px;border:3px solid #5A2080;box-shadow:6px 6px 0 #5A2080;padding:28px 22px;margin-bottom:36px;text-align:center;background:linear-gradient(135deg,#3A1060,#5A1880,#3A1060);color:white;}
+.pream-zone h2{font-size:1.7rem;color:#FFE49A;margin-bottom:4px;font-weight:700;}
+.pream-zone .psub{color:rgba(255,255,255,.8);font-size:.93rem;margin-bottom:18px;}
+.wpills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+.wpill{background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.3);border-radius:50px;padding:9px 18px;font-size:1rem;font-weight:600;cursor:pointer;transition:all .2s;color:white;}
+.wpill:hover{background:rgba(255,230,120,.3);border-color:#FFE49A;transform:scale(1.08);}
+.wpill.active{background:#FFE49A;color:#3A1060;border-color:#FFE49A;transform:scale(1.1);}
+.wmean{margin-top:18px;background:rgba(255,255,255,.1);border-radius:16px;padding:16px;min-height:90px;transition:all .3s;border:2px dashed rgba(255,255,255,.3);}
+.wmean.hide{opacity:.2;}
+.wmean .we{font-size:2.8rem;margin-bottom:6px;}
+.wmean h3{font-size:1.1rem;color:#FFE49A;margin-bottom:5px;}
+.wmean p{font-size:.92rem;line-height:1.7;color:rgba(255,255,255,.9);}
+
+/* ACCORDION */
+.acc-wrap{display:flex;flex-direction:column;gap:14px;margin-bottom:36px;}
+.aitem{border:3px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:4px 4px 0 var(--border);transition:transform .15s,box-shadow .15s;}
+.aitem:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--border);}
+.abtn{width:100%;padding:16px 18px;display:flex;align-items:center;gap:12px;cursor:pointer;background:transparent;border:none;text-align:right;font-family:'Laila',sans-serif;font-size:1.05rem;font-weight:600;color:#2D2D2D;direction:ltr;}
+.aico{font-size:1.9rem;flex-shrink:0;}
+.atitle{flex:1;text-align:left;}
+.aarr{font-size:1.3rem;transition:transform .3s;flex-shrink:0;}
+.aitem.open .aarr{transform:rotate(180deg);}
+.abody{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;padding:0 18px;background:rgba(255,255,255,.35);}
+.aitem.open .abody{max-height:500px;padding:14px 18px 18px;}
+.abody p{font-size:.95rem;line-height:1.8;color:#333;margin-bottom:8px;}
+.pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+.pill-item{background:rgba(255,255,255,.7);border:2px solid rgba(0,0,0,.15);border-radius:50px;padding:5px 13px;font-size:.82rem;display:flex;align-items:center;gap:5px;color:#2D2D2D;}
+
+/* TIMELINE */
+.tl{position:relative;padding:0 0 0 52px;margin-bottom:36px;}
+.tl::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:5px;background:linear-gradient(to bottom,#FFB347,#C084FC,#7EB8F7);border-radius:3px;}
+.titem{position:relative;margin-bottom:22px;}
+.tdot{position:absolute;left:-38px;top:10px;width:26px;height:26px;border-radius:50%;border:3px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.62rem;box-shadow:3px 3px 0 var(--border);}
+.tbox{border:3px solid var(--border);border-radius:18px;padding:14px 18px;box-shadow:4px 4px 0 var(--border);transition:transform .2s;}
+.tbox:hover{transform:translateX(6px);}
+.tyr{font-size:1.05rem;font-weight:700;margin-bottom:4px;}
+.tbox p{font-size:.93rem;line-height:1.7;color:#333;}
+
+/* PILLARS */
+.pillars{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin-bottom:36px;}
+.pillar{border:3px solid var(--border);border-radius:22px;padding:22px 16px;text-align:center;box-shadow:5px 5px 0 var(--border);cursor:pointer;transition:transform .2s,box-shadow .2s;position:relative;}
+.pillar:hover{transform:translate(-3px,-4px);box-shadow:8px 9px 0 var(--border);}
+.pillar-e{font-size:3.8rem;display:block;margin-bottom:10px;animation:bob 3s ease-in-out infinite;}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.pillar h3{font-size:1.05rem;font-weight:700;margin-bottom:6px;}
+.pillar p{font-size:.88rem;line-height:1.65;color:#333;}
+.p-badge{position:absolute;top:10px;right:10px;background:#3A2060;color:#FFE49A;border-radius:50px;padding:3px 9px;font-size:.62rem;font-weight:600;}
+
+/* FACTS */
+.facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:14px;margin-bottom:36px;}
+.fact{border:3px solid var(--border);border-radius:18px;padding:18px 12px;text-align:center;box-shadow:4px 4px 0 var(--border);transition:transform .2s;}
+.fact:hover{transform:scale(1.05) rotate(-1deg);}
+.fact .fn{font-size:2rem;font-weight:700;line-height:1;}
+.fact p{font-size:.78rem;margin-top:6px;color:#333;}
+
+/* AMBEDKAR */
+.ambed{border:4px solid var(--border);border-radius:26px;background:linear-gradient(135deg,#FFEACC,#FFD4A8);box-shadow:7px 7px 0 var(--border);padding:30px 22px;text-align:center;margin-bottom:36px;position:relative;overflow:hidden;}
+.ambed::before{content:'✨';position:absolute;font-size:7rem;top:-15px;right:-10px;opacity:.1;}
+.ambed-e{font-size:5rem;margin-bottom:10px;display:block;animation:bob 2.5s ease-in-out infinite;}
+.ambed h2{font-size:1.6rem;font-weight:700;color:#5C2A00;margin-bottom:8px;}
+.ambed p{font-size:.93rem;line-height:1.8;color:#4A1800;max-width:560px;margin:0 auto 12px;}
+.quote{background:rgba(0,0,0,.07);border-radius:14px;padding:12px 16px;border:2px dashed rgba(0,0,0,.2);font-size:.9rem;color:#3A1000;font-style:italic;max-width:500px;margin:0 auto;}
+
+/* QUIZ */
+.quiz-wrap{border:4px solid var(--border);border-radius:28px;box-shadow:8px 8px 0 var(--border);overflow:hidden;margin-bottom:40px;}
+.quiz-hdr{background:linear-gradient(135deg,#FFB347,#FF8FAB);padding:24px;text-align:center;border-bottom:4px solid var(--border);}
+.quiz-hdr h2{font-size:1.7rem;color:#3A1000;font-weight:700;margin-bottom:6px;}
+.quiz-hdr p{color:#5A2000;font-size:.93rem;}
+.qprog{background:#3A2060;padding:10px 20px;display:flex;align-items:center;gap:10px;border-bottom:3px solid var(--border);}
+.qpbw{flex:1;background:rgba(255,255,255,.2);border-radius:50px;height:14px;border:2px solid rgba(255,255,255,.3);}
+.qpb{height:100%;background:linear-gradient(90deg,#FFE49A,#FFB347);border-radius:50px;transition:width .4s ease;width:0%;}
+.qpt{color:#FFE49A;font-size:.82rem;font-weight:600;white-space:nowrap;}
+.qsl{color:#A8F0C0;font-size:.88rem;font-weight:600;}
+.q-area{padding:28px 24px;background:var(--cream);position:relative;}
+.q-num{font-size:.82rem;font-weight:700;color:#B05800;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px;}
+.q-illo{font-size:3.5rem;text-align:center;margin:10px 0;animation:jig 2s ease-in-out infinite;}
+.q-txt{font-size:1.1rem;font-weight:700;color:#2D2D2D;margin-bottom:6px;line-height:1.5;}
+.q-opts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px;}
+.qo{padding:13px 14px;border:3px solid var(--border);border-radius:16px;background:#fff;cursor:pointer;font-family:'Laila',sans-serif;font-size:.93rem;font-weight:500;text-align:center;transition:transform .15s,box-shadow .15s,background .2s;box-shadow:3px 3px 0 var(--border);color:#2D2D2D;}
+.qo:hover:not(.locked){transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--border);background:#FFF5C0;}
+.qo.correct{background:#C8F5D8;border-color:#2E7D32;color:#1B3D20;}
+.qo.wrong{background:#FFD4D4;border-color:#B71C1C;color:#4E0000;}
+.qo.locked{cursor:default;}
+.qfb{margin-top:16px;padding:14px 18px;border-radius:16px;border:2px solid var(--border);font-size:.93rem;font-weight:500;text-align:center;display:none;box-shadow:3px 3px 0 var(--border);line-height:1.7;}
+.qfb.show{display:block;}
+.qfb.ok{background:#D4F5E4;color:#1B3D20;}
+.qfb.no{background:#FFE4CC;color:#4E0000;}
+.qnxt{margin-top:16px;padding:12px 30px;background:#FFB347;color:#3A1000;border:3px solid var(--border);border-radius:14px;font-family:'Laila',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;display:none;box-shadow:4px 4px 0 var(--border);transition:transform .15s,box-shadow .15s;}
+.qnxt:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--border);}
+.qnxt.show{display:inline-block;}
+.res-scr{padding:36px 24px;text-align:center;background:var(--cream);display:none;}
+.res-scr.show{display:block;}
+.res-t{font-size:6rem;animation:bob 2s ease-in-out infinite;display:block;}
+.res-s{font-size:3.5rem;font-weight:700;margin:10px 0;color:#B05800;}
+.res-m{font-size:1.1rem;font-weight:600;color:#2D2D2D;margin-bottom:18px;}
+.res-b{display:inline-block;padding:11px 26px;border:3px solid var(--border);border-radius:20px;font-size:1rem;font-weight:700;margin-bottom:20px;box-shadow:5px 5px 0 var(--border);}
+.stars-r{font-size:2.2rem;letter-spacing:4px;margin:10px 0;}
+.retry-btn{padding:13px 34px;background:var(--sky);color:#003366;border:3px solid var(--border);border-radius:18px;font-family:'Laila',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;box-shadow:5px 5px 0 var(--border);transition:transform .15s,box-shadow .15s;}
+.retry-btn:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--border);}
+.rev-list{text-align:left;margin:20px 0 0;display:flex;flex-direction:column;gap:10px;}
+.rvi{padding:12px 14px;border:2px solid var(--border);border-radius:14px;font-size:.9rem;box-shadow:3px 3px 0 var(--border);}
+.rvi.ok{background:#D4F5E4;}
+.rvi.no{background:#FFE4CC;}
+.rvi .rvq{font-weight:700;margin-bottom:4px;}
+.rvi .rva{color:#555;}
+
+.z1{background:linear-gradient(160deg,#FFF5C0 0%,#FFEACC 100%);}
+.z2{background:linear-gradient(160deg,#D4F5E4 0%,#C4EED8 100%);}
+.z3{background:linear-gradient(160deg,#D4EAFF 0%,#C0DEFF 100%);}
+.zd{background:#3A2060;}
+.pad{padding:28px 0 8px;}
+.wave-sep svg{display:block;margin-bottom:-2px;}
+
+footer{background:#3A2060;color:#FFE49A;text-align:center;padding:28px 20px;border-top:4px solid #FFE49A;position:relative;z-index:1;}
+footer .ff{font-size:2.5rem;animation:pulse 2s infinite;display:block;margin-bottom:8px;}
+footer p{color:rgba(255,255,255,.7);font-size:.84rem;margin-top:5px;}
+
+@media(max-width:600px){
+  .m-grid,.flip-grid,.pillars,.q-opts{grid-template-columns:1fr;}
+  .facts{grid-template-columns:repeat(2,1fr);}
+  .fcard{height:auto;min-height:270px;}
+}
+</style>
+</head>
+<body>
+<div class="star-bg" id="starBg"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-dots"></div>
+  <div class="hero-flags">🇮🇳 🌟 🇮🇳 🌟 🇮🇳</div>
+  <div class="wheel-wrap"><svg id="ashokaW" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"></svg></div>
+  <h1>भारताचे महान<br>संविधान! 📖</h1>
+  <div class="hero-sub">जगातील सर्वात मोठे नियमपुस्तक — मुलांसाठी सोप्या भाषेत! 🎉<br>बॉक्स क्लिक करा · कार्ड फ्लिप करा · प्रश्नमंजुषा खेळा!</div>
+  <div class="scroll-hint">👇 खाली स्क्रोल करा — रहस्ये उघडा! 👇</div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-band">
+  <div class="ticker-inner">
+    <span>जगातील सर्वात मोठे लिखित संविधान</span><span>आत ४४८ कलमे आहेत!</span>
+    <span>लिहायला २ वर्षे ११ महिने लागले</span><span>२६ जानेवारी १९५० ला लागू झाले</span>
+    <span>डॉ. बाबासाहेब आंबेडकरांनी लिहिले</span><span>२५ भाग आणि १२ परिशिष्टे</span>
+    <span>यामुळेच प्रजासत्ताक दिन साजरा होतो!</span><span>२९९ सदस्यांनी मिळून लिहिले</span>
+    <span>जगातील सर्वात मोठे लिखित संविधान</span><span>आत ४४८ कलमे आहेत!</span>
+    <span>लिहायला २ वर्षे ११ महिने लागले</span><span>२६ जानेवारी १९५० ला लागू झाले</span>
+    <span>डॉ. बाबासाहेब आंबेडकरांनी लिहिले</span><span>२५ भाग आणि १२ परिशिष्टे</span>
+    <span>यामुळेच प्रजासत्ताक दिन साजरा होतो!</span><span>२९९ सदस्यांनी मिळून लिहिले</span>
+  </div>
+</div>
+
+<!-- WHAT IS IT -->
+<div class="z1 pad">
+<div class="sec">
+  <div class="sec-h" style="color:#7A2800;">📚 संविधान म्हणजे काय?</div>
+  <div class="sec-s">👆 प्रत्येक रहस्य बॉक्स क्लिक करा आणि आतील गुपित जाणून घ्या!</div>
+  <div class="m-grid">
+    <div class="mbox" style="background:#FFDDB8;" onclick="openBox(this)">
+      <div class="lock">🔒</div>
+      <div class="mbox-front"><div class="big-e">📖</div><h3 style="color:#5C2A00;">भारताचे नियमपुस्तक?</h3><div class="tap-me">👆 दाबा!</div></div>
+      <div class="mbox-back" style="background:#FFEACC;">
+        <h3 style="color:#7A2800;">🏫 शाळेसारखेच नियम!</h3>
+        <p style="color:#3E1000;">जसे शाळेत नियम असतात — "दुसऱ्याला त्रास देऊ नका, दयाळू व्हा" — तसेच भारतातही प्रत्येकासाठी, अगदी सरकारसाठीही नियम आहेत! ते नियमपुस्तक म्हणजेच संविधान!</p>
+        <div class="ex">🎯 सरकारने नियम मोडले तर संविधान सांगते — त्यांना थांबवा!</div>
+      </div>
+    </div>
+    <div class="mbox" style="background:#E8D4FF;" onclick="openBox(this)">
+      <div class="lock">🔒</div>
+      <div class="mbox-front"><div class="big-e">🗓️</div><h3 style="color:#3A006F;">ते कधी जन्माला आले?</h3><div class="tap-me">👆 दाबा!</div></div>
+      <div class="mbox-back" style="background:#EAD4FF;">
+        <h3 style="color:#3A006F;">🎉 २६ जानेवारी १९५०!</h3>
+        <p style="color:#2A0050;">या दिवशी भारत एक प्रजासत्ताक झाला — म्हणजे <strong>प्रजा (जनता ) हीच खरी सत्ता (मालक)!</strong> संविधानाने प्रत्येक नागरिकाला अधिकार दिले!</p>
+        <div class="ex">🥳 म्हणूनच आपण दरवर्षी दिल्लीत मोठ्या परेडसह <strong>प्रजासत्ताक दिन</strong> साजरा करतो!</div>
+      </div>
+    </div>
+    <div class="mbox" style="background:#C8EEF8;" onclick="openBox(this)">
+      <div class="lock">🔒</div>
+      <div class="mbox-front"><div class="big-e">🏆</div><h3 style="color:#003366;">जागतिक विक्रम?</h3><div class="tap-me">👆 दाबा!</div></div>
+      <div class="mbox-back" style="background:#D4EAFF;">
+        <h3 style="color:#003366;">🌍 जगात पहिले!</h3>
+        <p style="color:#002244;">भारताचे संविधान हे <strong>जगातील सर्वात मोठे लिखित संविधान</strong> आहे — ४४८ कलमे, २५ भाग, १२ परिशिष्टे!</p>
+        <div class="ex">✍️ २९९ बुद्धिमान लोकांनी <strong>२ वर्षे, ११ महिने व १८ दिवस</strong> मेहनत घेऊन लिहिले!</div>
+      </div>
+    </div>
+    <div class="mbox" style="background:#C8F0D8;" onclick="openBox(this)">
+      <div class="lock">🔒</div>
+      <div class="mbox-front"><div class="big-e">🧑‍⚖️</div><h3 style="color:#003D1F;">ते कोणी लिहिले?</h3><div class="tap-me">👆 दाबा!</div></div>
+      <div class="mbox-back" style="background:#D4F5E4;">
+        <h3 style="color:#003D1F;">👨‍⚖️ डॉ. बाबासाहेब आंबेडकर!</h3>
+        <p style="color:#002A12;">ते एक महान विद्वान होते ज्यांनी संविधान लिहिणाऱ्या समितीचे नेतृत्व केले. त्यांनी गरीब आणि वंचित लोकांच्या हक्कांसाठी लढा दिला!</p>
+        <div class="ex">🌟 त्यांना <strong>"भारतीय संविधानाचे जनक"</strong> म्हणतात!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-h" style="font-size:1.4rem;color:#4A006F;margin-bottom:14px;">🌟 मजेदार तथ्ये!</div>
+  <div class="facts">
+    <div class="fact" style="background:#FFF5C0;"><div class="fn" style="color:#7A5800;">४४८</div><p>कलमे (नियम)</p></div>
+    <div class="fact" style="background:#FFD4E8;"><div class="fn" style="color:#6B0036;">२५</div><p>भाग व प्रकरणे</p></div>
+    <div class="fact" style="background:#C8EEF8;"><div class="fn" style="color:#003366;">१२</div><p>परिशिष्टे</p></div>
+    <div class="fact" style="background:#C8F0D8;"><div class="fn" style="color:#003D1F;">२९९</div><p>लिहिणारे सदस्य</p></div>
+    <div class="fact" style="background:#EAD4FF;"><div class="fn" style="color:#3A006F;font-size:1.5rem;">२व<br>११म</div><p>लिहायला वेळ</p></div>
+    <div class="fact" style="background:#FFDDB8;"><div class="fn" style="color:#7A2800;">#१</div><p>सर्वात मोठे!</p></div>
+  </div>
+</div>
+</div>
+
+<!-- PREAMBLE -->
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,55 1000,-5 1440,25 L1440,50 L0,50Z" fill="#3A1060"/></svg></div>
+<div style="background:#3A1060;padding:20px 0;position:relative;z-index:1;">
+<div class="sec">
+  <div class="sec-h" style="color:#FFE49A;">🌈 उद्देशिका — भारताचे वचन!</div>
+  <div class="sec-s" style="color:rgba(255,255,255,.7);">👆 प्रत्येक सोनेरी शब्दावर क्लिक करा आणि त्याचा अर्थ जाणून घ्या!</div>
+  <div class="pream-zone">
+    <h2>✨ भारत आपल्या नागरिकांना काय वचन देतो?</h2>
+    <div class="psub">संविधानाच्या पहिल्याच ओळी — भारताची महानायकाची शपथ! 🦸</div>
+    <div class="wpills">
+      <div class="wpill" onclick="showMean('nyay')">⚖️ न्याय</div>
+      <div class="wpill" onclick="showMean('swatantrya')">🕊️ स्वातंत्र्य</div>
+      <div class="wpill" onclick="showMean('samata')">🤝 समता</div>
+      <div class="wpill" onclick="showMean('bandhutha')">💛 बंधुता</div>
+      <div class="wpill" onclick="showMean('gaurav')">👑 गौरव</div>
+      <div class="wpill" onclick="showMean('ekta')">🇮🇳 एकता</div>
+    </div>
+    <div class="wmean hide" id="meanBox">
+      <div class="we" id="mE">🌟</div>
+      <h3 id="mT">वरील सोनेरी शब्दावर क्लिक करा!</h3>
+      <p id="mP">प्रत्येक शब्द हे भारत प्रत्येक नागरिकाला देत असलेले मोठे वचन आहे — अगदी तुम्हालाही!</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,-5 1000,55 1440,25 L1440,50 L0,50Z" fill="#D4F5E4"/></svg></div>
+
+<!-- FUNDAMENTAL RIGHTS -->
+<div class="z2 pad">
+<div class="sec">
+  <div class="sec-h" style="color:#003D1F;">🛡️ तुमचे ६ महाशक्ती!</div>
+  <div class="sec-s">हे तुमचे मूलभूत अधिकार आहेत! 🔄 प्रत्येक कार्ड फ्लिप करा आणि जाणून घ्या!</div>
+  <div class="flip-grid">
+    <div class="fcard" onclick="this.classList.toggle('flipped')">
+      <div class="finner">
+        <div class="ffront" style="background:#FFF5C0;"><div class="fe">⚖️</div><h3 style="color:#5C3800;">समानतेचा अधिकार</h3><div class="fhint">🔄 फ्लिप करा!</div></div>
+        <div class="fback" style="background:#FFEACC;"><div class="be">👦👧</div><h4 style="color:#5C2A00;">सगळे समान!</h4><p style="color:#3E1800;">मुलाला आणि मुलीला समान अधिकार आहेत! धर्म, जात किंवा लिंगावर आधारित भेद करता येत नाही!</p></div>
+      </div>
+    </div>
+    <div class="fcard" onclick="this.classList.toggle('flipped')">
+      <div class="finner">
+        <div class="ffront" style="background:#D4EAFF;"><div class="fe">🗣️</div><h3 style="color:#003366;">स्वातंत्र्याचा अधिकार</h3><div class="fhint">🔄 फ्लिप करा!</div></div>
+        <div class="fback" style="background:#C8EEF8;"><div class="be">🐦</div><h4 style="color:#003366;">तुम्ही मुक्त आहात!</h4><p style="color:#002244;">मनातले बोलण्याचे स्वातंत्र्य, हवी ती नोकरी, भारतात कुठेही राहण्याचे स्वातंत्र्य — हे सगळे तुमचेच! 🕊️</p></div>
+      </div>
+    </div>
+    <div class="fcard" onclick="this.classList.toggle('flipped')">
+      <div class="finner">
+        <div class="ffront" style="background:#FFD4E8;"><div class="fe">🚫</div><h3 style="color:#6B0036;">शोषणाविरुद्ध अधिकार</h3><div class="fhint">🔄 फ्लिप करा!</div></div>
+        <div class="fback" style="background:#FCCAE0;"><div class="be">👶</div><h4 style="color:#6B0036;">बालमजुरी नाही!</h4><p style="color:#4A0026;">कोणत्याही मुलाला कारखान्यात काम करायला भाग पाडता येत नाही! बालमजुरी <strong>बेकायदेशीर</strong> आहे! 🎮</p></div>
+      </div>
+    </div>
+    <div class="fcard" onclick="this.classList.toggle('flipped')">
+      <div class="finner">
+        <div class="ffront" style="background:#EAD4FF;"><div class="fe">🕌</div><h3 style="color:#3A006F;">धर्माचा अधिकार</h3><div class="fhint">🔄 फ्लिप करा!</div></div>
+        <div class="fback" style="background:#E0C8F8;"><div class="be">🛕🕌⛪</div><h4 style="color:#3A006F;">सर्व धर्म समान!</h4><p style="color:#2A0050;">हिंदू, मुस्लिम, ख्रिश्चन, शीख कोणताही धर्म पाळण्याचे स्वातंत्र्य आहे. भारत सर्व धर्मांचा आदर करतो!</p></div>
+      </div>
+    </div>
+    <div class="fcard" onclick="this.classList.toggle('flipped')">
+      <div class="finner">
+        <div class="ffront" style="background:#D4F5E4;"><div class="fe">📚</div><h3 style="color:#003D1F;">सांस्कृतिक व शैक्षणिक अधिकार</h3><div class="fhint">🔄 फ्लिप करा!</div></div>
+        <div class="fback" style="background:#C4EED8;"><div class="be">🌏</div><h4 style="color:#003D1F;">संस्कृती जपा!</h4><p style="color:#002A12;">मराठी, तमिळ, बंगाली — भारतातील सर्व भाषांचे संरक्षण केले जाते! तुमची संस्कृती जगेल! 🌺</p></div>
+      </div>
+    </div>
+    <div class="fcard" onclick="this.classList.toggle('flipped')">
+      <div class="finner">
+        <div class="ffront" style="background:#FFDDB8;"><div class="fe">🏛️</div><h3 style="color:#5C2A00;">घटनात्मक उपायांचा अधिकार</h3><div class="fhint">🔄 फ्लिप करा!</div></div>
+        <div class="fback" style="background:#FFEACC;"><div class="be">❤️</div><h4 style="color:#5C2A00;">हृदय आणि आत्मा!</h4><p style="color:#3E1000;">कोणताही अधिकार हिरावला गेल्यास थेट सर्वोच्च न्यायालयात जाता येते! बाबासाहेबांनी याला संविधानाचे <strong>"हृदय आणि आत्मा"</strong> म्हटले!</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#D4F5E4;border-radius:20px;border:3px solid #2E7D32;padding:22px;text-align:center;box-shadow:5px 5px 0 #2E7D32;">
+    <div style="font-size:3rem;margin-bottom:8px;animation:jig 2s infinite;">🎒</div>
+    <h3 style="color:#003D1F;font-size:1.2rem;margin-bottom:8px;">बोनस महाशक्ती — शिक्षणाचा अधिकार!</h3>
+    <p style="color:#1B3D20;font-size:.93rem;max-width:480px;margin:0 auto;line-height:1.75;">६ ते १४ वर्षे वयाच्या प्रत्येक मुलाला <strong>मोफत शिक्षण</strong> मिळण्याचा कायदेशीर अधिकार आहे! शाळांमध्ये गरीब मुलांसाठी <strong>२५% जागा राखीव</strong> आहेत. <strong>तुमचा शिकण्याचा अधिकार संरक्षित आहे! 📖</strong></p>
+  </div>
+</div>
+</div>
+
+<!-- DIRECTIVE PRINCIPLES -->
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,55 1000,-5 1440,25 L1440,50 L0,50Z" fill="#FFF5C0"/></svg></div>
+<div style="background:#FFF5C0;padding:24px 0 8px;position:relative;z-index:1;">
+<div class="sec">
+  <div class="sec-h" style="color:#5C3800;">🎯 सरकारची मोठी यादी!</div>
+  <div class="sec-s" style="color:#4A2800;">मार्गदर्शक तत्त्वे — सरकारने ज्या गोष्टी नक्की कराव्यात. क्लिक करून उघडा!</div>
+  <div class="acc-wrap">
+    <div class="aitem" style="border-color:#B05800;box-shadow:4px 4px 0 #B05800;background:#FFEACC;">
+      <button class="abtn" onclick="toggleAcc(this)" style="color:#5C2A00;"><span class="aico">🏥</span><span class="atitle">प्रत्येक भारतीयाला आरोग्यसेवा!</span><span class="aarr">🔽</span></button>
+      <div class="abody"><p style="color:#3E1000;">सरकारने प्रत्येकाला डॉक्टर, औषधे आणि रुग्णालय मिळवून द्यायला हवे — अगदी सर्वात गरीब कुटुंबालाही!</p><div class="pill-row"><div class="pill-item">🏥 मोफत रुग्णालये</div><div class="pill-item">💊 स्वस्त औषधे</div><div class="pill-item">🩺 आयुष्मान भारत</div></div></div>
+    </div>
+    <div class="aitem" style="border-color:#005F70;box-shadow:4px 4px 0 #005F70;background:#D4EAFF;">
+      <button class="abtn" onclick="toggleAcc(this)" style="color:#003366;"><span class="aico">💰</span><span class="atitle">समान कामाला समान वेतन!</span><span class="aarr">🔽</span></button>
+      <div class="abody"><p style="color:#002244;">स्त्री आणि पुरुष एकाच कामासाठी एकाच पदावर असतील तर त्यांना समान पगार मिळायला हवा! भेद नको!</p><div class="pill-row"><div class="pill-item">👩‍🏫 महिला = 👨‍🏫 पुरुषाचा पगार</div><div class="pill-item">⚖️ न्यायी वेतन</div></div></div>
+    </div>
+    <div class="aitem" style="border-color:#2E7D32;box-shadow:4px 4px 0 #2E7D32;background:#D4F5E4;">
+      <button class="abtn" onclick="toggleAcc(this)" style="color:#003D1F;"><span class="aico">🌿</span><span class="atitle">निसर्गाचे संरक्षण!</span><span class="aarr">🔽</span></button>
+      <div class="abody"><p style="color:#002A12;">सरकारने जंगले, नद्या, प्राणी आणि पर्यावरण यांचे संरक्षण करायला हवे — तुमच्यासाठी, भावी पिढीसाठी!</p><div class="pill-row"><div class="pill-item">🐯 व्याघ्र प्रकल्प</div><div class="pill-item">🌳 राष्ट्रीय उद्याने</div><div class="pill-item">🚯 प्लास्टिक बंदी</div></div></div>
+    </div>
+    <div class="aitem" style="border-color:#6B21A8;box-shadow:4px 4px 0 #6B21A8;background:#EAD4FF;">
+      <button class="abtn" onclick="toggleAcc(this)" style="color:#3A006F;"><span class="aico">👵</span><span class="atitle">वृद्ध, गरीब व अपंगांना मदत!</span><span class="aarr">🔽</span></button>
+      <div class="abody"><p style="color:#2A0050;">वृद्ध, अपंग आणि खूप गरीब लोकांना विशेष मदत हवी. सरकारने त्यांची काळजी घ्यायला हवी!</p><div class="pill-row"><div class="pill-item">👴 वृद्धापकाळ निवृत्तीवेतन</div><div class="pill-item">🍚 मोफत धान्य</div><div class="pill-item">♿ अपंग सहाय्य</div></div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- FUNDAMENTAL DUTIES -->
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,-5 1000,55 1440,25 L1440,50 L0,50Z" fill="#D4EAFF"/></svg></div>
+<div class="z3 pad">
+<div class="sec">
+  <div class="sec-h" style="color:#003366;">🤲 भारताप्रती तुमची कर्तव्ये!</div>
+  <div class="sec-s" style="color:#002244;">अधिकारांसोबत जबाबदाऱ्याही येतात! प्रत्येक बॉक्स क्लिक करा!</div>
+  <div class="m-grid">
+    <div class="mbox" style="background:#C8EEF8;" onclick="openBox(this)">
+      <div class="lock">🔒</div>
+      <div class="mbox-front"><div class="big-e">🇮🇳</div><h3 style="color:#003366;">कर्तव्य #१ — रहस्य!</h3><div class="tap-me">👆 दाबा!</div></div>
+      <div class="mbox-back" style="background:#D4EAFF;"><h3 style="color:#003366;">🇮🇳 ध्वज व राष्ट्रगीताचा सन्मान!</h3><p style="color:#002244;">राष्ट्रगीत सुरू झाल्यावर नेहमी उभे राहा. तिरंग्याशी प्रेमाने वागा — तो कोटी भारतीयांचे प्रतीक आहे!</p></div>
+    </div>
+    <div class="mbox" style="background:#FFD4E8;" onclick="openBox(this)">
+      <div class="lock">🔒</div>
+      <div class="mbox-front"><div class="big-e">🌿</div><h3 style="color:#6B0036;">कर्तव्य #२ — रहस्य!</h3><div class="tap-me">👆 दाबा!</div></div>
+      <div class="mbox-back" style="background:#FCCAE0;"><h3 style="color:#6B0036;">🌿 निसर्गाचे रक्षण करा!</h3><p style="color:#4A0026;">कचरा टाकू नका! झाडे लावा! पाणी वाचवा! प्राण्यांचे संरक्षण करा. पर्यावरण आपल्या सर्वांचे आहे 🌍</p></div>
+    </div>
+    <div class="mbox" style="background:#D4F5E4;" onclick="openBox(this)">
+      <div class="lock">🔒</div>
+      <div class="mbox-front"><div class="big-e">🔬</div><h3 style="color:#003D1F;">कर्तव्य #३ — रहस्य!</h3><div class="tap-me">👆 दाबा!</div></div>
+      <div class="mbox-back" style="background:#C4EED8;"><h3 style="color:#003D1F;">🔬 वैज्ञानिक दृष्टिकोन!</h3><p style="color:#002A12;">प्रश्न विचारा! अंधश्रद्धेवर विश्वास ठेवू नका. उत्सुकतेने "का?" विचारा — वैज्ञानिक विचार भारताला बलशाली बनवतो 🚀</p></div>
+    </div>
+    <div class="mbox" style="background:#EAD4FF;" onclick="openBox(this)">
+      <div class="lock">🔒</div>
+      <div class="mbox-front"><div class="big-e">🎒</div><h3 style="color:#3A006F;">कर्तव्य #४ — रहस्य!</h3><div class="tap-me">👆 दाबा!</div></div>
+      <div class="mbox-back" style="background:#E0C8F8;"><h3 style="color:#3A006F;">🎒 शाळेत जा!</h3><p style="color:#2A0050;">पालकांनी आपल्या ६–१४ वर्षे वयाच्या मुलांना शाळेत पाठवायलाच हवे. शिक्षण हे फक्त अधिकार नाही — प्रत्येक कुटुंबाचे कर्तव्यही आहे! ✏️</p></div>
+    </div>
+  </div>
+  <div style="background:#3A2060;border-radius:18px;padding:16px 22px;border:3px solid #FFE49A;box-shadow:5px 5px 0 #FFE49A;text-align:center;">
+    <p style="color:#FFE49A;font-size:.93rem;">📋 एकूण ११ मूलभूत कर्तव्ये आहेत — एकता जपणे, संस्कृती टिकवणे, भारताचे रक्षण करणे आणि सर्वांमध्ये सौहार्द ठेवणे! 🤝🇮🇳</p>
+  </div>
+</div>
+</div>
+
+<!-- 3 PILLARS -->
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,55 1000,-5 1440,25 L1440,50 L0,50Z" fill="#D4F5E4"/></svg></div>
+<div class="z2 pad">
+<div class="sec">
+  <div class="sec-h" style="color:#003D1F;">🏛️ भारतातील ३ शक्ती!</div>
+  <div class="sec-s" style="color:#1B3D20;">तीन संघ मिळून भारत चालवतात — कोणीही खूप शक्तिशाली होऊ नये म्हणून ते एकमेकांना तपासतात!</div>
+  <div class="pillars">
+    <div class="pillar" style="background:#FFF5C0;">
+      <div class="p-badge">कायदे निर्माते</div>
+      <span class="pillar-e">🏛️</span><h3 style="color:#5C3800;">विधिमंडळ</h3>
+      <p><strong>संसद = लोकसभा + राज्यसभा.</strong> भारताच्या विद्यार्थी परिषदेसारखे — तुम्हीच त्यांना निवडता नवे कायदे करण्यासाठी! 🗳️</p>
+    </div>
+    <div class="pillar" style="background:#D4F5E4;">
+      <div class="p-badge">कार्यकारी मंडळ</div>
+      <span class="pillar-e">⚙️</span><h3 style="color:#003D1F;">कार्यपालिका</h3>
+      <p><strong>पंतप्रधान + मंत्रिमंडळ + अधिकारी.</strong> शाळेच्या मुख्याध्यापकांसारखे — ते दैनंदिन कारभार चालवतात आणि सर्व कायदे अमलात आणतात! 🏃</p>
+    </div>
+    <div class="pillar" style="background:#D4EAFF;">
+      <div class="p-badge">न्यायाधीश</div>
+      <span class="pillar-e">⚖️</span><h3 style="color:#003366;">न्यायपालिका</h3>
+      <p><strong>सर्वोच्च न्यायालय + उच्च न्यायालये.</strong> फुटबॉल सामन्यातील पंचासारखे — सगळ्यांनी नियम पाळावेत हे ते सुनिश्चित करतात, अगदी सरकारनेही! 🧑‍⚖️</p>
+    </div>
+  </div>
+  <div style="background:linear-gradient(135deg,#FFB347,#C084FC);border-radius:18px;padding:20px;text-align:center;border:3px solid var(--border);box-shadow:5px 5px 0 var(--border);">
+    <div style="font-size:2rem;margin-bottom:6px;">🔁</div>
+    <strong style="color:#2D0060;font-size:1rem;">हे तिघे एकमेकांना नेहमी तपासतात — कोणीही एकट्याने खूप शक्तिशाली होऊ शकत नाही!</strong><br>
+    <span style="font-size:.88rem;color:#3A1060;">या हुशार कल्पनेला "अधिकारांचे पृथक्करण" म्हणतात!</span>
+  </div>
+</div>
+</div>
+
+<!-- TIMELINE -->
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,-5 1000,55 1440,25 L1440,50 L0,50Z" fill="#FFF8F0"/></svg></div>
+<div style="background:var(--cream);padding:28px 0 8px;position:relative;z-index:1;">
+<div class="sec">
+  <div class="sec-h" style="color:#4A006F;">📅 संविधानाचा मोठा प्रवास!</div>
+  <div class="sec-s">एका स्वप्नापासून जगातील सर्वात मोठ्या नियमपुस्तकापर्यंत — फक्त ३ वर्षांत!</div>
+  <div class="tl">
+    <div class="titem">
+      <div class="tdot" style="background:#FFB347;">🗳️</div>
+      <div class="tbox" style="background:#FFF5C0;"><div class="tyr" style="color:#7A3800;">१९४६ — स्वप्नाचा संघ तयार झाला!</div><p>🏛️ भारतभरातून २९९ बुद्धिमान लोक एका ध्येयासाठी एकत्र आले: आपल्या नव्या देशासाठी नियमपुस्तक लिहायचे!</p></div>
+    </div>
+    <div class="titem">
+      <div class="tdot" style="background:#FF8FAB;">🎆</div>
+      <div class="tbox" style="background:#FFD4E8;"><div class="tyr" style="color:#6B0036;">१५ ऑगस्ट १९४७ — स्वातंत्र्य!</div><p>🇮🇳 भारत ब्रिटिश राजवटीतून मुक्त झाला! आता आपले स्वतःचे नियम लिहायची वेळ आली होती!</p></div>
+    </div>
+    <div class="titem">
+      <div class="tdot" style="background:#C084FC;">✍️</div>
+      <div class="tbox" style="background:#EAD4FF;"><div class="tyr" style="color:#3A006F;">१९४८-४९ — लेखनाचा काळ!</div><p>📝 डॉ. बाबासाहेब आंबेडकरांनी मसुदा समितीचे नेतृत्व केले. हजारो विचार, मोठमोठ्या चर्चा आणि जवळजवळ ३ वर्षांचे अथक परिश्रम!</p></div>
+    </div>
+    <div class="titem">
+      <div class="tdot" style="background:#7EB8F7;">✅</div>
+      <div class="tbox" style="background:#D4EAFF;"><div class="tyr" style="color:#003366;">२६ नोव्हेंबर १९४९ — स्वीकृत!</div><p>🎊 संविधान अधिकृतरीत्या <strong>स्वीकारले गेले!</strong> हा दिवस आता दरवर्षी <strong>संविधान दिन</strong> म्हणून साजरा होतो!</p></div>
+    </div>
+    <div class="titem">
+      <div class="tdot" style="background:#FFE49A;">🎉</div>
+      <div class="tbox" style="background:#FFEACC;border-left:4px solid #B05800;"><div class="tyr" style="color:#7A2800;">२६ जानेवारी १९५० — प्रजासत्ताक दिन! 🎊</div><p>🥁 संविधान जिवंत झाले! भारत एक <strong>प्रजासत्ताक</strong> बनला — जनताच खरी शासक झाली! दरवर्षी दिल्लीत मोठ्या परेडने हा दिवस साजरा होतो!</p></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- DR AMBEDKAR -->
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,55 1000,-5 1440,25 L1440,50 L0,50Z" fill="#FFEACC"/></svg></div>
+<div style="background:#FFEACC;padding:8px 0;position:relative;z-index:1;">
+<div class="sec">
+  <div class="ambed">
+    <span class="ambed-e">👨‍⚖️</span>
+    <h2>डॉ. भीमराव रामजी आंबेडकर — संविधानाचे जनक!</h2>
+    <p>डॉ. बाबासाहेब आंबेडकर हे भारतातील महान विद्वानांपैकी एक होते. त्यांनी जगातील सर्वोत्कृष्ट विद्यापीठांमध्ये शिक्षण घेतले. जाती भेदभावाला तोंड देत ते उठले आणि संविधानाचे शिल्पकार बनले — प्रत्येक भारतीयाला समान अधिकार, न्याय आणि सन्मान देऊन! 🌟</p>
+    <div class="quote">✏️ "संविधान हे केवळ वकिलांचे दस्तऐवज नाही. ते जीवनाचे वाहन आहे आणि त्याचा आत्मा सदैव काळाचा आत्मा असतो." — डॉ. बाबासाहेब आंबेडकर</div>
+  </div>
+</div>
+</div>
+
+<!-- QUIZ -->
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,-5 1000,55 1440,25 L1440,50 L0,50Z" fill="#3A2060"/></svg></div>
+<div class="zd pad" style="position:relative;z-index:1;">
+<div class="sec">
+  <div class="sec-h" style="color:#FFE49A;">🧠 संविधान प्रश्नमंजुषा!</div>
+  <div class="sec-s" style="color:rgba(255,255,255,.7);">तुम्ही जे शिकलात ते तपासा! १०/१० गुण मिळवून चॅम्पियन बॅज जिंका! 🏆</div>
+  <div class="quiz-wrap">
+    <div class="quiz-hdr">
+      <h2>🎯 संविधान आव्हान!</h2>
+      <p>१० प्रश्न · योग्य उत्तर निवडा · चॅम्पियन बॅज जिंका! 🏅</p>
+    </div>
+    <div class="qprog" id="qProg">
+      <div class="qpbw"><div class="qpb" id="qpb"></div></div>
+      <span class="qpt" id="qpt">प्र. १ / १०</span>
+      <span class="qsl" id="qsl">⭐ ०</span>
+    </div>
+    <div class="q-area" id="qArea">
+      <div class="q-num" id="qNum">प्रश्न १ पैकी १०</div>
+      <div class="q-illo" id="qIllo">📖</div>
+      <div class="q-txt" id="qTxt">लोड होत आहे…</div>
+      <div class="q-opts" id="qOpts"></div>
+      <div class="qfb" id="qFb"></div>
+      <button class="qnxt" id="qNxt" onclick="nextQ()">पुढे ➡️</button>
+    </div>
+    <div class="res-scr" id="resSrc">
+      <span class="res-t" id="resTrp">🏆</span>
+      <div class="res-s" id="resSco">१०/१०</div>
+      <div class="stars-r" id="resStar">⭐⭐⭐</div>
+      <div class="res-m" id="resMsg">अप्रतिम! तुम्ही संविधान चॅम्पियन आहात!</div>
+      <div class="res-b" id="resBdg" style="background:#FFF5C0;">🥇 संविधान चॅम्पियन!</div>
+      <br><br>
+      <button class="retry-btn" onclick="restartQ()">🔄 पुन्हा खेळा!</button>
+      <div class="rev-list" id="revList"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="wave-sep"><svg viewBox="0 0 1440 50"><path d="M0,25 C400,55 1000,-5 1440,25 L1440,50 L0,50Z" fill="#3A2060"/></svg></div>
+<footer>
+  <span class="ff">🇮🇳</span>
+  <div style="font-size:1.3rem;margin-bottom:6px;font-weight:700;">जय हिंद! 🙏 जय भारत!</div>
+  <p style="font-size:.93rem;margin-bottom:18px;">भारतीय संविधान — २६ जानेवारी १९५० · प्रत्येक भारतीय मुलासाठी ❤️</p>
+  <div style="max-width:520px;margin:0 auto 10px;background:rgba(255,255,255,.08);border:2px solid rgba(255,228,154,.5);border-radius:18px;padding:18px 22px;">
+    <div style="font-size:.95rem;color:#FFE49A;font-weight:700;margin-bottom:10px;">© कॉपीराइट — सर्व हक्क राखीव</div>
+    <div style="font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:6px;">⚖️ऍडव्होकेट अजिंक्य अशोक धेंडे</div>
+    <div style="font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.8;">
+    </div>
+    <div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+      <a href="tel:8149135283" style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,228,154,.15);border:2px solid rgba(255,228,154,.4);color:#FFE49A;border-radius:50px;padding:6px 16px;font-size:.88rem;font-weight:600;text-decoration:none;" onmouseover="this.style.background='rgba(255,228,154,.3)'" onmouseout="this.style.background='rgba(255,228,154,.15)'">📞 ८१४९१३५२८३</a>
+      <a href="mailto:ajinkya.dhende@gmail.com" style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,228,154,.15);border:2px solid rgba(255,228,154,.4);color:#FFE49A;border-radius:50px;padding:6px 16px;font-size:.88rem;font-weight:600;text-decoration:none;" onmouseover="this.style.background='rgba(255,228,154,.3)'" onmouseout="this.style.background='rgba(255,228,154,.15)'">✉️ ajinkya.dhende@gmail.com</a>
+    </div>
+  </div>
+  <p style="margin-top:10px;opacity:.4;font-size:.76rem;">शिका · जगा · प्रेम करा 🇮🇳</p>
+</footer>
+
+<script>
+// ASHOKA WHEEL
+(function(){
+  const svg=document.getElementById('ashokaW');
+  const ns='http://www.w3.org/2000/svg';
+  const mk=(t,a)=>{const e=document.createElementNS(ns,t);Object.entries(a).forEach(([k,v])=>e.setAttribute(k,v));return e;};
+  svg.appendChild(mk('circle',{cx:50,cy:50,r:44,fill:'none',stroke:'white','stroke-width':4}));
+  for(let i=0;i<24;i++){
+    const a=(i*15-90)*Math.PI/180;
+    svg.appendChild(mk('line',{x1:(50+9*Math.cos(a)).toFixed(2),y1:(50+9*Math.sin(a)).toFixed(2),x2:(50+42*Math.cos(a)).toFixed(2),y2:(50+42*Math.sin(a)).toFixed(2),stroke:'white','stroke-width':1.8,'stroke-linecap':'round'}));
+  }
+  svg.appendChild(mk('circle',{cx:50,cy:50,r:9,fill:'white'}));
+  svg.appendChild(mk('circle',{cx:50,cy:50,r:4,fill:'#000080'}));
+})();
+
+// STARS
+(function(){
+  const bg=document.getElementById('starBg');
+  ['⭐','✨','🌟','💫','🌈','🎈','🎉','🌺','🎊'].forEach(e=>{
+    const s=document.createElement('div');s.className='star';s.textContent=e;
+    s.style.cssText=`left:${Math.random()*100}%;top:${Math.random()*100}%;animation-delay:${Math.random()*8}s;animation-duration:${6+Math.random()*6}s`;
+    bg.appendChild(s);
+  });
+})();
+
+const CC=['#FFB347','#C084FC','#7EB8F7','#6BCB77','#FF8FAB','#FFE49A'];
+function openBox(el){
+  if(el.classList.contains('open'))return;
+  el.classList.add('open');el.querySelector('.lock').textContent='🔓';
+  const b=document.createElement('div');b.className='cburst';
+  for(let i=0;i<14;i++){
+    const p=document.createElement('div');p.className='cp';p.style.background=CC[i%CC.length];
+    const a=Math.random()*360,d=60+Math.random()*60;
+    p.style.setProperty('--tx',Math.cos(a*Math.PI/180)*d+'px');
+    p.style.setProperty('--ty',Math.sin(a*Math.PI/180)*d+'px');
+    b.appendChild(p);
+  }
+  el.appendChild(b);setTimeout(()=>b.remove(),700);
+}
+function toggleAcc(btn){
+  const item=btn.closest('.aitem'),was=item.classList.contains('open');
+  document.querySelectorAll('.aitem').forEach(i=>i.classList.remove('open'));
+  if(!was)item.classList.add('open');
+}
+
+const M={
+  nyay:{e:'⚖️',t:'न्याय — योग्य वागणूक!',p:"भारत वचन देतो की प्रत्येकाला न्याय्य वागणूक मिळेल! क्रिकेटसारखे — नियम श्रीमंत असो वा गरीब, सर्वांना समान! 🏏"},
+  swatantrya:{e:'🕊️',t:'स्वातंत्र्य — तुम्ही मुक्त आहात!',p:"तुम्हाला विचार करण्याचे, बोलण्याचे, लिहिण्याचे आणि स्वतःचे आयुष्य निवडण्याचे स्वातंत्र्य आहे! कुठेही उडू शकणाऱ्या पक्ष्यासारखे! 🐦"},
+  samata:{e:'🤝',t:'समता — सगळे समान!',p:"भारतातील प्रत्येक व्यक्ती समान आहे — धर्म, जात, पैसा किंवा लिंगावर आधारित कोणी 'जास्त महत्त्वाचे' नाही! 👫"},
+  bandhutha:{e:'💛',t:'बंधुता — आपण एक कुटुंब!',p:"भारतात १४० कोटी लोक आणि १०० पेक्षा जास्त भाषा — पण आपण सगळे एकच मोठे कुटुंब आहोत! एकमेकांची काळजी घेणारे! 🫂🇮🇳"},
+  gaurav:{e:'👑',t:'गौरव — सर्वांना सन्मान!',p:"प्रत्येक व्यक्तीला सन्मानाने वागवले जावे — कोणालाही अपमानित करता येणार नाही. प्रत्येक मानवी जीवनाचे मूल्य आहे! 🌺"},
+  ekta:{e:'🇮🇳',t:'एकता — एकत्र उभे राहू!',p:"इतक्या वेगवेगळ्या भाषा, धर्म आणि संस्कृती असूनही — आपण एक भारत आहोत! विविधतेत एकता ही भारताची सर्वात मोठी शक्ती आहे! 🌈🇮🇳"}
+};
+function showMean(k){
+  const m=M[k],box=document.getElementById('meanBox');
+  document.getElementById('mE').textContent=m.e;
+  document.getElementById('mT').textContent=m.t;
+  document.getElementById('mP').textContent=m.p;
+  box.classList.remove('hide');
+  document.querySelectorAll('.wpill').forEach(p=>p.classList.toggle('active',p.getAttribute('onclick')&&p.getAttribute('onclick').includes("'"+k+"'")));
+}
+
+// QUIZ - Marathi
+const Qs=[
+  {q:"भारताचे संविधान म्हणजे काय?",e:"📖",opts:["भारताचे नियमपुस्तक","भारतीय जेवणाची रेसिपी","क्रिकेट विक्रमांची यादी","लोककथांचा संग्रह"],ans:0,exp:"✅ संविधान हे भारताचे नियमपुस्तक आहे — ते सरकारसह सर्वांना सांगते कसे वागायचे आणि कोणते अधिकार आहेत!"},
+  {q:"भारताचे संविधान कोणत्या दिवशी लागू झाले?",e:"🗓️",opts:["१५ ऑगस्ट १९४७","२६ जानेवारी १९५०","२ ऑक्टोबर १८६९","२६ नोव्हेंबर १९४९"],ans:1,exp:"✅ २६ जानेवारी १९५० — म्हणूनच दरवर्षी या दिवशी दिल्लीत मोठ्या परेडसह प्रजासत्ताक दिन साजरा होतो!"},
+  {q:"'भारतीय संविधानाचे जनक' कोणाला म्हणतात?",e:"🧑‍⚖️",opts:["महात्मा गांधी","जवाहरलाल नेहरू","डॉ. बाबासाहेब आंबेडकर","सरदार पटेल"],ans:2,exp:"✅ डॉ. बाबासाहेब आंबेडकर हे मसुदा समितीचे अध्यक्ष होते आणि त्यांना अभिमानाने संविधानाचे जनक म्हटले जाते!"},
+  {q:"संविधान प्रत्येक भारतीयाला किती मूलभूत अधिकार देते?",e:"🛡️",opts:["३ अधिकार","६ अधिकार","११ अधिकार","१२ अधिकार"],ans:1,exp:"✅ ६ मूलभूत अधिकार आहेत — समानतेचा अधिकार, स्वातंत्र्याचा अधिकार, शिक्षणाचा अधिकार आणि इतर!"},
+  {q:"शिक्षणाच्या अधिकाराप्रमाणे ___ ते ___ वयाच्या मुलांना मोफत शिक्षण मिळते!",e:"🎒",opts:["३ ते १०","६ ते १४","८ ते १६","४ ते १२"],ans:1,exp:"✅ ६ ते १४ वर्षे वयाच्या प्रत्येक मुलाला मोफत शिक्षण मिळण्याचा कायदेशीर अधिकार आहे — अगदी तुम्हालाही!"},
+  {q:"मूलभूत कर्तव्ये म्हणजे काय?",e:"🤲",opts:["फक्त सरकारने करायच्या गोष्टी","प्रत्येक नागरिकाने पाळायच्या जबाबदाऱ्या","फक्त पोलिसांसाठी नियम","अतिरिक्त सुट्ट्यांचे अधिकार"],ans:1,exp:"✅ मूलभूत कर्तव्ये म्हणजे आपण देशासाठी पाळायच्या जबाबदाऱ्या — जसे ध्वजाचा सन्मान करणे आणि निसर्गाचे रक्षण करणे!"},
+  {q:"उद्देशिका ही भारताची… सारखी आहे.",e:"📜",opts:["खरेदी यादी","नागरिकांना शपथ आणि वचन","हवामान अंदाज","शाळेचे वेळापत्रक"],ans:1,exp:"✅ उद्देशिका ही भारताचे आपल्या नागरिकांना वचन आहे — न्याय, स्वातंत्र्य, समता, बंधुता, गौरव आणि एकतेचे!"},
+  {q:"मूलभूत अधिकार हिरावले गेल्यास कोणत्या न्यायालयात जाता येते?",e:"⚖️",opts:["जिल्हा न्यायालय","पोलीस ठाणे","सर्वोच्च न्यायालय","महापालिका कार्यालय"],ans:2,exp:"✅ थेट सर्वोच्च न्यायालयात जाता येते! या अधिकाराला घटनात्मक उपायांचा अधिकार म्हणतात — संविधानाचे 'हृदय आणि आत्मा'!"},
+  {q:"भारताचे संविधान जगातील सर्वात ___ लिखित संविधान म्हणून प्रसिद्ध आहे!",e:"🏆",opts:["छोटे","जुने","मोठे","कमी पाने असलेले"],ans:2,exp:"✅ भारताचे संविधान हे जगातील सर्वात मोठे लिखित संविधान आहे — ४४८ कलमे, २५ भाग आणि १२ परिशिष्टांसह!"},
+  {q:"भारताचे विधिमंडळ, न्यायपालिका आणि तिसरी शक्ती कोणती?",e:"🏛️",opts:["सैन्य","कार्यपालिका","माध्यमे","पोलीस"],ans:1,exp:"✅ विधिमंडळ (कायदे करते), कार्यपालिका (देश चालवते) आणि न्यायपालिका (न्याय देते) — हे तिघे एकमेकांवर नियंत्रण ठेवतात!"}
+];
+let qi=0,score=0,answered=false,userAns=[];
+function renderQ(){
+  const q=Qs[qi];
+  document.getElementById('qNum').textContent=`प्रश्न ${qi+1} पैकी ${Qs.length}`;
+  document.getElementById('qIllo').textContent=q.e;
+  document.getElementById('qTxt').textContent=q.q;
+  document.getElementById('qpb').style.width=(qi/Qs.length*100)+'%';
+  document.getElementById('qpt').textContent=`प्र. ${qi+1} / ${Qs.length}`;
+  document.getElementById('qsl').textContent=`⭐ ${score}`;
+  const fb=document.getElementById('qFb');fb.className='qfb';fb.textContent='';
+  document.getElementById('qNxt').classList.remove('show');
+  answered=false;
+  const oc=document.getElementById('qOpts');oc.innerHTML='';
+  q.opts.forEach((o,i)=>{
+    const b=document.createElement('button');b.className='qo';b.textContent=o;
+    b.onclick=()=>pick(i,b,q);oc.appendChild(b);
+  });
+}
+function pick(i,btn,q){
+  if(answered)return;answered=true;
+  document.querySelectorAll('.qo').forEach(b=>b.classList.add('locked'));
+  const fb=document.getElementById('qFb');
+  if(i===q.ans){
+    btn.classList.add('correct');score++;
+    document.getElementById('qsl').textContent=`⭐ ${score}`;
+    fb.textContent='🎉 '+q.exp;fb.className='qfb ok show';
+    userAns.push({q:q.q,ok:true,ya:q.opts[i],ra:q.opts[q.ans]});
+    burst();
+  }else{
+    btn.classList.add('wrong');
+    document.querySelectorAll('.qo')[q.ans].classList.add('correct');
+    fb.textContent='😅 अरेरे! '+q.exp;fb.className='qfb no show';
+    userAns.push({q:q.q,ok:false,ya:q.opts[i],ra:q.opts[q.ans]});
+  }
+  const nxt=document.getElementById('qNxt');
+  nxt.textContent=qi<Qs.length-1?'पुढील प्रश्न ➡️':'माझे गुण पहा! 🏆';
+  nxt.classList.add('show');
+}
+function nextQ(){qi++;if(qi>=Qs.length){showResult();return;}renderQ();}
+function showResult(){
+  document.getElementById('qArea').style.display='none';
+  document.getElementById('qProg').style.display='none';
+  const rs=document.getElementById('resSrc');rs.classList.add('show');
+  const pct=score/Qs.length;
+  let t,m,b,bg,st;
+  if(pct===1){t='🏆';m='परिपूर्ण गुण! तुम्ही संविधान प्रतिभावान आहात! 🤩';b='🥇 संविधान चॅम्पियन!';bg='#FFF5C0';st='⭐⭐⭐';}
+  else if(pct>=.8){t='🥇';m='अप्रतिम! तुम्हाला संविधान खूप चांगले माहित आहे! 😄';b='🥈 संविधान तज्ज्ञ!';bg='#D4EAFF';st='⭐⭐⭐';}
+  else if(pct>=.6){t='🥈';m="छान प्रयत्न! शिकत राहा आणि तुम्ही चॅम्पियन व्हाल! 📖";b='🥉 संविधान विद्यार्थी!';bg='#D4F5E4';st='⭐⭐';}
+  else if(pct>=.4){t='📖';m="चांगला प्रयत्न! पुन्हा वाचा आणि सराव करा! 💪";b='📚 अजून वाचा!';bg='#FFDDB8';st='⭐';}
+  else{t='💪';m="हार मानू नका! काळजीपूर्वक वाचा आणि पुन्हा प्रयत्न करा! 🌱";b='🌱 वाढत राहा!';bg='#FFD4E8';st='⭐';}
+  document.getElementById('resTrp').textContent=t;
+  document.getElementById('resSco').textContent=score+'/'+Qs.length;
+  document.getElementById('resMsg').textContent=m;
+  document.getElementById('resBdg').textContent=b;
+  document.getElementById('resBdg').style.background=bg;
+  document.getElementById('resStar').textContent=st;
+  document.getElementById('qpb').style.width='100%';
+  const rl=document.getElementById('revList');
+  rl.innerHTML='<h3 style="margin-bottom:10px;font-size:.95rem;color:#2D2D2D;">📋 तुमच्या उत्तरांचा आढावा:</h3>';
+  userAns.forEach((a,i)=>{
+    const d=document.createElement('div');d.className='rvi '+(a.ok?'ok':'no');
+    d.innerHTML=`<div class="rvq">${a.ok?'✅':'❌'} प्र.${i+1}: ${a.q}</div><div class="rva">${a.ok?'बरोबर: '+a.ra:'तुमचे उत्तर: '+a.ya+' · बरोबर उत्तर: '+a.ra}</div>`;
+    rl.appendChild(d);
+  });
+}
+function restartQ(){
+  qi=0;score=0;answered=false;userAns=[];
+  document.getElementById('qArea').style.display='block';
+  document.getElementById('qProg').style.display='flex';
+  document.getElementById('resSrc').classList.remove('show');
+  renderQ();
+}
+function burst(){
+  const area=document.getElementById('qArea');
+  const b=document.createElement('div');
+  b.style.cssText='position:absolute;top:50%;left:50%;pointer-events:none;z-index:99;';
+  for(let i=0;i<18;i++){
+    const p=document.createElement('div');
+    const a=Math.random()*360,d=80+Math.random()*80;
+    p.style.cssText=`position:absolute;width:9px;height:9px;border-radius:2px;background:${CC[i%CC.length]};animation:bOut .7s ease-out forwards;`;
+    p.style.setProperty('--tx',Math.cos(a*Math.PI/180)*d+'px');
+    p.style.setProperty('--ty',Math.sin(a*Math.PI/180)*d+'px');
+    b.appendChild(p);
+  }
+  area.style.position='relative';area.appendChild(b);setTimeout(()=>b.remove(),800);
+}
+renderQ();
+</script>
+</body>
+</html>
