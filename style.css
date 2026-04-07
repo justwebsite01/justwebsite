@@ -264,7 +264,7 @@ section{padding:5rem 0}
   background:linear-gradient(to bottom,var(--p500),var(--gold));
 }
 .hero-inner{
-  max-width:1240px;margin:0 auto;padding:2rem 5rem;
+  max-width:1240px;margin:0 auto;padding:2rem 2rem;
   display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;
   align-items:center;position:relative;z-index:1;
   width:100%;
