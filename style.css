@@ -51,7 +51,7 @@ button{cursor:pointer;font-family:inherit}
   background:var(--p900);
   display:flex;align-items:center;justify-content:center;
   padding:1.5rem;
-  animation:fadeIn .4s ease;
+  animation:fadeIn 0.45s ease;
 }
 #disclaimer-overlay.hidden{display:none}
 .disc-box{
