@@ -5,45 +5,63 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://www.dhendeassociates.com/</loc>
-    <lastmod>2025-06-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://dhendeassociates.com/</loc>
+    <lastmod>2025-04-17</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.dhendeassociates.com/"/>
     <image:image>
-      <image:loc>https://www.dhendeassociates.com/og-image.png</image:loc>
-      <image:title>Dhende Associates — Advocates, Notary and Legal Consultants, Pune</image:title>
+      <image:loc>https://dhendeassociates.com/favicon.png</image:loc>
+      <image:title>Dhende Associates — Advocates, Notary &amp; Legal Consultants, Pune</image:title>
     </image:image>
   </url>
 
-  <!-- Stamp Duty Calculator Tool -->
+  <!-- Legal Tools -->
   <url>
-    <loc>https://www.dhendeassociates.com/msdr.html</loc>
-    <lastmod>2025-06-01</lastmod>
+    <loc>https://dhendeassociates.com/macpv4.html</loc>
+    <lastmod>2025-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://dhendeassociates.com/msdr.html</loc>
+    <lastmod>2025-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://dhendeassociates.com/nia_138_limitation.html</loc>
+    <lastmod>2025-04-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Motor Accident Claim Estimator Tool -->
+  <!-- Law for Kids -->
   <url>
-    <loc>https://www.dhendeassociates.com/macpv4.html</loc>
-    <lastmod>2025-06-01</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Blog (when live) -->
-  <url>
-    <loc>https://www.dhendeassociates.com/blog</loc>
-    <lastmod>2025-06-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://dhendeassociates.com/constitutionforkids_eng.html</loc>
+    <lastmod>2025-04-17</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dhendeassociates.com/constitutionforkids_eng.html"/>
+    <xhtml:link rel="alternate" hreflang="mr" href="https://dhendeassociates.com/constitutionforkids_mar.html"/>
   </url>
 
-  <!-- llms.txt for AI discovery -->
   <url>
-    <loc>https://www.dhendeassociates.com/llms.txt</loc>
-    <lastmod>2025-06-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://dhendeassociates.com/constitutionforkids_mar.html</loc>
+    <lastmod>2025-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="mr" href="https://dhendeassociates.com/constitutionforkids_mar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dhendeassociates.com/constitutionforkids_eng.html"/>
+  </url>
+
+  <!-- Blog (add when live) -->
+  <url>
+    <loc>https://dhendeassociates.com/blog/</loc>
+    <lastmod>2025-04-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
