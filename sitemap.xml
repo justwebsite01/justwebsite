@@ -6,7 +6,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.dhendeassociates.com/</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -17,22 +17,29 @@
 
   <!-- Legal Tools -->
   <url>
-    <loc>https://www.dhendeassociates.com/macpv4.html</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://www.dhendeassociates.com/motor-accident-claim-estimator.html</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.dhendeassociates.com/msdr.html</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://www.dhendeassociates.com/maharshtra-stampduty-estimator.html</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.dhendeassociates.com/nia_138_limitation.html</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.dhendeassociates.com/leave-license-service.html</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -40,7 +47,7 @@
   <!-- Law for Kids -->
   <url>
     <loc>https://www.dhendeassociates.com/constitutionforkids_eng.html</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.dhendeassociates.com/constitutionforkids_eng.html"/>
@@ -49,7 +56,7 @@
 
   <url>
     <loc>https://www.dhendeassociates.com/constitutionforkids_mar.html</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="mr" href="https://www.dhendeassociates.com/constitutionforkids_mar.html"/>
