@@ -66,6 +66,85 @@ legal expertise,
 legal counsel, exact stamp duty calculation, exact registration fee calculation, exact document handling charges, accurate stamp duty estimate, accurate registration fee estimate, accurate document handling charges estimate
 legal tool for stamp duty calculation, IGR maharashtra calculator"/>
     <title> Maharashtra Stamp Duty, Registration and Document Handling charges Estimate</title>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dhendeassociates.com"},
+        {"@type": "ListItem", "position": 2, "name": "Legal Services", "item": "https://www.dhendeassociates.com#services"},
+        {"@type": "ListItem", "position": 3, "name": "Stamp Duty Calculator", "item": "https://www.dhendeassociates.com/maharshtra-stampduty-estimator.html"}
+      ]
+    }
+    </script>
+
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Maharashtra Stamp Duty & Registration Fee Calculator",
+      "description": "Free online calculator to estimate stamp duty, registration charges, and document handling fees for property transactions in Maharashtra",
+      "provider": {
+        "@type": "Organization",
+        "name": "Dhende Associates",
+        "url": "https://www.dhendeassociates.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Office No 1, First Floor, MHADA Commercial Complex",
+          "addressLocality": "Gokhalenagar",
+          "addressRegion": "Pune",
+          "postalCode": "411016",
+          "addressCountry": "IN"
+        },
+        "telephone": "+91-9209995555"
+      },
+      "url": "https://www.dhendeassociates.com/maharshtra-stampduty-estimator.html",
+      "serviceType": "Property Registration & Stamp Duty Calculation",
+      "areaServed": {
+        "@type": "State",
+        "name": "Maharashtra"
+      },
+      "hasOfferingDescription": "Calculates stamp duty for sale deed, gift deed, mortgage deed, partition deed, and leave & license agreements"
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is stamp duty calculated in Maharashtra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stamp duty in Maharashtra is calculated as a percentage of the property value (circle rate for stamp duty and ready reckoner rate for registration fee). The exact percentage varies based on the property location (municipal corporation, municipal council, or taluka), property type (residential or commercial), and the buyer's gender and age. This calculator uses official Maharashtra Government rates to provide accurate estimates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documents require stamp duty in property registration?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common documents that require stamp duty include: Sale Deed (for property purchase), Gift Deed (for gifting property), Mortgage Deed (for property mortgages), Partition Deed (for dividing joint property), Leave & License Agreement (for rental agreements), Lease Deed, and Power of Attorney. Each document type has its own stamp duty rate and calculation method based on the transaction value and document nature."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I claim relief on stamp duty?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Maharashtra offers several stamp duty relief schemes: First-time homebuyers may get relief, women buyers can avail concessions in certain cases, senior citizens may qualify for reductions, and agricultural properties have lower or nil stamp duty. However, exact eligibility and relief amounts depend on specific conditions. It's advisable to consult with a property lawyer or registration advocate to determine your eligibility and claim relief properly."
+          }
+        }
+      ]
+    }
+    </script>
+    
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -79,6 +158,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
  
     <div id="root"></div>
+    
+    <!-- Breadcrumb Navigation UI -->
+    <div style="background: linear-gradient(135deg, rgba(60,16,113,0.03) 0%, rgba(201,168,76,0.02) 100%); padding: 1rem 1.5rem; margin: 1.5rem; border-radius: 6px; border-left: 3px solid #c9a84c;">
+      <div style="font-size: 0.9rem; color: #6b5d52; display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; max-width: 900px; margin: 0 auto;">
+        <a href="index.html" style="color: #3a1060; font-weight: 500; text-decoration: none;">🏠 Home</a>
+        <span style="color: #b0a895;">›</span>
+        <a href="index.html#services" style="color: #3a1060; font-weight: 500; text-decoration: none;">Legal Services</a>
+        <span style="color: #b0a895;">›</span>
+        <span style="color: #6b5d52; font-weight: 600;">🏠 Stamp Duty Calculator</span>
+      </div>
+    </div>
+    
     <!-- Navigation Buttons with Internal Links -->
     <div class="navigation-buttons" style="margin: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
         <a href="index.html" style="background: rgb(60, 16, 113); padding: 8px 12px; border-radius: 6px; box-shadow: 0 2px 8px rgb(32, 6, 81); font-size: 10px; text-decoration: none; color: #d69b5c; display: flex; align-items: center; gap: 6px;">Home</a>
@@ -903,5 +994,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         ReactDOM.render(<StampDutyCalculator />, document.getElementById('root'));
     </script>
+
+    <!-- RELATED SERVICES & INTERNAL LINKING -->
+    <section style="background: linear-gradient(135deg, #f8f3ff 0%, #f0edfb 100%); padding: 3.5rem 2rem; margin-top: 2rem; border-radius: 12px;">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2 style="font-size: 1.8rem; font-weight: 600; margin-bottom: 0.5rem; color: #3a1060; text-align: center;">Related Legal Services</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem; font-size: 0.95rem;">Explore our other legal tools and services in Maharashtra</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+          <a href="motor-accident-claim-estimator.html" style="background: white; padding: 1.5rem; border-radius: 8px; text-decoration: none; border-left: 4px solid #c9a84c; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s; display: flex; flex-direction: column; gap: 0.75rem;">
+            <div style="font-size: 2rem;">🚗</div>
+            <h3 style="font-size: 1.1rem; font-weight: 600; color: #3a1060; margin: 0;">Motor Accident Claim</h3>
+            <p style="font-size: 0.85rem; color: #666; margin: 0;">MACT compensation calculator for accident injury and death claims</p>
+          </a>
+          <a href="leave-license-service.html" style="background: white; padding: 1.5rem; border-radius: 8px; text-decoration: none; border-left: 4px solid #c9a84c; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s; display: flex; flex-direction: column; gap: 0.75rem;">
+            <div style="font-size: 2rem;">📋</div>
+            <h3 style="font-size: 1.1rem; font-weight: 600; color: #3a1060; margin: 0;">Leave & License</h3>
+            <p style="font-size: 0.85rem; color: #666; margin: 0;">Online L&L registration via IGR Maharashtra - Valid address proof</p>
+          </a>
+          <a href="nia_138_limitation.html" style="background: white; padding: 1.5rem; border-radius: 8px; text-decoration: none; border-left: 4px solid #c9a84c; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s; display: flex; flex-direction: column; gap: 0.75rem;">
+            <div style="font-size: 2rem;">⚖️</div>
+            <h3 style="font-size: 1.1rem; font-weight: 600; color: #3a1060; margin: 0;">Section 138 NI Act</h3>
+            <p style="font-size: 0.85rem; color: #666; margin: 0;">Cheque bounce case deadline & legal notice timeline calculator</p>
+          </a>
+        </div>
+      </div>
+    </section>
 </body>
 </html>
