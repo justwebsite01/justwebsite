@@ -402,18 +402,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="card">
   <div class="sh"><div class="sh-ico" style="background:#EBF0F8">📋</div><div><div class="sh-ttl">Case Details</div><div class="sh-sub">Optional — appears in the generated report</div></div></div>
   <div class="g3">
-    <div class="fw"><label>Payee / Complainant</label><input type="text" id="payeeName" placeholder="Full name of payee"/></div>
-    <div class="fw"><label>Drawer / Accused</label><input type="text" id="drawerName" placeholder="Full name of drawer"/></div>
-    <div class="fw"><label>Cheque Amount (₹)</label><input type="number" id="chequeAmount" placeholder="e.g. 50000" oninput="onAmtInput()"/></div>
+    <div class="fw"><label for="payeeName">Payee / Complainant</label><input type="text" id="payeeName" placeholder="Full name of payee"/></div>
+    <div class="fw"><label for="drawerName">Drawer / Accused</label><input type="text" id="drawerName" placeholder="Full name of drawer"/></div>
+    <div class="fw"><label for="chequeAmount">Cheque Amount (₹)</label><input type="number" id="chequeAmount" placeholder="e.g. 50000" oninput="onAmtInput()"/></div>
   </div>
   <div class="g4">
     <div class="fw">
-      <label>Cheque No. <span style="color:#C2706F;font-weight:400;text-transform:none;letter-spacing:0">(exactly 6 digits)</span></label>
+      <label for="chequeNumber">Cheque No. <span style="color:#C2706F;font-weight:400;text-transform:none;letter-spacing:0">(exactly 6 digits)</span></label>
       <input type="text" id="chequeNumber" placeholder="e.g. 004821" maxlength="6" oninput="onChequeNum(this)"/>
       <div class="hint" id="h-chequeNumber">Must be exactly 6 digits</div>
     </div>
-    <div class="fw"><label>Bank Name</label><input type="text" id="bankName" placeholder="e.g. State Bank of India"/></div>
-    <div class="fw"><label>Branch Name</label><input type="text" id="branchName" placeholder="e.g. Shivajinagar, Pune"/></div>
+    <div class="fw"><label for="bankName">Bank Name</label><input type="text" id="bankName" placeholder="e.g. State Bank of India"/></div>
+    <div class="fw"><label for="branchName">Branch Name</label><input type="text" id="branchName" placeholder="e.g. Shivajinagar, Pune"/></div>
     <div class="fw">
       <label>Court Fee Stamp (2%)</label>
       <div class="fee-box" id="feePreview">Enter amount above</div>
@@ -423,11 +423,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="sh" style="margin-top:4px"><div class="sh-ico" style="background:#F0EDFB">📅</div><div><div class="sh-ttl">Critical Dates</div><div class="sh-sub">All five dates are required</div></div></div>
   <div class="g2">
-    <div class="fw"><label>① Cheque Date *</label><input type="date" id="chequeDate"/><div class="hint" id="h-chequeDate">Date printed on the cheque</div></div>
-    <div class="fw"><label>② Date of Presentation to Bank *</label><input type="date" id="presentationDate"/><div class="hint" id="h-presentationDate">Must be within 3 months of cheque date</div></div>
-    <div class="fw"><label>③ Date of Memo of Dishonour *</label><input type="date" id="dishonourDate"/><div class="hint" id="h-dishonourDate">Date on the bank's return / dishonour memo</div></div>
-    <div class="fw"><label>④ Date of Legal Demand Notice Issued *</label><input type="date" id="noticeDate"/><div class="hint" id="h-noticeDate">Must be within 30 days of dishonour memo</div></div>
-    <div class="fw s2"><label>⑤ Date of Notice Delivery / Service *</label><input type="date" id="deliveryDate"/><div class="hint" id="h-deliveryDate">Date on which the accused received the notice</div></div>
+    <div class="fw"><label for="chequeDate">① Cheque Date *</label><input type="date" id="chequeDate"/><div class="hint" id="h-chequeDate">Date printed on the cheque</div></div>
+    <div class="fw"><label for="presentationDate">② Date of Presentation to Bank *</label><input type="date" id="presentationDate"/><div class="hint" id="h-presentationDate">Must be within 3 months of cheque date</div></div>
+    <div class="fw"><label for="dishonourDate">③ Date of Memo of Dishonour *</label><input type="date" id="dishonourDate"/><div class="hint" id="h-dishonourDate">Date on the bank's return / dishonour memo</div></div>
+    <div class="fw"><label for="noticeDate">④ Date of Legal Demand Notice Issued *</label><input type="date" id="noticeDate"/><div class="hint" id="h-noticeDate">Must be within 30 days of dishonour memo</div></div>
+    <div class="fw s2"><label for="deliveryDate">⑤ Date of Notice Delivery / Service *</label><input type="date" id="deliveryDate"/><div class="hint" id="h-deliveryDate">Date on which the accused received the notice</div></div>
   </div>
   <div class="btn-row">
     <button class="btn-go" onclick="doCalc()">⚖️ &nbsp;Calculate Limitation Dates</button>
