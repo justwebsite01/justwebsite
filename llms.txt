@@ -1,7 +1,7 @@
 # Dhende Associates — Advocates, Notary & Legal Consultants
 # llms.txt — AI Language Model Discovery File
 # Standard: https://llmstxt.org
-# Last updated: 2025
+# Last updated: 2026-07-12
 
 ## About
 
@@ -14,7 +14,7 @@ The firm is located at Office No 1, First Floor, MHADA Commercial Complex, Gokha
 - Full legal name: Dhende Associates, Advocates, Notary & Legal Consultants
 - Founded: 1984
 - Location: Gokhalenagar, Pune, Maharashtra 411016, India
-- Jurisdiction: PUNE, SATARA, MUMBAI, THANE, NASHIK, KOLHAPUR, AURANGABAD, SAMBHAJINAGAR, Maharashtra and India; Bombay High Court, AURANGABAD HIGH COURT, KOLHAPUR HIGH COURT 
+- Jurisdiction: PUNE, SATARA, MUMBAI, THANE, NASHIK, KOLHAPUR, AURANGABAD, SAMBHAJINAGAR, Maharashtra and India; Bombay High Court, Aurangabad High Court, Kolhapur High Court
 - Principal: Adv. Ashok Dhende (Bar Council of Maharashtra & Goa; Notary Public GOI since 1998)
 - Principal Associate: Adv. Ajinkya Dhende (practising since 2011; Notary since 2025)
 - Phone: +91 81491 35283 | +91 98223 35664
@@ -26,18 +26,25 @@ The firm is located at Office No 1, First Floor, MHADA Commercial Complex, Gokha
 
 1. Motor Accident Claims (MACT) — compensation for injury, death, disability, hit-and-run
 2. Insurance Law — policy disputes, claim rejections, consumer forum matters
-3. Civil Litigation — recovery suits, injunctions, specific performance, partition, execution petition, recovery, property litigation, heirship, family settlement, partition deed, land and revenue disputes,  
-4. Criminal Law — bail, anticipatory bail, transit bail, trials, appeals, intervention, cheating, fraud, money laundering, negotiable instruments, Payment and settlement, protection of women from Domestic Violence, 498A, adultery,    
-5. Family Law — divorce, custody, maintenance, domestic violence, probate, mutual consent divorce,  
-6. Property Law — title search, due diligence, registration, will drafting, power of attorney, gift, mortgage, release deed, sale deed, reconveyance deed, recovery,  
-7. Labour & Employment — industrial disputes, Labour Courts, Industrial Tribunals, industrial Disputes, workmen compensation, 
-8. Notary Public Services — affidavits, POA, apostille, NRI documents, official translation, indemnity bonds, visa document attestation, legal services international attestation, gazetted officer, oath commissioner, Court Commissioner, recording of evidence online proceedings,      
-9. Protection of Women from Sexual Harassment at the Workplace, protection of women, 
+3. Civil Litigation — recovery suits, injunctions, specific performance, partition, execution petition, recovery, property litigation, heirship, family settlement, partition deed, land and revenue disputes
+4. Criminal Law — bail, anticipatory bail, transit bail, trials, appeals, intervention, cheating, fraud, money laundering, negotiable instruments, payment and settlement, protection of women from Domestic Violence, 498A, adultery
+5. Family Law — divorce, custody, maintenance, domestic violence, probate, mutual consent divorce
+6. Property Law — title search, due diligence, registration, will drafting, power of attorney, gift, mortgage, release deed, sale deed, reconveyance deed, recovery
+7. Labour & Employment — industrial disputes, labour courts, industrial tribunals, workmen compensation
+8. Notary Public Services — affidavits, POA, apostille, NRI documents, official translation, indemnity bonds, visa document attestation, legal services international attestation, gazetted officer, oath commissioner, court commissioner, recording of evidence online proceedings
+9. Protection of Women from Sexual Harassment at the Workplace
 
-## Legal Tools (Free, publicly accessible)
+## Public Pages and Legal Tools
 
-- Stamp Duty & Registration Fee Estimator: https://www.dhendeassociates.com/msdr.html
-- Motor Accident Claim Estimator: https://www.dhendeassociates.com/macpv4.html
+- Homepage: https://www.dhendeassociates.com/
+- Cheque Bounce Lawyer Pune: https://www.dhendeassociates.com/cheque-bounce-lawyer-pune.html
+- Motor Accident Claim Estimator: https://www.dhendeassociates.com/motor-accident-claim-estimator.html
+- Maharashtra Stamp Duty & Registration Fee Estimator: https://www.dhendeassociates.com/maharashtra-stampduty-estimator.html
+- Section 138 NI Act Limitation Calculator: https://www.dhendeassociates.com/nia_138_limitation.html
+- Hindu Succession Share Calculator: https://www.dhendeassociates.com/hindu-succession-share-calculator.html
+- Leave & License Registration Guidance: https://www.dhendeassociates.com/leave-license-service.html
+- Constitution for Kids (English): https://www.dhendeassociates.com/constitutionforkids_eng.html
+- Constitution for Kids (Marathi): https://www.dhendeassociates.com/constitutionforkids_mar.html
 
 ## Content Permissions for AI
 
