@@ -318,22 +318,22 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
     <div class="enquiry-form" id="enquiry-form">
       <h3>Section 138 Case Enquiry</h3>
       <div class="form-row">
-        <div class="fg"><label>Your Name</label><input type="text" placeholder="Full name"></div>
-        <div class="fg"><label>Phone / WhatsApp</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
+        <div class="fg"><label>Your Name</label><input type="text" id="f-name" name="name" placeholder="Full name" required></div>
+        <div class="fg"><label>Phone / WhatsApp</label><input type="tel" id="f-phone" name="phone" placeholder="+91 XXXXX XXXXX" required></div>
       </div>
       <div class="fg"><label>Your Role in This Matter</label>
-        <select>
+        <select id="f-role" name="role">
           <option value="">— Select —</option>
           <option>Complainant — My cheque was dishonoured</option>
           <option>Accused — I received a Section 138 notice / complaint</option>
         </select>
       </div>
       <div class="form-row">
-        <div class="fg"><label>Cheque Amount (₹)</label><input type="text" placeholder="e.g. ₹5,00,000"></div>
-        <div class="fg"><label>Cheque Return Date</label><input type="date"></div>
+        <div class="fg"><label>Cheque Amount (₹)</label><input type="text" id="f-amount" name="amount" placeholder="e.g. ₹5,00,000"></div>
+        <div class="fg"><label>Cheque Return Date</label><input type="date" id="f-date" name="cheque_date"></div>
       </div>
       <div class="fg"><label>Reason for Dishonour</label>
-        <select>
+        <select id="f-reason" name="reason">
           <option value="">— Select reason —</option>
           <option>Insufficient Funds</option>
           <option>Account Closed</option>
@@ -343,7 +343,7 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
         </select>
       </div>
       <div class="fg"><label>Current Status</label>
-        <select>
+        <select id="f-status" name="status">
           <option value="">— Select status —</option>
           <option>Just received return memo — notice not sent yet</option>
           <option>Legal notice sent — awaiting 15-day period</option>
@@ -363,7 +363,9 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
 <footer class="footer">
   <div class="footer-grid">
     <div class="f-brand"><h3>Dhende Associates</h3><span class="f-brand-tag">Advocates · Notary &amp; Legal Consultants — Est. 1984</span><p>Four decades of trusted legal practice at Bombay High Court and District Courts across Maharashtra.</p><div class="f-addr">Office No 1, First Floor, MHADA Commercial Complex, Gokhalenagar, Pune 411016<br>📞 +91 81491 35283 · +91 98223 35664</div><div class="f-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d674.005644921228!2d73.82680121409193!3d18.527522543664382!2m3!1f0!2f0.000029515797663748344!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf7629973f4f%3A0xea00cb8b7ee510a0!2sAdvocate%20Ashok%20Dhende%20and%20Associates!5e0!3m2!1sen!2sin!4v1775886261204!5m2!1sen!2sin" allowfullscreen loading="lazy" title="Dhende Associates Location"></iframe></div></div>
-    <div class="f-col"><h4>Related Services</h4><ul><li><a href="https://www.dhendeassociates.com/criminal-law.html">Criminal Law &amp; Bail</a></li><li><a href="https://www.dhendeassociates.com/anticipatory-bail-pune.html">Anticipatory Bail Pune</a></li><li><a href="https://www.dhendeassociates.com/civil-litigation.html">Civil Litigation</a></li><li><a href="https://www.dhendeassociates.com/insurance-disputes.html">Insurance Disputes</a></li><li><a href="https://www.dhendeassociates.com/family-law.html">Family Law</a></li><li><a href="https://www.dhendeassociates.com/mact-claims.html">Motor Accident Claims</a></li></ul></div>
+    <!--temporary kept this section off for related services -->
+    <!-- <div class="f-col"><h4>Related Services</h4><ul><li><a href="https://www.dhendeassociates.com/criminal-law.html">Criminal Law &amp; Bail</a></li><li><a href="https://www.dhendeassociates.com/anticipatory-bail-pune.html">Anticipatory Bail Pune</a></li><li><a href="https://www.dhendeassociates.com/civil-litigation.html">Civil Litigation</a></li><li><a href="https://www.dhendeassociates.com/insurance-disputes.html">Insurance Disputes</a></li><li><a href="https://www.dhendeassociates.com/family-law.html">Family Law</a></li><li><a href="https://www.dhendeassociates.com/mact-claims.html">Motor Accident Claims</a></li></ul></div> -->
+    
     <div class="f-col"><h4>Legal Tools</h4><ul><li><a href="https://www.dhendeassociates.com/nia_138_limitation.html">NI Act 138 Calculator</a></li><li><a href="https://www.dhendeassociates.com/motor-accident-claim-estimator.html">MACT Calculator</a></li><li><a href="https://www.dhendeassociates.com/maharashtra-stampduty-estimator.html">Stamp Duty Estimator</a></li><li><a href="https://www.dhendeassociates.com/notary-services.html">Notary Services</a></li><li><a href="https://www.dhendeassociates.com/">Home</a></li><li><a href="https://www.dhendeassociates.com/about.html">About Us</a></li></ul></div>
   </div>
   <div class="footer-btm"><span>© 2025 Dhende Associates. All rights reserved.</span><span>Disclaimer: Content is for general information only and does not constitute legal advice.</span></div>
@@ -378,7 +380,43 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
 
 <script>
 function toggleFaq(btn){const item=btn.closest('.faq-item');const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open');}
-function submitForm(){document.getElementById('enquiry-form').style.opacity='0.4';document.getElementById('enquiry-form').style.pointerEvents='none';setTimeout(()=>{document.querySelector('.enquiry-form h3').style.display='none';document.querySelectorAll('.fg,.form-row,.form-sub,.form-note').forEach(el=>el.style.display='none');document.getElementById('form-success').style.display='block';document.getElementById('enquiry-form').style.opacity='1';},600);}
+function submitForm(){
+  const name=document.getElementById('f-name').value.trim();
+  const phone=document.getElementById('f-phone').value.trim();
+  const role=document.getElementById('f-role').value;
+  const amount=document.getElementById('f-amount').value.trim();
+  const chequeDate=document.getElementById('f-date').value;
+  const reason=document.getElementById('f-reason').value;
+  const status=document.getElementById('f-status').value;
+
+  if(!name || !phone){
+    alert('Please enter your name and phone number.');
+    return;
+  }
+
+  const details=[
+    'Hello Dhende Associates,',
+    '',
+    'New Section 138 enquiry from website:',
+    'Name: '+name,
+    'Phone / WhatsApp: '+phone,
+    role ? 'Role: '+role : '',
+    amount ? 'Cheque Amount: '+amount : '',
+    chequeDate ? 'Cheque Return Date: '+chequeDate : '',
+    reason ? 'Reason for Dishonour: '+reason : '',
+    status ? 'Current Status: '+status : ''
+  ].filter(Boolean).join('\n');
+
+  const waText=encodeURIComponent(details);
+  window.open('https://wa.me/918149135283?text='+waText, '_blank', 'noopener');
+
+  const mailTo='mailto:ajinkya.dhende@gmail.com?subject='+encodeURIComponent('Section 138 enquiry from website')+'&body='+encodeURIComponent(details+'\n\nPlease contact me at the earliest.');
+  window.open(mailTo, '_blank', 'noopener');
+
+  document.getElementById('enquiry-form').style.opacity='0.4';
+  document.getElementById('enquiry-form').style.pointerEvents='none';
+  setTimeout(()=>{document.querySelector('.enquiry-form h3').style.display='none';document.querySelectorAll('.fg,.form-row,.form-sub,.form-note').forEach(el=>el.style.display='none');document.getElementById('form-success').style.display='block';document.getElementById('enquiry-form').style.opacity='1';},600);
+}
 window.addEventListener('scroll',()=>{document.getElementById('navbar').style.boxShadow=window.scrollY>60?'0 2px 24px rgba(0,0,0,0.35)':'none';});
 </script>
 </body>
