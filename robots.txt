@@ -1,21 +1,25 @@
 # robots.txt — Dhende Associates
 # https://www.dhendeassociates.com/
-# Last updated: 2026-05-15
+# Last updated: 2026-07-12
 
 User-agent: *
 Allow: /
-
-# Disallow admin / form submissions
 Disallow: /cgi-bin/
-# Allow query strings for tools and applications
-# Disallow: /*?* - REMOVED to allow calculator query parameters
+
+# Public legal tools and service pages are eligible for indexing
+Allow: /cheque-bounce-lawyer-pune.html
+Allow: /motor-accident-claim-estimator.html
+Allow: /maharashtra-stampduty-estimator.html
+Allow: /nia_138_limitation.html
+Allow: /hindu-succession-share-calculator.html
+Allow: /leave-license-service.html
+Allow: /constitutionforkids_eng.html
+Allow: /constitutionforkids_mar.html
 
 # Sitemap location
 Sitemap: https://www.dhendeassociates.com/sitemap.xml
 
-# Crawl-delay for bots that respect it (optional; remove if not needed)
-
-# AI / LLM crawlers — allow for discoverability (llms.txt is present)
+# AI / LLM crawlers — allow discoverability and indexing
 User-agent: GPTBot
 Allow: /
 
@@ -30,7 +34,6 @@ Allow: /
 
 User-agent: Googlebot
 Allow: /
-
 
 User-agent: Bingbot
 Allow: /
