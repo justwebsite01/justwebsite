@@ -3,10 +3,10 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Homepage - Hub for all services -->
+  <!-- Homepage - main landing page -->
   <url>
     <loc>https://www.dhendeassociates.com/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -15,71 +15,71 @@
     </image:image>
   </url>
 
-  
-  <!-- Primary Legal Tools - High Priority -->
+  <!-- Service and legal content pages -->
   <url>
-    <loc>https://www.dhendeassociates.com/motor-accident-claim-estimator.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <loc>https://www.dhendeassociates.com/cheque-bounce-lawyer-pune.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.99</priority>
   </url>
 
-  <!-- Maharashtra Stamp Duty & Registration Fee Calculator -->
   <url>
-    <loc>https://www.dhendeassociates.com/maharashtra-stampduty-estimator.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <loc>https://www.dhendeassociates.com/motor-accident-claim-estimator.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.98</priority>
   </url>
 
-  <!-- Blog -->
   <url>
-    <loc>https://www.dhendeassociates.com/blog.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <loc>https://www.dhendeassociates.com/maharashtra-stampduty-estimator.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.97</priority>
   </url>
 
-  <!-- 138 Limitation period  -->
   <url>
-    <loc>https://www.dhendeassociates.com/nia_138_limitation.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <loc>https://www.dhendeassociates.com/blog.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.96</priority>
   </url>
 
-    <!-- Hindu Sucession inheritance share calculator and various guidelines  -->
-<url>
-    <loc>https://www.dhendeassociates.com/hindu-succession-share-calculator.html</loc>
-    <lastmod>2026-06-08</lastmod>
+  <url>
+    <loc>https://www.dhendeassociates.com/nia_138_limitation.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
-  <!-- Leave and Licence related services and guidelines  -->
   <url>
-    <loc>https://www.dhendeassociates.com/leave-license-service.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <loc>https://www.dhendeassociates.com/hindu-succession-share-calculator.html</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.94</priority>
   </url>
 
+  <url>
+    <loc>https://www.dhendeassociates.com/leave-license-service.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.93</priority>
+  </url>
 
-  <!-- Educational Content - Bilingual with hreflang -->
+  <!-- Educational content - bilingual -->
   <url>
     <loc>https://www.dhendeassociates.com/constitutionforkids_eng.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.94</priority>
+    <priority>0.92</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.dhendeassociates.com/constitutionforkids_eng.html"/>
     <xhtml:link rel="alternate" hreflang="mr" href="https://www.dhendeassociates.com/constitutionforkids_mar.html"/>
   </url>
 
   <url>
     <loc>https://www.dhendeassociates.com/constitutionforkids_mar.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.93</priority>
+    <priority>0.91</priority>
     <xhtml:link rel="alternate" hreflang="mr" href="https://www.dhendeassociates.com/constitutionforkids_mar.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.dhendeassociates.com/constitutionforkids_eng.html"/>
   </url>
