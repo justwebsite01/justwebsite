@@ -4,6 +4,8 @@ body{font-family:'Source Serif 4',Georgia,serif;background:#FAF8FF;color:#1E1033
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 button{cursor:pointer;font-family:inherit}
+a,button,.hamburger,.nav-wa,.wa-float{min-height:44px;min-width:44px}
+a:focus-visible,button:focus-visible,.hamburger:focus-visible,.nav-wa:focus-visible,.wa-float:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 
 /* ═══ COLOUR TOKENS ═══ */
 :root{
