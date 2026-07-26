@@ -680,6 +680,11 @@ section{padding:5rem 0}
   font-family:var(--ff-u);font-size:.69rem;
   color:var(--muted);line-height:1.5;
 }
+.tool-meta{
+  font-family:var(--ff-u);font-size:.68rem;
+  color:var(--p600);margin:.7rem 0 .8rem;
+  font-weight:600;
+}
 .tools-note{
   text-align:center;
   font-family:var(--ff-u);font-size:.78rem;
