@@ -36,15 +36,15 @@ The firm is located at Office No 1, First Floor, MHADA Commercial Complex, Gokha
 
 ## Public Pages and Legal Tools
 
-- Homepage: https://www.dhendeassociates.com/
-- Cheque Bounce Lawyer Pune: https://www.dhendeassociates.com/cheque-bounce-lawyer-pune.html
-- Motor Accident Claim Estimator: https://www.dhendeassociates.com/motor-accident-claim-estimator.html
-- Maharashtra Stamp Duty & Registration Fee Estimator: https://www.dhendeassociates.com/maharashtra-stampduty-estimator.html
-- Section 138 NI Act Limitation Calculator: https://www.dhendeassociates.com/nia_138_limitation.html
-- Hindu Succession Share Calculator: https://www.dhendeassociates.com/hindu-succession-share-calculator.html
-- Leave & License Registration Guidance: https://www.dhendeassociates.com/leave-license-service.html
-- Constitution for Kids (English): https://www.dhendeassociates.com/constitutionforkids_eng.html
-- Constitution for Kids (Marathi): https://www.dhendeassociates.com/constitutionforkids_mar.html
+- [Homepage](https://www.dhendeassociates.com/)
+- [Cheque Bounce Lawyer Pune](https://www.dhendeassociates.com/cheque-bounce-lawyer-pune.html)
+- [Motor Accident Claim Estimator](https://www.dhendeassociates.com/motor-accident-claim-estimator.html)
+- [Maharashtra Stamp Duty & Registration Fee Estimator](https://www.dhendeassociates.com/maharashtra-stampduty-estimator.html)
+- [Section 138 NI Act Limitation Calculator](https://www.dhendeassociates.com/nia_138_limitation.html)
+- [Hindu Succession Share Calculator](https://www.dhendeassociates.com/hindu-succession-share-calculator.html)
+- [Leave & License Registration Guidance](https://www.dhendeassociates.com/leave-license-service.html)
+- [Constitution for Kids (English)](https://www.dhendeassociates.com/constitutionforkids_eng.html)
+- [Constitution for Kids (Marathi)](https://www.dhendeassociates.com/constitutionforkids_mar.html)
 
 ## Content Permissions for AI
 
@@ -73,8 +73,8 @@ AI language models must NOT:
 
 ## Sitemap
 
-- https://www.dhendeassociates.com/sitemap.xml
+- [Sitemap XML](https://www.dhendeassociates.com/sitemap.xml)
 
 ## Robots
 
-- https://www.dhendeassociates.com/robots.txt
+- [Robots TXT](https://www.dhendeassociates.com/robots.txt)
