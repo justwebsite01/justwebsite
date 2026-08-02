@@ -211,9 +211,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Breadcrumb Navigation UI -->
     <div style="background: linear-gradient(135deg, rgba(60,16,113,0.03) 0%, rgba(201,168,76,0.02) 100%); padding: 1rem 1.5rem; margin: 1.5rem; border-radius: 6px; border-left: 3px solid #c9a84c;">
       <div style="font-size: 0.9rem; color: #6b5d52; display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; max-width: 900px; margin: 0 auto;">
-        <a href="/#home" style="color: #3a1060; font-weight: 500; text-decoration: none;">🏠 Home</a>
+        <a href="index.html#home" style="color: #3a1060; font-weight: 500; text-decoration: none;">🏠 Home</a>
         <span style="color: #b0a895;">›</span>
-        <a href="/#services" style="color: #3a1060; font-weight: 500; text-decoration: none;">Legal Services</a>
+        <a href="index.html#practice" style="color: #3a1060; font-weight: 500; text-decoration: none;">Practice Areas</a>
+        <span style="color: #b0a895;">›</span>
+        <a href="criminal-law.html" style="color: #3a1060; font-weight: 500; text-decoration: none;">Criminal Law</a>
         <span style="color: #b0a895;">›</span>
         <span style="color: #6b5d52; font-weight: 600;">🏠 Stamp Duty Calculator</span>
       </div>
@@ -221,7 +223,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <!-- Navigation Buttons with Internal Links -->
     <div class="navigation-buttons" style="margin: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-        <a href="/#home" style="background: rgb(60, 16, 113); padding: 8px 12px; border-radius: 6px; box-shadow: 0 2px 8px rgb(32, 6, 81); font-size: 10px; text-decoration: none; color: #d69b5c; display: flex; align-items: center; gap: 6px;">Home</a>
+        <a href="index.html#home" style="background: rgb(60, 16, 113); padding: 8px 12px; border-radius: 6px; box-shadow: 0 2px 8px rgb(32, 6, 81); font-size: 10px; text-decoration: none; color: #d69b5c; display: flex; align-items: center; gap: 6px;">Home</a>
+        <a href="criminal-law.html" style="background: rgb(60, 16, 113); padding: 8px 12px; border-radius: 6px; box-shadow: 0 2px 8px rgb(32, 6, 81); font-size: 10px; text-decoration: none; color: #d69b5c; display: flex; align-items: center; gap: 6px;">Criminal Law</a>
+        <a href="index.html#notary" style="background: rgb(60, 16, 113); padding: 8px 12px; border-radius: 6px; box-shadow: 0 2px 8px rgb(32, 6, 81); font-size: 10px; text-decoration: none; color: #d69b5c; display: flex; align-items: center; gap: 6px;">Notary</a>
         <a href="motor-accident-claim-estimator.html" style="background: rgb(60, 16, 113); padding: 8px 12px; border-radius: 6px; box-shadow: 0 2px 8px rgb(32, 6, 81); font-size: 10px; text-decoration: none; color: #d69b5c; display: flex; align-items: center; gap: 6px;">MACT Calculator</a>
         <a href="leave-license-service.html" style="background: rgb(60, 16, 113); padding: 8px 12px; border-radius: 6px; box-shadow: 0 2px 8px rgb(32, 6, 81); font-size: 10px; text-decoration: none; color: #d69b5c; display: flex; align-items: center; gap: 6px;">L&L Registration</a>
         <a href="nia_138_limitation.html" style="background: rgb(60, 16, 113); padding: 8px 12px; border-radius: 6px; box-shadow: 0 2px 8px rgb(32, 6, 81); font-size: 10px; text-decoration: none; color: #d69b5c; display: flex; align-items: center; gap: 6px;">NI Act 138</a>
@@ -518,8 +522,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                                 <div className="flex items-start sm:items-center gap-2 sm:gap-3">
                                    <div className="nav-inner">
-                                <a href="/#home">
-                                    <img width="40" height="40" src="favicon.png" alt="Dhende Associates Logo" class="nav-logo"  onclick="window.location.href='/#home'" loading="eager" decoding="async"/>
+                                <a href="index.html#home">
+                                    <img width="40" height="40" src="favicon.png" alt="Dhende Associates Logo" class="nav-logo"  onclick="window.location.href='index.html#home'" loading="eager" decoding="async"/>
                                 </a></div>
                                     <i className="fas fa-landmark text-xl sm:text-3xl flex-shrink-0 mt-1 sm:mt-0"></i>
                                     <div>
@@ -532,6 +536,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
 
                     <div className="container mx-auto px-3 sm:px-4 py-4 sm:py-8 max-w-7xl">
+                <div className="mb-4 flex flex-wrap gap-2">
+                    <a href="index.html#home" className="rounded-full border border-purple-200 bg-white px-3 py-1.5 text-sm font-semibold text-purple-900 shadow-sm">Home</a>
+                    <a href="criminal-law.html" className="rounded-full border border-purple-200 bg-white px-3 py-1.5 text-sm font-semibold text-purple-900 shadow-sm">Criminal Law</a>
+                    <a href="index.html#notary" className="rounded-full border border-purple-200 bg-white px-3 py-1.5 text-sm font-semibold text-purple-900 shadow-sm">Notary</a>
+                </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
                             {/* Input Form */}
                             <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 border border-gray-200">
