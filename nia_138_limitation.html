@@ -123,9 +123,40 @@ body{
   min-height:100vh;background:var(--bg);
   background-image:radial-gradient(circle at 12% 20%,rgba(107,143,191,.09) 0%,transparent 45%),
                    radial-gradient(circle at 88% 78%,rgba(143,123,191,.07) 0%,transparent 45%);
-  font-family:'DM Sans',sans-serif;padding:32px 16px 56px;color:var(--text);
+  font-family:'DM Sans',sans-serif;padding:96px 16px 56px;color:var(--text);
 }
 .wrap{max-width:840px;margin:0 auto}
+
+#navbar{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(26,13,59,.96);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-inner{max-width:1240px;margin:0 auto;padding:1rem 1.25rem;height:66px;display:flex;align-items:center;gap:1rem;position:relative}
+.nav-logo{width:40px;height:40px;border-radius:8px;cursor:pointer;object-fit:cover;flex-shrink:0}
+.nav-brand{display:flex;flex-direction:column;line-height:1.1;min-width:0}
+.nav-firm{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:700;color:#fff}
+.nav-tagline{font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.66);margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:.25rem;flex:1;justify-content:flex-end;flex-wrap:wrap}
+.nav-links a{font-family:'DM Sans',sans-serif;font-size:.78rem;color:rgba(255,255,255,.78);padding:.4rem .65rem;border-radius:4px;white-space:nowrap;text-decoration:none}
+.nav-links a:hover{background:rgba(255,255,255,.08);color:#fff}
+.nav-wa{display:inline-flex;align-items:center;gap:.45rem;background:#C9A84C;color:#1A0D3B;font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:600;padding:.48rem 1rem;border-radius:4px;border:none;white-space:nowrap;text-decoration:none}
+.nav-wa svg{flex-shrink:0}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.45rem;background:none;border:none;margin-left:auto}
+.hamburger span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.8);transition:transform .2s,opacity .2s}
+#navbar.mobile-open .hamburger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+#navbar.mobile-open .hamburger span:nth-child(2){opacity:0}
+#navbar.mobile-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+@media (max-width:980px){
+  .nav-brand{display:none}
+  .nav-links{display:none;position:absolute;top:66px;left:0;right:0;flex-direction:column;align-items:flex-start;padding:1rem 1.25rem 1.25rem;background:rgba(26,13,59,.98);border-top:1px solid rgba(255,255,255,.08)}
+  .nav-links.open{display:flex}
+  .nav-links a{width:100%;padding:.7rem .2rem}
+  .nav-wa{display:none}
+  .hamburger{display:flex}
+}
+
+@media (max-width:620px){
+  .nav-inner{padding:.9rem 1rem;height:64px}
+  body{padding-top:80px}
+}
 
 /* ── HEADER ── */
 .hdr{background:linear-gradient(135deg,#42067e,#7B6BAF);border-radius:20px;padding:28px 32px;margin-bottom:18px;position:relative;overflow:hidden;box-shadow:0 8px 32px rgba(107,143,191,.28)}
@@ -396,6 +427,34 @@ td.td-warn{color:#C2706F;font-weight:600}td.td-acc{color:#B8894A;font-weight:700
 </head>
 <body data-tool-page-id="nia-138-tool">
 
+<nav id="navbar">
+  <div class="nav-inner">
+    <img width="40" height="40" src="favicon.png" alt="Dhende Associates Logo" class="nav-logo" onclick="window.location.href='#home'"/>
+    <div class="nav-brand">
+      <span class="nav-firm">Dhende Associates</span>
+      <span class="nav-tagline">Advocates &amp; Notary Public</span>
+    </div>
+    <div class="nav-links">
+      <a href="#Home">Home</a>
+      <a href="motor-accident-claim-estimator.html">Motor Accident Claim Estimator</a>
+      <a href="hindu-succession-share-calculator.html">Hindu Succession Share Calculator</a>
+      <a href="/#property">Property</a>
+      <a href="/#tools">Legal Tools</a>
+      <a href="/#team">Team</a>
+      <a href="/#blog">Blog</a>
+      <a href="constitutionforkids_eng.html">Law for Kids</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <a class="nav-wa" href="https://wa.me/918149135283" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      WhatsApp
+    </a>
+    <button class="hamburger" type="button" title="Toggle mobile menu" onclick="toggleMob()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4ZG63FK"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -421,8 +480,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <div class="hdr-ico"><div class="navigation-buttons" style="margin: 50px; display: flex; justify-content: center; gap: 10px;">
         <a href="index.html#home" class="nav-btn nav-home" title="Go to Home Page" style="background: rgb(67, 11, 150); padding: 8px 18px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); font-size: 14px; text-decoration: none; color: #333; display: flex; align-items: center; gap: 6px;"><img src="favicon.png" width="40" height="40" alt="Home" loading="eager" decoding="async"/> <span style="display: none;">Home</span></a>
-        <a href="criminal-law.html" class="nav-btn" title="Criminal Law & Bail" style="background: #fff; padding: 8px 18px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); font-size: 14px; text-decoration: none; color: #3a1060;">Criminal Law</a>
-        <a href="index.html#notary" class="nav-btn" title="Notary Public Services" style="background: #fff; padding: 8px 18px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); font-size: 14px; text-decoration: none; color: #3a1060;">Notary</a>
+        
     </div></div>
     
     <div>
@@ -609,6 +667,14 @@ function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').repl
 function nf(n){return Number(n).toLocaleString('en-IN')}
 function daysBetween(a,b){return Math.round((b-a)/864e5)}
 function today(){var t=new Date();t.setHours(0,0,0,0);return t}
+
+function toggleMob(){
+  var nav=document.getElementById('navbar');
+  var links=document.querySelector('#navbar .nav-links');
+  if(!nav||!links)return;
+  nav.classList.toggle('mobile-open');
+  links.classList.toggle('open');
+}
 
 /* ── TAB SWITCHER ── */
 function switchTab(id,btn){
