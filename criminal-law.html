@@ -220,9 +220,11 @@ section.alt{background:var(--surface)}
 .related-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--p300)}
 .related-card-ttl{font-family:'Source Serif 4',serif;font-size:15.5px;color:var(--p900);margin-bottom:8px}
 .related-card p{font-size:13px;color:var(--text-mid);line-height:1.55}
-.wa-float{position:fixed;bottom:28px;right:28px;z-index:900;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.38);text-decoration:none;transition:all .3s}
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:900;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.38);text-decoration:none;transition:all .3s;gap:10px}
 .wa-float:hover{transform:scale(1.12);box-shadow:0 6px 28px rgba(37,211,102,.5)}
 .wa-float svg{width:28px;height:28px;fill:#fff}
+.wa-tooltip{display:none;font-size:12px;background:#0f172a;color:#fff;padding:7px 10px;border-radius:999px;white-space:nowrap}
+@media (min-width:768px){.wa-float:hover .wa-tooltip{display:inline-block}}
 .doc-col h3{font-family:'Source Serif 4',serif;font-size:19px;color:var(--p900);margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--p100)}
 /* Urgency box */
 .urgency-box{background:linear-gradient(135deg,#7F1D1D,#991B1B);border-radius:var(--r-lg);padding:32px 36px;border-left:4px solid #FCA5A5;margin-bottom:32px}
@@ -238,8 +240,9 @@ section.alt{background:var(--surface)}
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4ZG63FK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<a href="https://wa.me/918149135283?text=Hello%20Dhende%20Associates%2C%20I%20need%20urgent%20help%20with%20a%20criminal%20matter." class="wa-float" title="WhatsApp Us" aria-label="Chat on WhatsApp" rel="noopener noreferrer">
+<a href="https://wa.me/918149135283?text=Hello%20Dhende%20Associates%2C%20I%20would%20like%20to%20enquire%20about%20legal%20services." class="wa-float" target="_blank" rel="noopener" title="WhatsApp Us" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52 -.075-.149-.669-1.612-.916-2.207 -.242-.579 -.487 -.5 -.669 -.51 -.173 -.008 -.371 -.01 -.57 -.01 -.198 0 -.52 .074 -.792 .372 -.272 .２９７ -１．０４ １．０１６ -１．０４ ２．４７９ ０ １．４６２ １．０６５ ２．８７５ １．２１３ ３．０７４ .１４９ .１９８ ２．０９６ ３．２ ５．０７７ ４．４８７ .７０９ .３０６ １．２６２ .４８９ １．６９４ .６２５ .７１２ .２２７ １．３６ .１９５ １．８７１ .１１８ .５７１ -.０８５ １．７５８ -.７１９ ２．００６ -１．４１３ .２４８ -.６９４ .２４８ -１．２８９ .₁₇₃ -₁．₄₁₃ -₀．₀₇₄ -₀．₁₂₄ -₀．₂₇₂ -₀．₁₉₈ -₀．₅₇ -₀．₃₄₇ z"/><path d="M₁₂ ₀C₅．₃₇₃ ₀ ₀ ៥．₃₇₃ ₀ ₁₂c₀ ₂．₁₂³ .៥៥⁴ ⁴．₁₁⁸ ₁．₅₂³ ⁵．⁸⁴⁵L₀ ₂⁴l⁶．²⁹-₁．⁵⁰⁸A₁₁．₉³⁵ ᵗ¹¹•९³⁵ ᵗ°°°¹² ᵗ²⁴c⁶•⁶²⁷ ᵗ° ᵗ¹²-⁵•³⁷³ ᵗ¹²-¹²S₁₈•⁶²⁷ ᵗ° ᵗ¹² ᵗ°zm₀ ₂₁•捌¹⁸c-₁•९肆⁶ ᵗ° -³•७伍⁸-\.伍²⁴ -伍•叁零伍 -壹•肆³肆l-\.叁捌-\,贰贰陆-叁•柒叁伍\.玖²捌-\,६肆-\,२肆捌A玖•柒捌² ኩ•柒捌² ኩ°°°¹² ኩ²⁴C₂•壹捌² ා •伍柒 •壹捌²c伍•ర్మ •మ్మ •మ్మ •మ్మ •మ్మ •మ్మ z"/></svg>
+  <span class="wa-tooltip">Chat on WhatsApp</span>
 </a>
 
 <nav class="navbar" id="navbar">
