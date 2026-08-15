@@ -397,8 +397,12 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
       <div class="c-detail"><div class="c-ico">⏰</div><div class="c-txt"><p>Office Hours</p><span>Monday – Saturday · 9:00 AM – 9:00 PM</span></div></div>
       <a href="https://wa.me/918149135283?text=I%20need%20confidential%20advice%20on%20a%20family%20matter.%20My%20situation%20is%3A" class="wa-big">💬 WhatsApp Confidentially</a>
     </div>
+ 
+    <!-- Enquiry Form 
     <div class="enquiry-form" id="enquiry-form">
       <h3>Family Law Enquiry</h3>
+      
+    
       <div class="form-row">
         <div class="fg"><label>Full Name</label><input type="text" placeholder="Your name (optional)"></div>
         <div class="fg"><label>Phone / WhatsApp</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
@@ -437,6 +441,12 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
       </div>
     </div>
   </div>
+  -->
+
+
+
+
+
 </section>
 
 <footer class="footer">
@@ -492,6 +502,43 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
 
 <script>
 function toggleFaq(btn){const item=btn.closest('.faq-item');const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open');}
+function submitForm(){
+  const name=document.getElementById('f-name').value.trim();
+  const phone=document.getElementById('f-phone').value.trim();
+  const role=document.getElementById('f-role').value;
+  const amount=document.getElementById('f-amount').value.trim();
+  const chequeDate=document.getElementById('f-date').value;
+  const reason=document.getElementById('f-reason').value;
+  const status=document.getElementById('f-status').value;
+
+  if(!name || !phone){
+    alert('Please enter your name and phone number.');
+    return;
+  }
+
+  const details=[
+    'Hello Dhende Associates,',
+    '',
+    'New Section 138 enquiry from website:',
+    'Name: '+name,
+    'Phone / WhatsApp: '+phone,
+    role ? 'Role: '+role : '',
+    amount ? 'Cheque Amount: '+amount : '',
+    chequeDate ? 'Cheque Return Date: '+chequeDate : '',
+    reason ? 'Reason for Dishonour: '+reason : '',
+    status ? 'Current Status: '+status : ''
+  ].filter(Boolean).join('\n');
+
+  const waText=encodeURIComponent(details);
+  window.open('https://wa.me/918149135283?text='+waText, '_blank', 'noopener');
+
+  const mailTo='mailto:ajinkya.dhende@gmail.com?subject='+encodeURIComponent('Section 138 enquiry from website')+'&body='+encodeURIComponent(details+'\n\nPlease contact me at the earliest.');
+  window.open(mailTo, '_blank', 'noopener');
+
+  document.getElementById('enquiry-form').style.opacity='0.4';
+  document.getElementById('enquiry-form').style.pointerEvents='none';
+  setTimeout(()=>{document.querySelector('.enquiry-form h3').style.display='none';document.querySelectorAll('.fg,.form-row,.form-sub,.form-note').forEach(el=>el.style.display='none');document.getElementById('form-success').style.display='block';document.getElementById('enquiry-form').style.opacity='1';},600);
+}
 function submitForm(){document.getElementById('enquiry-form').style.opacity='0.4';document.getElementById('enquiry-form').style.pointerEvents='none';setTimeout(()=>{document.querySelector('.enquiry-form h3').style.display='none';document.querySelectorAll('.fg,.form-row,.form-sub,.form-note').forEach(el=>el.style.display='none');document.getElementById('form-success').style.display='block';document.getElementById('enquiry-form').style.opacity='1';},600);}
 window.addEventListener('scroll',()=>{document.getElementById('navbar').style.boxShadow=window.scrollY>60?'0 2px 24px rgba(0,0,0,0.35)':'none';});
 </script>
