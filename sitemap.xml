@@ -27,7 +27,7 @@
     <loc>https://www.dhendeassociates.com/criminal-law.html</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.99</priority>
+    <priority>0.991</priority>
   </url>
 
   <url>
@@ -76,7 +76,7 @@
     <loc>https://www.dhendeassociates.com/leave-license-service.html</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.93</priority>
+    <priority>0.92</priority>
   </url>
 
   <!-- Educational content - bilingual -->
@@ -84,7 +84,7 @@
     <loc>https://www.dhendeassociates.com/constitutionforkids_eng.html</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.92</priority>
+    <priority>0.91</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.dhendeassociates.com/constitutionforkids_eng.html"/>
     <xhtml:link rel="alternate" hreflang="mr" href="https://www.dhendeassociates.com/constitutionforkids_mar.html"/>
   </url>
@@ -93,7 +93,7 @@
     <loc>https://www.dhendeassociates.com/constitutionforkids_mar.html</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.91</priority>
+    <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="mr" href="https://www.dhendeassociates.com/constitutionforkids_mar.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.dhendeassociates.com/constitutionforkids_eng.html"/>
   </url>
