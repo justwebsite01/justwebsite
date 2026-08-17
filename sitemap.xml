@@ -6,7 +6,7 @@
   <!-- Homepage - main landing page -->
   <url>
     <loc>https://www.dhendeassociates.com/</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -18,56 +18,63 @@
   <!-- Service and legal content pages -->
   <url>
     <loc>https://www.dhendeassociates.com/cheque-bounce-lawyer-pune.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.99</priority>
   </url>
 
   <url>
     <loc>https://www.dhendeassociates.com/criminal-law.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.99</priority>
   </url>
 
   <url>
     <loc>https://www.dhendeassociates.com/motor-accident-claim-estimator.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.98</priority>
   </url>
 
   <url>
     <loc>https://www.dhendeassociates.com/maharashtra-stampduty-estimator.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.97</priority>
   </url>
 
   <url>
     <loc>https://www.dhendeassociates.com/blog.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.96</priority>
   </url>
 
   <url>
     <loc>https://www.dhendeassociates.com/nia_138_limitation.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://www.dhendeassociates.com/hindu-succession-share-calculator.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.94</priority>
   </url>
 
   <url>
+    <loc>https://www.dhendeassociates.com/family-law.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.93</priority>
+  </url>
+
+  <url>
     <loc>https://www.dhendeassociates.com/leave-license-service.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.93</priority>
   </url>
@@ -75,7 +82,7 @@
   <!-- Educational content - bilingual -->
   <url>
     <loc>https://www.dhendeassociates.com/constitutionforkids_eng.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.92</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.dhendeassociates.com/constitutionforkids_eng.html"/>
