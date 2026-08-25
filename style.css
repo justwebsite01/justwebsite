@@ -239,11 +239,7 @@ section{padding:5rem 0}
 /* ═══════════════════════════════════════
    HERO
 ═══════════════════════════════════════ */
-.hero{
-  min-height:100vh;position:relative;
-  background:var(--p900);
-  display:flex;align-items:center;overflow:hidden;
-}
+.hero{min-height:100vh;min-height:100svh;position:relative;background:var(--p900);display:flex;align-items:center;overflow:hidden}
 .hero-geo{position:absolute;inset:0;pointer-events:none;overflow:hidden}
 .hero-geo::before{
   content:'';position:absolute;
