@@ -7,7 +7,7 @@
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#ffffff",
-  "theme_color": "#1a1a1a",
+  "theme_color": "#1A0D3B",
   "categories": ["legal", "services"],
   "screenshots": [
     {
@@ -52,7 +52,7 @@
       "name": "Stamp Duty Calculator",
       "short_name": "Stamp Duty",
       "description": "Maharashtra stamp duty estimation",
-      "url": "/maharshtra-stampduty-estimator.html?utm_source=pwa_shortcut",
+      "url": "/maharashtra-stampduty-estimator.html?utm_source=pwa_shortcut",
       "icons": [
         {
           "src": "favicon.png",
