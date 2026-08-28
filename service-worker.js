@@ -16,9 +16,10 @@ const CACHE_ASSETS = [
   '/',
   '/index.html',
   '/motor-accident-claim-estimator.html',
-  '/maharshtra-stampduty-estimator.html',
+  '/maharashtra-stampduty-estimator.html',
   '/nia_138_limitation.html',
   '/leave-license-service.html',
+  '/hindu-succession-share-calculator.html',
   '/style.css',
   '/stylemacpv4.css',
   '/style-msdr.css',
@@ -31,7 +32,7 @@ const CACHE_ASSETS = [
  */
 self.addEventListener('install', (event) => {
   console.log('[Service Worker] Installing...');
-  
+
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log('[Service Worker] Caching essential assets');
@@ -47,7 +48,7 @@ self.addEventListener('install', (event) => {
  */
 self.addEventListener('activate', (event) => {
   console.log('[Service Worker] Activating...');
-  
+
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
@@ -152,7 +153,7 @@ async function syncContactForm() {
     // Get queued forms from IndexedDB
     const db = await openDB();
     const forms = await db.getAll('contact-forms');
-    
+
     for (const form of forms) {
       try {
         await fetch('/api/contact', {
@@ -160,7 +161,7 @@ async function syncContactForm() {
           body: JSON.stringify(form),
           headers: { 'Content-Type': 'application/json' }
         });
-        
+
         // Remove from queue on success
         await db.delete('contact-forms', form.id);
       } catch (error) {
@@ -179,15 +180,15 @@ async function syncContactForm() {
 function openDB() {
   return new Promise((resolve, reject) => {
     const request = indexedDB.open('DhendeDB', 1);
-    
+
     request.onerror = () => reject(request.error);
     request.onsuccess = () => {
       const db = request.result;
-      
+
       if (!db.objectStoreNames.contains('contact-forms')) {
         db.createObjectStore('contact-forms', { keyPath: 'id', autoIncrement: true });
       }
-      
+
       resolve(db);
     };
   });
