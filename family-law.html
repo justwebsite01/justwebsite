@@ -17,6 +17,7 @@
 <meta property="og:locale" content="en_IN">
 <meta property="og:site_name" content="Dhende Associates">
 <link rel="icon" href="https://www.dhendeassociates.com/favicon.png" type="image/png">
+<link rel="manifest" href="manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
@@ -54,6 +55,12 @@
 .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:64px;padding:0 40px;display:flex;align-items:center;justify-content:space-between;background:rgba(26,13,59,0.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(184,150,62,.2);transition:box-shadow .3s}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}.nav-logo img{width:32px;height:32px;border-radius:5px}.nav-logo-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#fff;line-height:1.1;display:block}.nav-logo-tag{font-size:9px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase}
 .nav-links{display:flex;align-items:center;gap:2px;list-style:none}.nav-links a{font-size:13px;color:rgba(255,255,255,.78);text-decoration:none;padding:6px 10px;border-radius:6px;transition:all .2s}.nav-links a:hover{color:#fff;background:rgba(255,255,255,.09)}.nav-cta{background:linear-gradient(135deg,#25D366,#128C7E)!important;color:#fff!important;padding:8px 16px!important;border-radius:8px!important;font-weight:600}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}
+.mob-menu{display:none;position:fixed;inset:0;z-index:1200;background:#1A0D3B;padding:5rem 1.5rem 1.5rem;flex-direction:column;gap:.6rem;overflow-y:auto}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:15px;color:#fff;padding:.75rem 1rem;border-radius:8px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+.mob-wa{background:linear-gradient(135deg,#25D366,#128C7E)!important;color:#fff!important;font-weight:600;text-align:center;margin-top:.5rem}
 .breadcrumb{margin-top:64px;padding:12px 48px;background:var(--p900);border-bottom:1px solid rgba(184,150,62,.18);font-size:13px;color:rgba(255,255,255,.55)}.breadcrumb a{color:rgba(255,255,255,.65);text-decoration:none;transition:color .2s}.breadcrumb a:hover{color:var(--gold)}.breadcrumb .cur{color:var(--gold)}
 .hero{background:linear-gradient(140deg,#170933 0%,#1e0a4a 50%,#0f1538 100%);padding:80px 48px 68px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-20%;right:-8%;width:650px;height:650px;background:radial-gradient(circle,rgba(139,92,246,.14) 0%,transparent 65%);border-radius:50%;pointer-events:none}
@@ -92,7 +99,7 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
 .compassion-box h3{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold);margin-bottom:10px}
 .compassion-box p{color:rgba(255,255,255,.78);font-size:15px;line-height:1.75}
 @media(max-width:1100px){section{padding:56px 32px}.hero{padding:64px 32px 56px}.breadcrumb,.stats-bar{padding-left:32px;padding-right:32px}.footer{padding:48px 32px 28px}.related-sec{padding:40px 32px}.contact-sec{padding:56px 32px}}
-@media(max-width:768px){section{padding:48px 20px}.hero{padding:48px 20px 44px}.breadcrumb,.stats-bar{padding-left:20px;padding-right:20px}.nav-links{display:none}.two-col{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr;gap:32px}.footer-grid{grid-template-columns:1fr;gap:28px}.footer{padding:40px 20px 24px}.footer-btm{flex-direction:column;text-align:center}.steps-grid{grid-template-columns:1fr 1fr}.step:not(:last-child)::after{display:none}.related-sec{padding:36px 20px}.stats-grid{grid-template-columns:repeat(3,1fr)}.cta-strip{flex-direction:column;text-align:center}.contact-sec{padding:48px 20px}.compassion-box{flex-direction:column;gap:16px}}
+@media(max-width:768px){section{padding:48px 20px}.hero{padding:48px 20px 44px}.breadcrumb,.stats-bar{padding-left:20px;padding-right:20px}.nav-links{display:none}.hamburger{display:flex}.two-col{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr;gap:32px}.footer-grid{grid-template-columns:1fr;gap:28px}.footer{padding:40px 20px 24px}.footer-btm{flex-direction:column;text-align:center}.steps-grid{grid-template-columns:1fr 1fr}.step:not(:last-child)::after{display:none}.related-sec{padding:36px 20px}.stats-grid{grid-template-columns:repeat(3,1fr)}.cta-strip{flex-direction:column;text-align:center}.contact-sec{padding:48px 20px}.compassion-box{flex-direction:column;gap:16px}}
 @media(max-width:480px){.hero h1{font-size:30px}.hero-actions{flex-direction:column}.steps-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}.form-row{grid-template-columns:1fr}}
 </style>
 </head>
@@ -117,7 +124,22 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact" class="nav-cta">📞 Confidential Consultation</a></li>
   </ul>
+  <button class="hamburger" type="button" aria-label="Toggle navigation menu" onclick="toggleMob()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mob-menu" id="mobMenu">
+  <a href="#overview" onclick="toggleMob()">Overview</a>
+  <a href="#services" onclick="toggleMob()">Services</a>
+  <a href="#laws" onclick="toggleMob()">Applicable Laws</a>
+  <a href="#process" onclick="toggleMob()">Our Process</a>
+  <a href="#documents" onclick="toggleMob()">Documents</a>
+  <a href="#faq" onclick="toggleMob()">FAQ</a>
+  <a href="https://www.dhendeassociates.com/#practice" onclick="toggleMob()">Practice Areas</a>
+  <a href="#contact" onclick="toggleMob()">Contact</a>
+  <a class="mob-wa" href="https://wa.me/918149135283" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+</div>
 
 <div class="breadcrumb">
   <a href="https://www.dhendeassociates.com/">🏠 Home</a> ›
@@ -391,62 +413,67 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
     <div class="c-info">
       <h2>Speak to Us <em>in Confidence</em></h2>
       <p>Family matters are handled with complete discretion. Share your situation with our advocates — by WhatsApp, call, or in person at our Gokhalenagar, Pune office. All consultations are strictly confidential, judgment-free, and without any obligation to engage.</p>
-      <div class="c-detail"><div class="c-ico">📍</div><div class="c-txt"><p>Office Address</p><a href="https://maps.app.goo.gl/FT5mNgG5bBRJW8A99" target="_blank">Office No 1, First Floor, MHADA Commercial Complex,<br>Gokhalenagar, Pune 411016, Maharashtra</a></div></div>
-      <div class="c-detail"><div class="c-ico">📞</div><div class="c-txt"><p>Phone / WhatsApp</p><a href="tel:+918149135283">+91 8149135283</a> &nbsp;·&nbsp; <a href="tel:+919822335664">+91 98223 35664</a></div></div>
+      <div class="c-detail"><div class="c-ico">📍</div><div class="c-txt"><p>Office Address</p><a href="https://maps.app.goo.gl/FT5mNgG5bBRJW8A99" target="_blank" rel="noopener">Office No 1, First Floor, MHADA Commercial Complex,<br>Gokhalenagar, Pune 411016, Maharashtra</a></div></div>
+      <div class="c-detail"><div class="c-ico">📞</div><div class="c-txt"><p>Phone / WhatsApp</p><a href="tel:+918149135283">+91 81491 35283</a> &nbsp;·&nbsp; <a href="tel:+919822335664">+91 98223 35664</a></div></div>
       <div class="c-detail"><div class="c-ico">✉️</div><div class="c-txt"><p>Email</p><a href="mailto:ajinkya.dhende@gmail.com">ajinkya.dhende@gmail.com</a></div></div>
       <div class="c-detail"><div class="c-ico">⏰</div><div class="c-txt"><p>Office Hours</p><span>Monday – Saturday · 9:00 AM – 9:00 PM</span></div></div>
-      <a href="https://wa.me/918149135283?text=I%20need%20confidential%20advice%20on%20a%20family%20matter.%20My%20situation%20is%3A" class="wa-big">💬 WhatsApp Confidentially</a>
+      <a href="https://wa.me/918149135283?text=I%20need%20confidential%20advice%20on%20a%20family%20matter.%20My%20situation%20is%3A" class="wa-big" target="_blank" rel="noopener">💬 WhatsApp Confidentially</a>
     </div>
- 
-    <!-- Enquiry Form 
+
+    <!-- Enquiry Form -->
     <div class="enquiry-form" id="enquiry-form">
-      <h3>Family Law Enquiry</h3>
-      
-    
-      <div class="form-row">
-        <div class="fg"><label>Full Name</label><input type="text" placeholder="Your name (optional)"></div>
-        <div class="fg"><label>Phone / WhatsApp</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
+      <h3>Family Law Confidential Enquiry</h3>
+      <div id="form-fields">
+        <div class="form-row">
+          <div class="fg">
+            <label for="f-name">Full Name</label>
+            <input type="text" id="f-name" placeholder="Your name (optional)">
+          </div>
+          <div class="fg">
+            <label for="f-phone">Phone / WhatsApp *</label>
+            <input type="tel" id="f-phone" placeholder="+91 XXXXX XXXXX" required>
+          </div>
+        </div>
+        <div class="fg">
+          <label for="f-matter">Nature of Matter</label>
+          <select id="f-matter">
+            <option value="">— Select matter type —</option>
+            <option value="Mutual Consent Divorce">Mutual Consent Divorce</option>
+            <option value="Contested Divorce">Contested Divorce</option>
+            <option value="Child Custody & Guardianship">Child Custody &amp; Guardianship</option>
+            <option value="Maintenance / Alimony">Maintenance / Alimony</option>
+            <option value="Domestic Violence (PWDVA)">Domestic Violence — PWDVA Protection</option>
+            <option value="Matrimonial Property Dispute">Matrimonial Property Dispute</option>
+            <option value="Restitution of Conjugal Rights">Restitution of Conjugal Rights</option>
+            <option value="NRI Family Matter">NRI Family Matter</option>
+            <option value="Muslim Divorce / Khula">Muslim Divorce / Khula</option>
+            <option value="Other Family Matter">Other Family Matter</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label for="f-law">Applicable Personal Law</label>
+          <select id="f-law">
+            <option value="">— Select —</option>
+            <option value="Hindu / Sikh / Buddhist / Jain">Hindu / Sikh / Buddhist / Jain</option>
+            <option value="Muslim">Muslim</option>
+            <option value="Christian">Christian</option>
+            <option value="Special Marriage Act (Interfaith)">Special Marriage Act (Interfaith)</option>
+            <option value="Not Sure — Please Advise">Not Sure — Please Advise</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label for="f-msg">Brief Description (Optional)</label>
+          <textarea id="f-msg" rows="3" placeholder="You may describe your situation briefly — or simply leave this blank and call us directly."></textarea>
+        </div>
+        <button class="form-sub" type="button" onclick="submitForm()">Send Confidential Enquiry →</button>
+        <p class="form-note">🔒 Strictly private and confidential. We do not share your details with anyone.</p>
       </div>
-      <div class="fg"><label>Nature of Matter</label>
-        <select>
-          <option value="">— Select matter type —</option>
-          <option>Mutual Consent Divorce</option>
-          <option>Contested Divorce</option>
-          <option>Child Custody & Guardianship</option>
-          <option>Maintenance / Alimony</option>
-          <option>Domestic Violence — PWDVA Protection</option>
-          <option>Matrimonial Property Dispute</option>
-          <option>Restitution of Conjugal Rights</option>
-          <option>NRI Family Matter</option>
-          <option>Muslim Divorce / Khula</option>
-          <option>Other Family Matter</option>
-        </select>
-      </div>
-      <div class="fg"><label>Applicable Personal Law</label>
-        <select>
-          <option value="">— Select —</option>
-          <option>Hindu / Sikh / Buddhist / Jain</option>
-          <option>Muslim</option>
-          <option>Christian</option>
-          <option>Special Marriage Act (Interfaith)</option>
-          <option>Not Sure — Please Advise</option>
-        </select>
-      </div>
-      <div class="fg"><label>Brief Description (Optional)</label><textarea rows="3" placeholder="You may describe your situation briefly — or simply leave this blank and call us directly."></textarea></div>
-      <button class="form-sub" type="button" onclick="submitForm()">Send Confidential Enquiry →</button>
-      <p class="form-note">🔒 Strictly private and confidential. We do not share your details with anyone.</p>
-      <div class="form-success" id="form-success">
+      <div class="form-success" id="form-success" style="display:none;">
         <h4>✅ We Will Be in Touch</h4>
-        <p>We respond within 2–3 hours on working days. For urgent domestic violence matters, please WhatsApp immediately: <a href="https://wa.me/918149135283" style="color:var(--gold)">+91 8149135283</a></p>
+        <p>We respond within 2–3 hours on working days. For urgent domestic violence matters, please WhatsApp immediately: <a href="https://wa.me/918149135283" style="color:var(--gold)" target="_blank" rel="noopener">+91 81491 35283</a></p>
       </div>
     </div>
   </div>
-  -->
-
-
-
-
-
 </section>
 
 <footer class="footer">
@@ -461,13 +488,13 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
     <div class="f-col">
       <h4>Practice Areas</h4>
       <ul>
-        <li><a href="https://www.dhendeassociates.com/mact-claims.html">Motor Accident Claims (MACT)</a></li>
         <li><a href="https://www.dhendeassociates.com/criminal-law.html">Criminal Law &amp; Bail</a></li>
         <li><a href="https://www.dhendeassociates.com/family-law.html">Family Law &amp; Divorce</a></li>
-        <li><a href="https://www.dhendeassociates.com/civil-litigation.html">Civil Litigation</a></li>
-        <li><a href="https://www.dhendeassociates.com/insurance-disputes.html">Insurance Disputes</a></li>
+        <li><a href="https://www.dhendeassociates.com/cheque-bounce-lawyer-pune.html">Cheque Bounce (Sec 138)</a></li>
         <li><a href="https://www.dhendeassociates.com/leave-license-service.html">Leave &amp; License Registration</a></li>
-        <li><a href="https://www.dhendeassociates.com/notary-services.html">Notary Public Services</a></li>
+        <li><a href="https://www.dhendeassociates.com/#practice">Civil Litigation</a></li>
+        <li><a href="https://www.dhendeassociates.com/#practice">Insurance Disputes</a></li>
+        <li><a href="https://www.dhendeassociates.com/#notary">Notary Public Services</a></li>
       </ul>
     </div>
     <div class="f-col">
@@ -475,6 +502,7 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
       <ul>
         <li><a href="https://www.dhendeassociates.com/motor-accident-claim-estimator.html">MACT Compensation Calculator</a></li>
         <li><a href="https://www.dhendeassociates.com/maharashtra-stampduty-estimator.html">Stamp Duty Estimator</a></li>
+        <li><a href="https://www.dhendeassociates.com/hindu-succession-share-calculator.html">Hindu Succession Calculator</a></li>
         <li><a href="https://www.dhendeassociates.com/nia_138_limitation.html">NI Act 138 Calculator</a></li>
         <li><a href="https://www.dhendeassociates.com/constitutionforkids_eng.html">Constitution for Kids</a></li>
         <li><a href="https://www.dhendeassociates.com/">Home</a></li>
@@ -483,7 +511,7 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
     </div>
   </div>
   <div class="footer-btm">
-    <span>© 2025 Dhende Associates. All rights reserved. · Adv. Ashok Dhende, Notary Public since 1998.</span>
+    <span>© 2026 Dhende Associates. All rights reserved. · Adv. Ashok Dhende, Notary Public since 1998.</span>
     <span>Disclaimer: Content is for general information only and does not constitute legal advice.</span>
   </div>
 </footer>
@@ -495,7 +523,7 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
     <div class="related-grid">
       <a href="https://www.dhendeassociates.com/criminal-law.html" class="related-card"><div class="related-card-ttl">🔒 Criminal Law &amp; Bail</div><p>FIR defence, anticipatory bail, BNSS proceedings. Expert criminal defence across Pune courts and Bombay High Court.</p></a>
       <a href="https://www.dhendeassociates.com/#notary" class="related-card"><div class="related-card-ttl">📋 Notary Services</div><p>Notarisation of affidavits, powers of attorney, consent letters, succession documents, and all notarial acts. Adv. Ajinkya Dhende, Notary Public 2025.</p></a>
-      <a href="https://www.dhendeassociates.com/cheque-bounce-lawyer-pune.html" class="related-card"><div class="related-card-ttl">🏛️ Negotiable Instruments Act</div><p> A dishonoured cheque is not just a broken promise — it is a criminal offence under Section 138 of the Negotiable Instruments Act, 1881. Dhende Associates represents <strong style="color:#fff">complainants</strong> in recovering their money swiftly and <strong style="color:#fff">accused persons</strong> in building the strongest possible defence — before Pune Magistrate Courts and in appeal</p></a>
+      <a href="https://www.dhendeassociates.com/cheque-bounce-lawyer-pune.html" class="related-card"><div class="related-card-ttl">🏛️ Negotiable Instruments Act</div><p>A dishonoured cheque is not just a broken promise — it is a criminal offence under Section 138 of the Negotiable Instruments Act, 1881. Dhende Associates represents complainants and accused persons before Pune Magistrate Courts and in appeal.</p></a>
     </div>
   </div>
 </section>
@@ -505,42 +533,40 @@ function toggleFaq(btn){const item=btn.closest('.faq-item');const wasOpen=item.c
 function submitForm(){
   const name=document.getElementById('f-name').value.trim();
   const phone=document.getElementById('f-phone').value.trim();
-  const role=document.getElementById('f-role').value;
-  const amount=document.getElementById('f-amount').value.trim();
-  const chequeDate=document.getElementById('f-date').value;
-  const reason=document.getElementById('f-reason').value;
-  const status=document.getElementById('f-status').value;
+  const matter=document.getElementById('f-matter').value;
+  const law=document.getElementById('f-law').value;
+  const msg=document.getElementById('f-msg').value.trim();
 
-  if(!name || !phone){
-    alert('Please enter your name and phone number.');
+  if(!phone){
+    alert('Please enter your phone or WhatsApp number.');
     return;
   }
 
   const details=[
     'Hello Dhende Associates,',
     '',
-    'New Section 138 enquiry from website:',
-    'Name: '+name,
+    'New Confidential Family Law enquiry from website:',
+    name ? 'Name: '+name : '',
     'Phone / WhatsApp: '+phone,
-    role ? 'Role: '+role : '',
-    amount ? 'Cheque Amount: '+amount : '',
-    chequeDate ? 'Cheque Return Date: '+chequeDate : '',
-    reason ? 'Reason for Dishonour: '+reason : '',
-    status ? 'Current Status: '+status : ''
+    matter ? 'Nature of Matter: '+matter : '',
+    law ? 'Personal Law: '+law : '',
+    msg ? 'Details: '+msg : ''
   ].filter(Boolean).join('\n');
 
   const waText=encodeURIComponent(details);
   window.open('https://wa.me/918149135283?text='+waText, '_blank', 'noopener');
 
-  const mailTo='mailto:ajinkya.dhende@gmail.com?subject='+encodeURIComponent('Section 138 enquiry from website')+'&body='+encodeURIComponent(details+'\n\nPlease contact me at the earliest.');
-  window.open(mailTo, '_blank', 'noopener');
-
-  document.getElementById('enquiry-form').style.opacity='0.4';
-  document.getElementById('enquiry-form').style.pointerEvents='none';
-  setTimeout(()=>{document.querySelector('.enquiry-form h3').style.display='none';document.querySelectorAll('.fg,.form-row,.form-sub,.form-note').forEach(el=>el.style.display='none');document.getElementById('form-success').style.display='block';document.getElementById('enquiry-form').style.opacity='1';},600);
+  document.getElementById('form-fields').style.display='none';
+  document.getElementById('form-success').style.display='block';
 }
-function submitForm(){document.getElementById('enquiry-form').style.opacity='0.4';document.getElementById('enquiry-form').style.pointerEvents='none';setTimeout(()=>{document.querySelector('.enquiry-form h3').style.display='none';document.querySelectorAll('.fg,.form-row,.form-sub,.form-note').forEach(el=>el.style.display='none');document.getElementById('form-success').style.display='block';document.getElementById('enquiry-form').style.opacity='1';},600);}
-window.addEventListener('scroll',()=>{document.getElementById('navbar').style.boxShadow=window.scrollY>60?'0 2px 24px rgba(0,0,0,0.35)':'none';});
+function toggleMob(){
+  const m=document.getElementById('mobMenu');
+  if(m){
+    m.classList.toggle('open');
+    document.body.style.overflow=m.classList.contains('open')?'hidden':'';
+  }
+}
+window.addEventListener('scroll',()=>{const nb=document.getElementById('navbar');if(nb){nb.style.boxShadow=window.scrollY>60?'0 2px 24px rgba(0,0,0,0.35)':'none';}});
 </script>
 </body>
 </html>
