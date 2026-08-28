@@ -26,6 +26,7 @@
 <meta property="og:locale" content="en_IN">
 <meta property="og:site_name" content="Dhende Associates">
 <link rel="icon" href="https://www.dhendeassociates.com/favicon.png" type="image/png">
+<link rel="manifest" href="manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
@@ -49,7 +50,13 @@
 .navbar{position:fixed;top:0;left:0;right:0;z-index:500;height:64px;padding:0 40px;display:flex;align-items:center;justify-content:space-between;background:rgba(26,13,59,0.95);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07);transition:box-shadow .3s}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}.nav-logo img{width:32px;height:32px;border-radius:5px}.nav-logo-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#fff;line-height:1.1;display:block}.nav-logo-tag{font-size:9px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase}
 .nav-links{display:flex;align-items:center;gap:2px;list-style:none}.nav-links a{font-size:13px;color:rgba(255,255,255,.78);text-decoration:none;padding:6px 10px;border-radius:6px;transition:all .2s}.nav-links a:hover{color:#fff;background:rgba(255,255,255,.09)}.nav-cta{background:linear-gradient(135deg,#25D366,#128C7E)!important;color:#fff!important;padding:8px 16px!important;border-radius:8px!important;font-weight:600}
-.breadcrumb{margin-top:64px;padding:12px 48px;background:var(--p900);border-bottom:1px solid rgba(184,150,62,.18);font-size:13px;color:rgba(255,255,255,.55)}.breadcrumb a{color:rgba(255,255,255,.65);text-decoration:none}.breadcrumb a:hover{color:var(--gold)}.breadcrumb .cur{color:var(--gold)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}
+.mob-menu{display:none;position:fixed;inset:0;z-index:1200;background:#1A0D3B;padding:5rem 1.5rem 1.5rem;flex-direction:column;gap:.6rem;overflow-y:auto}
+.mob-menu.open{display:flex}
+.mob-menu a{font-size:15px;color:#fff;padding:.75rem 1rem;border-radius:8px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.07)}
+.mob-wa{background:linear-gradient(135deg,#25D366,#128C7E)!important;color:#fff!important;font-weight:600;text-align:center;margin-top:.5rem}
+.breadcrumb{margin-top:64px;padding:12px 48px;background:var(--p900);border-bottom:1px solid rgba(184,150,62,.18);font-size:13px;color:rgba(255,255,255,.55)}.breadcrumb a{color:rgba(255,255,255,.65);text-decoration:none;transition:color .2s}.breadcrumb a:hover{color:var(--gold)}.breadcrumb .cur{color:var(--gold)}
 .hero{background:linear-gradient(140deg,#0e0820 0%,#180b38 50%,#0d1328 100%);padding:80px 48px 68px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-20%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(109,53,222,.13) 0%,transparent 65%);border-radius:50%;pointer-events:none}
 .hero-content{max-width:860px;position:relative;z-index:1}
@@ -97,7 +104,7 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
 .related-sec{background:var(--p050);padding:48px}.related-h{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--p900);margin-bottom:4px}.related-sub{font-size:13.5px;color:var(--text-mid);margin-bottom:24px}.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:1100px;margin:0 auto}.related-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:24px;text-decoration:none;transition:all .3s;display:block}.related-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}.related-card-ttl{font-family:'Source Serif 4',serif;font-size:15.5px;color:var(--p900);margin-bottom:8px}.related-card p{font-size:13px;color:var(--text-mid);line-height:1.55}
 .wa-float{position:fixed;bottom:28px;right:28px;z-index:900;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.38);text-decoration:none;transition:all .3s}.wa-float:hover{transform:scale(1.12)}.wa-float svg{width:28px;height:28px;fill:#fff}
 @media(max-width:1100px){section{padding:56px 32px}.hero{padding:64px 32px 56px}.breadcrumb,.stats-bar{padding-left:32px;padding-right:32px}.footer,.related-sec,.contact-sec{padding-left:32px;padding-right:32px}}
-@media(max-width:768px){section{padding:48px 20px}.hero{padding:48px 20px 44px}.breadcrumb,.stats-bar{padding-left:20px;padding-right:20px}.nav-links{display:none}.two-col,.dual-box{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr;gap:32px}.footer-grid{grid-template-columns:1fr;gap:28px}.footer,.related-sec,.contact-sec{padding:40px 20px}.footer-btm{flex-direction:column;text-align:center}.cta-strip{flex-direction:column;text-align:center}.deadline-flow{flex-direction:column;gap:12px}.df-step:not(:last-child)::after{content:'↓';right:auto;left:50%;top:auto;bottom:-18px;transform:translateX(-50%)}}
+@media(max-width:768px){section{padding:48px 20px}.hero{padding:48px 20px 44px}.breadcrumb,.stats-bar{padding-left:20px;padding-right:20px}.nav-links{display:none}.hamburger{display:flex}.two-col,.dual-box{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr;gap:32px}.footer-grid{grid-template-columns:1fr;gap:28px}.footer,.related-sec,.contact-sec{padding:40px 20px}.footer-btm{flex-direction:column;text-align:center}.cta-strip{flex-direction:column;text-align:center}.deadline-flow{flex-direction:column;gap:12px}.df-step:not(:last-child)::after{content:'↓';right:auto;left:50%;top:auto;bottom:-18px;transform:translateX(-50%)}}
 @media(max-width:480px){.hero h1{font-size:30px}.hero-actions{flex-direction:column}.form-row{grid-template-columns:1fr}}
 </style>
  
@@ -106,7 +113,7 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4ZG63FK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<a href="https://wa.me/918149135283?text=Hello%20Dhende%20Associates%2C%20I%20need%20help%20with%20a%20cheque%20bounce%20matter%20under%20Section%20138%20NI%20Act." class="wa-float" aria-label="WhatsApp">
+<a href="https://wa.me/918149135283?text=Hello%20Dhende%20Associates%2C%20I%20need%20help%20with%20a%20cheque%20bounce%20matter%20under%20Section%20138%20NI%20Act." class="wa-float" aria-label="WhatsApp" target="_blank" rel="noopener">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.523 5.845L0 24l6.29-1.508A11.935 11.935 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.946 0-3.758-.524-5.305-1.434l-.38-.226-3.735.895.928-3.64-.248-.391A9.782 9.782 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
 </a>
 
@@ -116,7 +123,6 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
     <div><span class="nav-logo-name">Dhende Associates</span><span class="nav-logo-tag">Advocates · Notary </span></div>
   </a>
   <ul class="nav-links">
-
     <li><a href="#overview">Overview</a></li>
     <li><a href="#deadlines">Deadlines</a></li>
     <li><a href="#ingredients">Ingredients</a></li>
@@ -125,7 +131,22 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
     <li><a href="https://www.dhendeassociates.com/nia_138_limitation.html">🧮 Calculator</a></li>
     <li><a href="#contact" class="nav-cta">📞 Free Evaluation</a></li>
   </ul>
+  <button class="hamburger" type="button" aria-label="Toggle mobile menu" onclick="document.getElementById('mobMenu').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mob-menu" id="mobMenu">
+  <a href="#overview" onclick="document.getElementById('mobMenu').classList.remove('open')">Overview</a>
+  <a href="#deadlines" onclick="document.getElementById('mobMenu').classList.remove('open')">Deadlines</a>
+  <a href="#ingredients" onclick="document.getElementById('mobMenu').classList.remove('open')">Ingredients</a>
+  <a href="#defences" onclick="document.getElementById('mobMenu').classList.remove('open')">Defences</a>
+  <a href="#faq" onclick="document.getElementById('mobMenu').classList.remove('open')">FAQ</a>
+  <a href="https://www.dhendeassociates.com/nia_138_limitation.html" onclick="document.getElementById('mobMenu').classList.remove('open')">🧮 Calculator</a>
+  <a href="https://www.dhendeassociates.com/" onclick="document.getElementById('mobMenu').classList.remove('open')">Home</a>
+  <a href="#contact" onclick="document.getElementById('mobMenu').classList.remove('open')">Contact</a>
+  <a class="mob-wa" href="https://wa.me/918149135283" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+</div>
 
 <div class="breadcrumb">
   <a href="https://www.dhendeassociates.com/">🏠 Home</a> ›
