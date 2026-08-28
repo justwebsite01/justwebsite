@@ -1,18 +1,20 @@
 # robots.txt — Dhende Associates
 # https://www.dhendeassociates.com/
-# Last updated: 2026-07-12
+# Last updated: 2026-08-28
 
 User-agent: *
 Allow: /
 Disallow: /cgi-bin/
 
 # Public legal tools and service pages are eligible for indexing
+Allow: /criminal-law.html
+Allow: /family-law.html
 Allow: /cheque-bounce-lawyer-pune.html
+Allow: /leave-license-service.html
 Allow: /motor-accident-claim-estimator.html
 Allow: /maharashtra-stampduty-estimator.html
-Allow: /nia_138_limitation.html
 Allow: /hindu-succession-share-calculator.html
-Allow: /leave-license-service.html
+Allow: /nia_138_limitation.html
 Allow: /constitutionforkids_eng.html
 Allow: /constitutionforkids_mar.html
 
