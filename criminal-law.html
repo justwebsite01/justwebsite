@@ -33,6 +33,7 @@
     content="Experienced criminal lawyer in Pune for anticipatory bail, regular bail, FIR quashing, trial defence and criminal appeals under BNS/BNSS 2023.">
   <meta name="twitter:image" content="https://www.dhendeassociates.com/og-image.png">
   <link rel="icon" href="https://www.dhendeassociates.com/favicon.png" type="image/png">
+  <link rel="manifest" href="manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -1321,6 +1322,10 @@
         display: none
       }
 
+      .hamburger {
+        display: flex
+      }
+
       .two-col {
         grid-template-columns: 1fr
       }
@@ -1370,6 +1375,58 @@
       }
     }
 
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: .5rem;
+      background: none;
+      border: none;
+      margin-left: auto;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+    }
+
+    .mob-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1200;
+      background: #1A0D3B;
+      padding: 5rem 1.5rem 1.5rem;
+      flex-direction: column;
+      gap: .6rem;
+      overflow-y: auto;
+    }
+
+    .mob-menu.open {
+      display: flex;
+    }
+
+    .mob-menu a {
+      font-size: 15px;
+      color: #fff;
+      padding: .75rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, .07);
+    }
+
+    .mob-wa {
+      background: linear-gradient(135deg, #25D366, #128C7E) !important;
+      color: #fff !important;
+      font-weight: 600;
+      text-align: center;
+      margin-top: .5rem;
+    }
+
     @media(max-width:480px) {
       .hero h1 {
         font-size: 30px
@@ -1399,7 +1456,7 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4ZG63FK" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
 
-  <a href="https://wa.me/918149135283?text=Hello%20Dhende%20Associates%2C%20I%20would%20like%20to%20enquire%20about%20legal%20services."
+  <a href="https://wa.me/918149135283?text=Hello%20Dhende%20Associates%2C%20I%20would%20like%20to%20enquire%20about%20criminal%20law%20services."
     class="wa-float" target="_blank" rel="noopener" title="WhatsApp Us" aria-label="Chat on WhatsApp">
     <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
       <path
@@ -1415,17 +1472,31 @@
       </div>
     </a>
     <ul class="nav-links">
-
       <li><a href="#overview">Overview</a></li>
       <li><a href="#types">Services</a></li>
       <li><a href="#bail-guide">Bail Guide</a></li>
       <li><a href="#process">Our Process</a></li>
       <li><a href="#documents">Documents</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="/#practice">Practice Areas</a></li>
+      <li><a href="https://www.dhendeassociates.com/#practice">Practice Areas</a></li>
       <li><a href="#contact" class="nav-cta">📞 Urgent Consultation</a></li>
     </ul>
+    <button class="hamburger" type="button" aria-label="Toggle mobile menu" onclick="toggleMob()">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <div class="mob-menu" id="mobMenu">
+    <a href="#overview" onclick="toggleMob()">Overview</a>
+    <a href="#types" onclick="toggleMob()">Services</a>
+    <a href="#bail-guide" onclick="toggleMob()">Bail Guide</a>
+    <a href="#process" onclick="toggleMob()">Our Process</a>
+    <a href="#documents" onclick="toggleMob()">Documents</a>
+    <a href="#faq" onclick="toggleMob()">FAQ</a>
+    <a href="https://www.dhendeassociates.com/#practice" onclick="toggleMob()">Practice Areas</a>
+    <a href="#contact" onclick="toggleMob()">Contact</a>
+    <a class="mob-wa" href="https://wa.me/918149135283" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+  </div>
 
   <nav class="breadcrumb" id="breadcrumb" aria-label="Breadcrumb">
     <a href="https://www.dhendeassociates.com/">🏠 Home</a>
@@ -1970,23 +2041,20 @@
           <h4>Practice Areas</h4>
           <ul>
             <li><a href="https://www.dhendeassociates.com/criminal-law.html">Criminal Law &amp; Bail</a></li>
+            <li><a href="https://www.dhendeassociates.com/family-law.html">Family Law &amp; Divorce</a></li>
             <li><a href="https://www.dhendeassociates.com/cheque-bounce-lawyer-pune.html">Cheque Bounce Law</a></li>
-            <li><a href="https://www.dhendeassociates.com/leave-license-service.html">Leave &amp; License
-                Registration</a></li>
-            <li><a href="https://www.dhendeassociates.com/#notary">Notary Public Services</a></li>
-            <li><a href="https://www.dhendeassociates.com/#practice">Family Law &amp; Divorce</a></li>
+            <li><a href="https://www.dhendeassociates.com/leave-license-service.html">Leave &amp; License Registration</a></li>
             <li><a href="https://www.dhendeassociates.com/#practice">Civil Litigation</a></li>
-            <li><a href="https://www.dhendeassociates.com/#practice">Motor Accident Claims (MACT)</a></li>
             <li><a href="https://www.dhendeassociates.com/#practice">Insurance Disputes</a></li>
+            <li><a href="https://www.dhendeassociates.com/#notary">Notary Public Services</a></li>
           </ul>
         </div>
         <div class="f-col">
           <h4>Legal Tools</h4>
           <ul>
-            <li><a href="https://www.dhendeassociates.com/motor-accident-claim-estimator.html">MACT Compensation
-                Calculator</a></li>
-            <li><a href="https://www.dhendeassociates.com/maharashtra-stampduty-estimator.html">Stamp Duty Estimator</a>
-            </li>
+            <li><a href="https://www.dhendeassociates.com/motor-accident-claim-estimator.html">MACT Compensation Calculator</a></li>
+            <li><a href="https://www.dhendeassociates.com/maharashtra-stampduty-estimator.html">Stamp Duty Estimator</a></li>
+            <li><a href="https://www.dhendeassociates.com/hindu-succession-share-calculator.html">Hindu Succession Calculator</a></li>
             <li><a href="https://www.dhendeassociates.com/nia_138_limitation.html">NI Act 138 Calculator</a></li>
             <li><a href="https://www.dhendeassociates.com/constitutionforkids_eng.html">Constitution for Kids</a></li>
             <li><a href="https://www.dhendeassociates.com/">Home</a></li>
@@ -2025,6 +2093,13 @@
 
     <script>
       function toggleFaq(btn) { const item = btn.closest('.faq-item'); const wasOpen = item.classList.contains('open'); document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open')); if (!wasOpen) item.classList.add('open'); }
+      function toggleMob() {
+        const m = document.getElementById('mobMenu');
+        if (m) {
+          m.classList.toggle('open');
+          document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+        }
+      }
       function submitForm() {
         const name = document.getElementById('clientName').value.trim();
         const phone = document.getElementById('clientPhone').value.trim();
