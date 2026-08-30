@@ -1,89 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="google-site-verification" content="PiksVZaXg7yXCtuIJKmjqDi6nK7VVSGKS_OU0gdy_qU"/>
-<title>Dhende Associates — Advocates, Notary &amp; Legal Consultants</title>
-<link rel="icon" type="image/png" href="favicon.png">
-<!-- Performance Optimizations -->
-<link rel="dns-prefetch" href="https://fonts.googleapis.com">
-<link rel="dns-prefetch" href="https://fonts.gstatic.com">
-<link rel="dns-prefetch" href="https://wa.me">
-<link rel="dns-prefetch" href="https://www.google.com">
-<link rel="preconnect" href="https://www.googletagmanager.com">
-<link rel="preconnect" href="https://www.google-analytics.com">
-<link rel="preconnect" href="https://wa.me">
-<style>
-:root{--p900:#1A0D3B;--p800:#2A1654;--p600:#5438A0;--p500:#6B50BE;--p300:#B8A4E5;--gold:#C9A84C;--gold-lt:#E8C97A;--white:#FFFFFF}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Source Serif 4',Georgia,serif;background:#FAF8FF;color:#1E1033;line-height:1.7;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-#navbar{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(26,13,59,.95);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
-.nav-inner{max-width:1240px;margin:0 auto;padding:1rem;height:66px;display:flex;align-items:center;gap:1.5rem}
-.nav-brand{display:flex;flex-direction:column;line-height:1.15}
-.nav-firm{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.2rem;font-weight:600;color:var(--white);letter-spacing:.02em}
-.nav-tagline{font-family:'DM Sans',sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--p300);margin-top:1px}
-.nav-links{display:flex;align-items:center;gap:.1rem}
-.nav-links a{font-family:'DM Sans',sans-serif;font-size:.78rem;color:rgba(255,255,255,.72);padding:.45rem .82rem;border-radius:4px;white-space:nowrap}
-.nav-wa{display:flex;align-items:center;gap:.45rem;background:var(--gold);color:var(--p900);font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:500;padding:.48rem 1.1rem;border-radius:4px;border:none;white-space:nowrap}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem;background:none;border:none}
-.hamburger span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.8)}
-.hero{min-height:100vh;position:relative;background:var(--p900);display:flex;align-items:center;overflow:hidden}
-.hero-geo{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-.hero-geo::before{content:'';position:absolute;top:-220px;right:-220px;width:780px;height:780px;border:1px solid rgba(255,255,255,.04);border-radius:50%}
-.hero-geo::after{content:'';position:absolute;top:-80px;right:-80px;width:520px;height:520px;border:1px solid rgba(180,140,230,.08);border-radius:50%}
-.hero-geo2{position:absolute;bottom:-180px;left:-140px;width:480px;height:480px;border:1px solid rgba(255,255,255,.03);border-radius:50%;pointer-events:none}
-.hero-left-bar{position:absolute;top:0;left:0;width:5px;height:100%;background:linear-gradient(to bottom,var(--p600),var(--gold))}
-.hero-inner{max-width:1240px;margin:0 auto;padding:2rem 2rem;display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center;position:relative;z-index:1;width:100%}
-.hero-badge{display:inline-flex;align-items:center;gap:.6rem;font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:500;color:var(--gold);letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.3rem}
-.hero-badge::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
-.hero-h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.6rem,5vw,4.1rem);font-weight:600;line-height:1.08;color:var(--white);margin-bottom:1.4rem}
-.hero-h1 em{color:var(--p300);font-style:italic}
-.hero-since{display:inline-block;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);color:#E8C97A;font-family:'DM Sans',sans-serif;font-size:.75rem;letter-spacing:.1em;padding:.35rem .9rem;border-radius:20px;margin-bottom:1.5rem}
-.hero-desc{font-family:'Source Serif 4',Georgia,serif;font-size:.98rem;font-weight:300;color:rgba(255,255,255,.6);line-height:1.85;max-width:500px;margin-bottom:2.5rem}
-.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-primary{font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:500;background:var(--p500);color:var(--white);padding:.8rem 1.75rem;border-radius:4px;border:1.5px solid var(--p500)}
-.btn-gold{font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:500;background:var(--gold);color:var(--p900);padding:.8rem 1.75rem;border-radius:4px;border:1.5px solid var(--gold)}
-.btn-ghost{font-family:'DM Sans',sans-serif;font-size:.85rem;background:transparent;color:rgba(255,255,255,.75);padding:.8rem 1.75rem;border-radius:4px;border:1px solid rgba(255,255,255,.22)}
-.hero-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:2.25rem}
-.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.75rem}
-.hero-stat{text-align:center;padding:.9rem .5rem;background:rgba(255,255,255,.04);border-radius:7px}
-.stat-n{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:2.3rem;font-weight:700;color:var(--white);line-height:1}
-.stat-l{font-family:'DM Sans',sans-serif;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:.4rem}
-.hero-pills{display:flex;flex-wrap:wrap;gap:.5rem}
-.pill{font-family:'DM Sans',sans-serif;font-size:.68rem;padding:.28rem .8rem;border-radius:20px}
-.pill-p{background:rgba(107,80,190,.25);color:var(--p300);border:1px solid rgba(107,80,190,.35)}
-.pill-g{background:rgba(113,76,223,.375);color:var(--gold-lt);border:1px solid rgba(201,168,76,.25)}
-.pill-w{background:rgba(255,255,255,.07);color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.12)}
-.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.45rem;font-family:'DM Sans',sans-serif;font-size:.63rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.25)}
-.hero-scroll-line{width:1px;height:38px;background:linear-gradient(to bottom,rgba(255,255,255,.3),transparent)}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="google-site-verification" content="PiksVZaXg7yXCtuIJKmjqDi6nK7VVSGKS_OU0gdy_qU" />
+  <title>Dhende Associates — Advocates, Notary &amp; Legal Consultants</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Performance Optimizations -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://wa.me">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://wa.me">
+  <style>
+    :root {
+      --p900: #1A0D3B;
+      --p800: #2A1654;
+      --p600: #5438A0;
+      --p500: #6B50BE;
+      --p300: #B8A4E5;
+      --gold: #C9A84C;
+      --gold-lt: #E8C97A;
+      --white: #FFFFFF
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      background: #FAF8FF;
+      color: #1E1033;
+      line-height: 1.7;
+      overflow-x: hidden
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 500;
+      background: rgba(26, 13, 59, .95);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, .07)
+    }
+
+    .nav-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 1rem;
+      height: 66px;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem
+    }
+
+    .nav-brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15
+    }
+
+    .nav-firm {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: .02em
+    }
+
+    .nav-tagline {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .62rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--p300);
+      margin-top: 1px
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: .1rem
+    }
+
+    .nav-links a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .78rem;
+      color: rgba(255, 255, 255, .72);
+      padding: .45rem .82rem;
+      border-radius: 4px;
+      white-space: nowrap
+    }
+
+    .nav-wa {
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+      background: var(--gold);
+      color: var(--p900);
+      font-family: 'DM Sans', sans-serif;
+      font-size: .78rem;
+      font-weight: 500;
+      padding: .48rem 1.1rem;
+      border-radius: 4px;
+      border: none;
+      white-space: nowrap
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: .5rem;
+      background: none;
+      border: none
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: rgba(255, 255, 255, .8)
+    }
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      background: var(--p900);
+      display: flex;
+      align-items: center;
+      overflow: hidden
+    }
+
+    .hero-geo {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden
+    }
+
+    .hero-geo::before {
+      content: '';
+      position: absolute;
+      top: -220px;
+      right: -220px;
+      width: 780px;
+      height: 780px;
+      border: 1px solid rgba(255, 255, 255, .04);
+      border-radius: 50%
+    }
+
+    .hero-geo::after {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 520px;
+      height: 520px;
+      border: 1px solid rgba(180, 140, 230, .08);
+      border-radius: 50%
+    }
+
+    .hero-geo2 {
+      position: absolute;
+      bottom: -180px;
+      left: -140px;
+      width: 480px;
+      height: 480px;
+      border: 1px solid rgba(255, 255, 255, .03);
+      border-radius: 50%;
+      pointer-events: none
+    }
+
+    .hero-left-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--p600), var(--gold))
+    }
+
+    .hero-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 2rem 2rem;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      width: 100%
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .7rem;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin-bottom: 1.3rem
+    }
+
+    .hero-badge::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--gold)
+    }
+
+    .hero-h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.6rem, 5vw, 4.1rem);
+      font-weight: 600;
+      line-height: 1.08;
+      color: var(--white);
+      margin-bottom: 1.4rem
+    }
+
+    .hero-h1 em {
+      color: var(--p300);
+      font-style: italic
+    }
+
+    .hero-since {
+      display: inline-block;
+      background: rgba(201, 168, 76, .15);
+      border: 1px solid rgba(201, 168, 76, .3);
+      color: #E8C97A;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .75rem;
+      letter-spacing: .1em;
+      padding: .35rem .9rem;
+      border-radius: 20px;
+      margin-bottom: 1.5rem
+    }
+
+    .hero-desc {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: .98rem;
+      font-weight: 300;
+      color: rgba(255, 255, 255, .6);
+      line-height: 1.85;
+      max-width: 500px;
+      margin-bottom: 2.5rem
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap
+    }
+
+    .btn-primary {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .85rem;
+      font-weight: 500;
+      background: var(--p500);
+      color: var(--white);
+      padding: .8rem 1.75rem;
+      border-radius: 4px;
+      border: 1.5px solid var(--p500)
+    }
+
+    .btn-gold {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .85rem;
+      font-weight: 500;
+      background: var(--gold);
+      color: var(--p900);
+      padding: .8rem 1.75rem;
+      border-radius: 4px;
+      border: 1.5px solid var(--gold)
+    }
+
+    .btn-ghost {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .85rem;
+      background: transparent;
+      color: rgba(255, 255, 255, .75);
+      padding: .8rem 1.75rem;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, .22)
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 10px;
+      padding: 2.25rem
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.75rem
+    }
+
+    .hero-stat {
+      text-align: center;
+      padding: .9rem .5rem;
+      background: rgba(255, 255, 255, .04);
+      border-radius: 7px
+    }
+
+    .stat-n {
+      display: block;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.3rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1
+    }
+
+    .stat-l {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .66rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .4);
+      margin-top: .4rem
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem
+    }
+
+    .pill {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .68rem;
+      padding: .28rem .8rem;
+      border-radius: 20px
+    }
+
+    .pill-p {
+      background: rgba(107, 80, 190, .25);
+      color: var(--p300);
+      border: 1px solid rgba(107, 80, 190, .35)
+    }
+
+    .pill-g {
+      background: rgba(113, 76, 223, .375);
+      color: var(--gold-lt);
+      border: 1px solid rgba(201, 168, 76, .25)
+    }
+
+    .pill-w {
+      background: rgba(255, 255, 255, .07);
+      color: rgba(255, 255, 255, .6);
+      border: 1px solid rgba(255, 255, 255, .12)
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .45rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .63rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .25)
+    }
+
+    .hero-scroll-line {
+      width: 1px;
+      height: 38px;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, .3), transparent)
+    }
+  </style>
+
+  <!-- Google Tag Manager -->
+  <script defer>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T4ZG63FK');</script>
+  <!-- End Google Tag Manager -->
 
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=DM+Sans:wght@300;400;500&display=swap">
-<link rel="preload" as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet';this.media='all'">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=DM+Sans:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=DM+Sans:wght@300;400;500&display=swap">
+  <link rel="preload" as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet';this.media='all'">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=DM+Sans:wght@300;400;500&display=swap"
+    media="print" onload="this.media='all'">
 
-<!-- SEO Meta Tags -->
-<meta name="description" content="Trusted advocate & notary in Pune. 40+ years of legal practice in Motor Accident Claims, Insurance, Civil/Criminal Law, Property Law. Serving Maharashtra & India.">
-<meta name="keywords" content="advocates Pune, law firm Pune, Bombay High Court advocate, MACT advocate Pune, motor accident claim Pune, MACT compensation calculator, Gap certificate, anticipatory bail advocate Pune, bail application lawyer Pune, criminal lawyer Pune, BNSS advocate Pune, FIR defence Pune, affidavit for caste validity, Affidavit symbiosys admission eligibility, passport related affidavit, name change affidavit, same name affidavit, promissory note, indemnity bond, service agreement, service Bond, corporate bonds, loss of FD, deceased bank claim, lawyer Pune, family lawyer Pune, divorce advocate Pune, civil litigation Pune, property lawyer Pune, sale deed advocate Pune, title verification Pune, stamp duty advisor Pune, NRI property legal help Pune, insurance dispute advocate Pune, cheque bounce lawyer Pune, Section 138 NI Act advocate, notary public Pune, notary near me Pune, legal heir certificate Pune, will drafting lawyer Pune, leave and license registration Pune, labour law advocate Pune, RTI filing advocate Pune, legal notice drafting Pune, document drafting lawyer Pune, Maharashtra advocate, legal services Maharashtra, trusted advocate Pune, Dhende Associates Pune">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta name="author" content="Adv. Ashok Dhende, Adv. Ajinkya Dhende">
-<meta name="publisher" content="Dhende Associates">
-<meta name="revisit-after" content="7 days">
-<link rel="canonical" href="https://www.dhendeassociates.com/">
-<meta name="msapplication-TileColor" content="#1a1a1a">
-<meta name="theme-color" content="#1A0D3B">
-<meta name="geo.region" content="IN-MH">
-<meta name="geo.placename" content="Pune, Maharashtra">
-<meta name="geo.position" content="18.5204;73.8567">
-<meta name="ICBM" content="18.5204, 73.8567">
-<!-- 1. PRIMARY: LegalService + LocalBusiness -->
-<script type="application/ld+json">
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Trusted advocate & notary in Pune. 40+ years of legal practice in Motor Accident Claims, Insurance, Civil/Criminal Law, Property Law. Serving Maharashtra & India.">
+  <meta name="keywords"
+    content="advocates Pune, law firm Pune, Bombay High Court advocate, MACT advocate Pune, motor accident claim Pune, MACT compensation calculator, Gap certificate, anticipatory bail advocate Pune, bail application lawyer Pune, criminal lawyer Pune, BNSS advocate Pune, FIR defence Pune, affidavit for caste validity, Affidavit symbiosys admission eligibility, passport related affidavit, name change affidavit, same name affidavit, promissory note, indemnity bond, service agreement, service Bond, corporate bonds, loss of FD, deceased bank claim, lawyer Pune, family lawyer Pune, divorce advocate Pune, civil litigation Pune, property lawyer Pune, sale deed advocate Pune, title verification Pune, stamp duty advisor Pune, NRI property legal help Pune, insurance dispute advocate Pune, cheque bounce lawyer Pune, Section 138 NI Act advocate, notary public Pune, notary near me Pune, legal heir certificate Pune, will drafting lawyer Pune, leave and license registration Pune, labour law advocate Pune, RTI filing advocate Pune, legal notice drafting Pune, document drafting lawyer Pune, Maharashtra advocate, legal services Maharashtra, trusted advocate Pune, Dhende Associates Pune">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Adv. Ashok Dhende, Adv. Ajinkya Dhende">
+  <meta name="publisher" content="Dhende Associates">
+  <meta name="revisit-after" content="7 days">
+  <link rel="canonical" href="https://www.dhendeassociates.com/">
+  <meta name="msapplication-TileColor" content="#1a1a1a">
+  <meta name="theme-color" content="#1A0D3B">
+  <meta name="geo.region" content="IN-MH">
+  <meta name="geo.placename" content="Pune, Maharashtra">
+  <meta name="geo.position" content="18.5204;73.8567">
+  <meta name="ICBM" content="18.5204, 73.8567">
+  <!-- 1. PRIMARY: LegalService + LocalBusiness -->
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -346,8 +706,8 @@ img{max-width:100%;display:block}
 }
 </script>
 
-<!-- 2. PERSONS — Principal and Key Advocates -->
-<script type="application/ld+json">
+  <!-- 2. PERSONS — Principal and Key Advocates -->
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -454,8 +814,8 @@ img{max-width:100%;display:block}
 }
 </script>
 
-<!-- 3. FAQ PAGE — Common legal questions (boosts featured snippets and AI answers) -->
-<script type="application/ld+json">
+  <!-- 3. FAQ PAGE — Common legal questions (boosts featured snippets and AI answers) -->
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -547,964 +907,1088 @@ img{max-width:100%;display:block}
 
 
 
-<!-- Open Graph Tags -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dhende Associates — Trusted Legal Advocates in Pune">
-<meta property="og:description" content="40+ years of dedicated legal practice. Motor Accident Claims, Insurance, Property Law, Notary Services in Pune and Maharashtra.">
-<meta property="og:url" content="https://www.dhendeassociates.com/">
-<meta property="og:image" content="https://www.dhendeassociates.com/og-image.png">
-<meta property="og:image:secure_url" content="https://www.dhendeassociates.com/og-image.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Dhende Associates — Advocates, Notary and Legal Consultants in Pune">
-<meta property="og:site_name" content="Dhende Associates">
-<meta property="og:locale" content="en_IN">
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dhende Associates — Trusted Legal Advocates in Pune">
+  <meta property="og:description"
+    content="40+ years of dedicated legal practice. Motor Accident Claims, Insurance, Property Law, Notary Services in Pune and Maharashtra.">
+  <meta property="og:url" content="https://www.dhendeassociates.com/">
+  <meta property="og:image" content="https://www.dhendeassociates.com/og-image.png">
+  <meta property="og:image:secure_url" content="https://www.dhendeassociates.com/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dhende Associates — Advocates, Notary and Legal Consultants in Pune">
+  <meta property="og:site_name" content="Dhende Associates">
+  <meta property="og:locale" content="en_IN">
 
-<!-- Twitter Card Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Dhende Associates — Trusted Legal Advocates in Pune">
-<meta name="twitter:description" content="Motor Accident Claims | Insurance | Property Law | Notary Public | 40+ years of practice in Pune">
-<meta name="twitter:image" content="https://www.dhendeassociates.com/og-image.png">
-<link rel="icon" href="https://www.dhendeassociates.com/favicon.png">
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dhende Associates — Trusted Legal Advocates in Pune">
+  <meta name="twitter:description"
+    content="Motor Accident Claims | Insurance | Property Law | Notary Public | 40+ years of practice in Pune">
+  <meta name="twitter:image" content="https://www.dhendeassociates.com/og-image.png">
+  <link rel="icon" href="https://www.dhendeassociates.com/favicon.png">
 </head>
+
 <body>
 
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4ZG63FK" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
- 
-<!-- ══════════════════════════════════
+
+  <!-- ══════════════════════════════════
      LEGAL DISCLAIMER OVERLAY
 ══════════════════════════════════ -->
-<div id="disclaimer-overlay">
-  <div class="disc-box">
+  <div id="disclaimer-overlay">
+    <div class="disc-box">
       <div class="disc-header">
-      <div class="disc-title aligntextcenter">Legal Disclaimer</div>
-      <div class="disc-sub1 aligntextcenter">Dhende Associates</div>
-      <div class="disc-sub aligntextcenter">Advocates &amp; Notary</div>
-      <div class="disc-sub aligntextcenter">Please read before proceeding</div>
-    </div>
-    <div class="disc-body">
-      <div class="disc-section-title">Nature of this website</div>
-      <p class="disc-text">This website is the online presence of Dhende Associates, a law firm practising in Maharashtra. The information provided here is for general informational and educational purposes only. It does not constitute legal advice, and accessing this site does not create an advocate-client relationship between you and Dhende Associates or any of its advocates.</p>
-      <div class="disc-section-title">No solicitation</div>
-      <p class="disc-text">Nothing on this website shall be construed as solicitation of legal work or advertisement of legal services in a manner inconsistent with the Bar Council of India Rules, 1975. The firm complies with all applicable professional conduct rules.</p>
-      <div class="disc-section-title">Accuracy of information</div>
-      <p class="disc-text">While every effort is made to keep information current, laws and regulations change frequently. The firm does not guarantee that all content reflects the most recent legal developments. You should always consult a qualified advocate for advice specific to your situation.</p>
-      <p class="disc-text">Information submitted through contact forms on this website is confidential and used only to respond to your enquiry. We do not share your information with third parties.</p>
-      <label class="disc-checkbox-row" for="disc-check">
-        <input type="checkbox" id="disc-check" onchange="toggleAccept(this)">
-        <span class="disc-checkbox-label">I have read and understood this disclaimer. I agree that my use of this website does not constitute solicitation of legal services and that no advocate-client relationship is created by accessing this site.</span>
-      </label>
-    </div>
-    <div class="disc-actions">
-      <button class="disc-accept" id="disc-accept-btn" onclick="acceptDisclaimer()">I Understand &amp; Proceed to Website</button>
-     </div>
-     <div class="disc-actions">
-      <button class="disc-decline" onclick="window.history.back()">Decline &amp; Exit</button>
+        <div class="disc-title aligntextcenter">Legal Disclaimer</div>
+        <div class="disc-sub1 aligntextcenter">Dhende Associates</div>
+        <div class="disc-sub aligntextcenter">Advocates &amp; Notary</div>
+        <div class="disc-sub aligntextcenter">Please read before proceeding</div>
+      </div>
+      <div class="disc-body">
+        <div class="disc-section-title">Nature of this website</div>
+        <p class="disc-text">This website is the online presence of Dhende Associates, a law firm practising in
+          Maharashtra. The information provided here is for general informational and educational purposes only. It does
+          not constitute legal advice, and accessing this site does not create an advocate-client relationship between
+          you and Dhende Associates or any of its advocates.</p>
+        <div class="disc-section-title">No solicitation</div>
+        <p class="disc-text">Nothing on this website shall be construed as solicitation of legal work or advertisement
+          of legal services in a manner inconsistent with the Bar Council of India Rules, 1975. The firm complies with
+          all applicable professional conduct rules.</p>
+        <div class="disc-section-title">Accuracy of information</div>
+        <p class="disc-text">While every effort is made to keep information current, laws and regulations change
+          frequently. The firm does not guarantee that all content reflects the most recent legal developments. You
+          should always consult a qualified advocate for advice specific to your situation.</p>
+        <p class="disc-text">Information submitted through contact forms on this website is confidential and used only
+          to respond to your enquiry. We do not share your information with third parties.</p>
+        <label class="disc-checkbox-row" for="disc-check">
+          <input type="checkbox" id="disc-check" onchange="toggleAccept(this)">
+          <span class="disc-checkbox-label">I have read and understood this disclaimer. I agree that my use of this
+            website does not constitute solicitation of legal services and that no advocate-client relationship is
+            created by accessing this site.</span>
+        </label>
+      </div>
+      <div class="disc-actions">
+        <button class="disc-accept" id="disc-accept-btn" onclick="acceptDisclaimer()">I Understand &amp; Proceed to
+          Website</button>
+      </div>
+      <div class="disc-actions">
+        <button class="disc-decline" onclick="window.history.back()">Decline &amp; Exit</button>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      WHATSAPP FLOAT
 ══════════════════════════════════ -->
-<a href="https://wa.me/918149135283?text=Hello%20Dhende%20Associates%2C%20I%20would%20like%20to%20enquire%20about%20legal%20services." class="wa-float" target="_blank" rel="noopener" title="WhatsApp Us">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-  <span class="wa-tooltip">Chat on WhatsApp</span>
-</a>
+  <a href="https://wa.me/918149135283?text=Hello%20Dhende%20Associates%2C%20I%20would%20like%20to%20enquire%20about%20legal%20services."
+    class="wa-float" target="_blank" rel="noopener" title="WhatsApp Us">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+    </svg>
+    <span class="wa-tooltip">Chat on WhatsApp</span>
+  </a>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      NAVBAR
 ══════════════════════════════════ -->
-<nav id="navbar">
-  <div class="nav-inner">
-    <img width="40" height="40" src="favicon.png" alt="Dhende Associates Logo" class="nav-logo" onclick="window.location.href='#home'"/>
-    <div class="nav-brand">
-      <span class="nav-firm" onclick="window.location.href='#home'"> Dhende Associates</span> 
-      <span class="nav-tagline" onclick="window.location.href='#home'">Advocates &amp; Notary Public</span> 
-    
-    </div>
-    <div class="nav-links">
-      <a href="#principal">About</a>
-      <a href="#practice">Practice Areas</a>
-      <a href="#notary">Notary</a>
-      <a href="#property">Property</a>
-      <a href="#tools">Legal Tools</a>
-      <a href="#team">Team</a>
-      <a href="#blog">Blog</a>
-      <a href="#kids">Law for Kids</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <a class="nav-wa" href="https://wa.me/918149135283" target="_blank" rel="noopener">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-      WhatsApp
-    </a>
-    <button class="hamburger" type="button" title="Toggle mobile menu" onclick="toggleMob()">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-<div class="mob-menu" id="mobMenu">
-  <a href="#principal" onclick="toggleMob()">About the Firm</a>
-  <a href="#practice" onclick="toggleMob()">Practice Areas</a>
-  <a href="#notary" onclick="toggleMob()">Notary Public</a>
-  <a href="#property" onclick="toggleMob()">Property Services</a>
-  <a href="#tools" onclick="toggleMob()">Legal Tools</a>
-  <a href="#team" onclick="toggleMob()">Our Team</a>
-  <a href="#blog" onclick="toggleMob()">Blog</a>
-  <a href="#kids" onclick="toggleMob()">Law for Kids</a>
-  <a href="#contact" onclick="toggleMob()">Contact</a>
-  <a class="mob-wa" href="https://wa.me/918149135283" target="_blank" rel="noopener">💬 WhatsApp Us</a>
-</div>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <img width="40" height="40" src="favicon.png" alt="Dhende Associates Logo" class="nav-logo"
+        onclick="window.location.href='#home'" />
+      <div class="nav-brand">
+        <span class="nav-firm" onclick="window.location.href='#home'"> Dhende Associates</span>
+        <span class="nav-tagline" onclick="window.location.href='#home'">Advocates &amp; Notary Public</span>
 
-<!-- ══════════════════════════════════
+      </div>
+      <div class="nav-links">
+        <a href="#principal">About</a>
+        <a href="#practice">Practice Areas</a>
+        <a href="#notary">Notary</a>
+        <a href="#property">Property</a>
+        <a href="#tools">Legal Tools</a>
+        <a href="#team">Team</a>
+        <a href="#blog">Blog</a>
+        <a href="#kids">Law for Kids</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="nav-wa" href="https://wa.me/918149135283" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+        WhatsApp
+      </a>
+      <button class="hamburger" type="button" title="Toggle mobile menu" onclick="toggleMob()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mob-menu" id="mobMenu">
+    <a href="#principal" onclick="toggleMob()">About the Firm</a>
+    <a href="#practice" onclick="toggleMob()">Practice Areas</a>
+    <a href="#notary" onclick="toggleMob()">Notary Public</a>
+    <a href="#property" onclick="toggleMob()">Property Services</a>
+    <a href="#tools" onclick="toggleMob()">Legal Tools</a>
+    <a href="#team" onclick="toggleMob()">Our Team</a>
+    <a href="#blog" onclick="toggleMob()">Blog</a>
+    <a href="#kids" onclick="toggleMob()">Law for Kids</a>
+    <a href="#contact" onclick="toggleMob()">Contact</a>
+    <a class="mob-wa" href="https://wa.me/918149135283" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+  </div>
+
+  <!-- ══════════════════════════════════
      HERO
 ══════════════════════════════════ -->
-<section class="hero" id="home">
-  <div class="hero-geo"></div>
-  <div class="hero-geo2"></div>
-  <div class="hero-left-bar"></div>
-  <div class="hero-inner">
-    <div>
-      <div class="hero-badge">Established since 1984</div>
-      <h1 class="hero-h1">Trusted Advocates<br>for <em>Every Legal</em><br>Challenge</h1>
-      <div class="hero-since">⚖️&nbsp;&nbsp;Principal Adv. Ashok Dhende · Practising since 1984</div>
-      <p class="hero-desc" style="text-align:justify;">Four decades of dedicated legal practice in Civil &amp; Criminal litigation, Motor Accident Claims, Insurance Matters, Property Transactions, and Notary Services — serving India with integrity and expertise.</p>
-      <div class="hero-btns">
-        <button class="btn-gold" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Legal Advice</button>
-        <button class="btn-primary" onclick="document.getElementById('practice').scrollIntoView({behavior:'smooth'})">Practice Areas</button>
-        <button class="btn-ghost" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'})">Free Legal Tools</button>
-      </div>
-    </div>
-    <div>
-      <div class="hero-card">
-        <div class="hero-stats">
-          <div class="hero-stat"><span class="stat-n">40+</span><span class="stat-l">Years Practice</span></div>
-          <div class="hero-stat"><span class="stat-n">1984</span><span class="stat-l">Established</span></div>
-          <div class="hero-stat"><span class="stat-n">1998</span><span class="stat-l">Notary Since</span></div>
-          <div class="hero-stat"><span class="stat-n">8</span><span class="stat-l">Practice Areas</span></div>
-        </div>
-        <div class="hero-pills">
-          <span class="pill pill-g">Civil Law</span>
-          <span class="pill pill-g">Criminal Law</span>
-          <span class="pill pill-g">Family Law</span>
-          <span class="pill pill-g">Motor Accident Claims</span>
-          <span class="pill pill-g">Insurance Matters</span>
-          <span class="pill pill-g">Property Law</span>
-          <span class="pill pill-g">Notary Public Services</span>
-          <span class="pill pill-g">Startup Legal Consultations</span>
-          <span class="pill pill-g">Due Diligence</span>
+  <section class="hero" id="home">
+    <div class="hero-geo"></div>
+    <div class="hero-geo2"></div>
+    <div class="hero-left-bar"></div>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">Established since 1984</div>
+        <h1 class="hero-h1">Trusted Advocates<br>for <em>Every Legal</em><br>Challenge</h1>
+        <div class="hero-since">⚖️&nbsp;&nbsp;Principal Adv. Ashok Dhende · Practising since 1984</div>
+        <p class="hero-desc" style="text-align:justify;">Four decades of dedicated legal practice in Civil &amp;
+          Criminal litigation, Motor Accident Claims, Insurance Matters, Property Transactions, and Notary Services —
+          serving India with integrity and expertise.</p>
+        <div class="hero-btns">
+          <button class="btn-gold" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get
+            Legal Advice</button>
+          <button class="btn-primary"
+            onclick="document.getElementById('practice').scrollIntoView({behavior:'smooth'})">Practice Areas</button>
+          <button class="btn-ghost" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'})">Free
+            Legal Tools</button>
         </div>
       </div>
+      <div>
+        <div class="hero-card">
+          <div class="hero-stats">
+            <div class="hero-stat"><span class="stat-n">40+</span><span class="stat-l">Years Practice</span></div>
+            <div class="hero-stat"><span class="stat-n">1984</span><span class="stat-l">Established</span></div>
+            <div class="hero-stat"><span class="stat-n">1998</span><span class="stat-l">Notary Since</span></div>
+            <div class="hero-stat"><span class="stat-n">8</span><span class="stat-l">Practice Areas</span></div>
+          </div>
+          <div class="hero-pills">
+            <span class="pill pill-g">Civil Law</span>
+            <span class="pill pill-g">Criminal Law</span>
+            <span class="pill pill-g">Family Law</span>
+            <span class="pill pill-g">Motor Accident Claims</span>
+            <span class="pill pill-g">Insurance Matters</span>
+            <span class="pill pill-g">Property Law</span>
+            <span class="pill pill-g">Notary Public Services</span>
+            <span class="pill pill-g">Startup Legal Consultations</span>
+            <span class="pill pill-g">Due Diligence</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="hero-scroll">
-    <div class="hero-scroll-line"></div>
-    <span>Scroll</span>
-  </div>
-</section>
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      PRINCIPAL
 ══════════════════════════════════ -->
-<section class="principal" id="principal">
-  <div class="container">
-    <div class="principal-inner">
-      <div class="reveal">
-        <div class="principal-card">
-          <div class="principal-avatar">AD</div>
-          <div class="principal-name">Adv. Ashok Dhende</div>
-          <div class="principal-role">Principal Advocate &amp; Founder</div>
-          <div class="principal-since">Practising since 1984 · 40+ years at the Bar</div>
-          <div class="principal-divider"></div>
-          <div class="principal-creds">Bar Council of Maharashtra &amp; Goa</div>
-          <div class="principal-creds">Notary Public</div>
+  <section class="principal" id="principal">
+    <div class="container">
+      <div class="principal-inner">
+        <div class="reveal">
+          <div class="principal-card">
+            <div class="principal-avatar">AD</div>
+            <div class="principal-name">Adv. Ashok Dhende</div>
+            <div class="principal-role">Principal Advocate &amp; Founder</div>
+            <div class="principal-since">Practising since 1984 · 40+ years at the Bar</div>
+            <div class="principal-divider"></div>
+            <div class="principal-creds">Bar Council of Maharashtra &amp; Goa</div>
+            <div class="principal-creds">Notary Public</div>
+          </div>
         </div>
-      </div>
-      <div class="principal-content reveal reveal-d2">
-        <span class="eyebrow">Principal Advocate</span>
-        <h2 class="section-title">Four Decades of <em>Dedicated Practice</em></h2>
-        <div class="rule"></div>
-        <p class="principal-text" style="text-align:justify;">Adv. Ashok Dhende has been at the forefront of legal practice in Pune since 1984 — building Dhende Associates into a full-service firm known for its depth of knowledge, client-centric approach, and unwavering professional ethics.</p>
-        <p class="principal-text" style="text-align:justify;">With special expertise in Civil and Criminal litigation, Motor Accident Claims, and Insurance disputes, Adv. Ashok Dhende has represented thousands of clients before Pune District Courts, and specialised tribunals across Maharashtra as well as the Bombay High Court.</p>
-        <p class="principal-text" style="text-align:justify;">Recognised as a Notary Public since 1998 under the Notaries Act, 1952, he provides authoritative notarial services across India for documents of every description.</p>
-        <div class="principal-highlights">
-          <div class="highlight-item">
-            <div class="hi-title">Motor Accident Claims</div>
-            <div class="hi-desc" style="text-align:justify;">MACT — compensation, Workmen Compensation, Insurance, hit-and-run matters</div>
-          </div>
-          <div class="highlight-item">
-            <div class="hi-title">Insurance Law</div>
-            <div class="hi-desc" style="text-align:justify;">Policy disputes, Claim rejections, consumer forum matters</div>
-          </div>
-          <div class="highlight-item">
-            <div class="hi-title">Family Law</div>
-            <div class="hi-desc" style="text-align:justify;">Matrimonial &amp; Divorce Proceedings, Maintenance &amp; Financial Support, Child Advocacy &amp; Guardianship, Domestic Violence &amp; Criminal Litigation</div>
-          </div>
-          <div class="highlight-item">
-            <div class="hi-title">Property Transactions</div>
-            <div class="hi-desc" style="text-align:justify;">End-to-end support from due diligence to registration</div>
-          </div>
-          <div class="highlight-item">
-            <div class="hi-title">Notarial Services</div>
-            <div class="hi-desc" style="text-align:justify;">Authorised Notary Public Government of India since 1998 — services like Affidavits, Indemnity Bonds, Partnerships, MOU, document categories</div>
-          </div>
-          <div class="highlight-item">
-            <div class="hi-title">Succession and Heirship related services</div>
-            <div class="hi-desc" style="text-align:justify;">The legal transfer of assets, Succession Certificates, Letters of Administration or Probate.</div>
+        <div class="principal-content reveal reveal-d2">
+          <span class="eyebrow">Principal Advocate</span>
+          <h2 class="section-title">Four Decades of <em>Dedicated Practice</em></h2>
+          <div class="rule"></div>
+          <p class="principal-text" style="text-align:justify;">Adv. Ashok Dhende has been at the forefront of legal
+            practice in Pune since 1984 — building Dhende Associates into a full-service firm known for its depth of
+            knowledge, client-centric approach, and unwavering professional ethics.</p>
+          <p class="principal-text" style="text-align:justify;">With special expertise in Civil and Criminal litigation,
+            Motor Accident Claims, and Insurance disputes, Adv. Ashok Dhende has represented thousands of clients before
+            Pune District Courts, and specialised tribunals across Maharashtra as well as the Bombay High Court.</p>
+          <p class="principal-text" style="text-align:justify;">Recognised as a Notary Public since 1998 under the
+            Notaries Act, 1952, he provides authoritative notarial services across India for documents of every
+            description.</p>
+          <div class="principal-highlights">
+            <div class="highlight-item">
+              <div class="hi-title">Motor Accident Claims</div>
+              <div class="hi-desc" style="text-align:justify;">MACT — compensation, Workmen Compensation, Insurance,
+                hit-and-run matters</div>
+            </div>
+            <div class="highlight-item">
+              <div class="hi-title">Insurance Law</div>
+              <div class="hi-desc" style="text-align:justify;">Policy disputes, Claim rejections, consumer forum matters
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="hi-title">Family Law</div>
+              <div class="hi-desc" style="text-align:justify;">Matrimonial &amp; Divorce Proceedings, Maintenance &amp;
+                Financial Support, Child Advocacy &amp; Guardianship, Domestic Violence &amp; Criminal Litigation</div>
+            </div>
+            <div class="highlight-item">
+              <div class="hi-title">Property Transactions</div>
+              <div class="hi-desc" style="text-align:justify;">End-to-end support from due diligence to registration
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="hi-title">Notarial Services</div>
+              <div class="hi-desc" style="text-align:justify;">Authorised Notary Public Government of India since 1998 —
+                services like Affidavits, Indemnity Bonds, Partnerships, MOU, document categories</div>
+            </div>
+            <div class="highlight-item">
+              <div class="hi-title">Succession and Heirship related services</div>
+              <div class="hi-desc" style="text-align:justify;">The legal transfer of assets, Succession Certificates,
+                Letters of Administration or Probate.</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      PRACTICE AREAS
 ══════════════════════════════════ -->
-<section class="practice" id="practice">
-  <div class="container">
-    <div class="practice-head">
-      <span class="eyebrow reveal">Comprehensive Legal Services</span>
-      <h2 class="section-title reveal">Areas of <em>Practice</em></h2>
-      <div class="rule center reveal"></div>
-      <p class="reveal" style="font-family:var(--ff-u);font-size:.85rem;color:var(--muted);max-width:520px;margin:0 auto">From preliminary counsel to full representation — Dhende Associates covers the complete spectrum of Indian law.</p>
+  <section class="practice" id="practice">
+    <div class="container">
+      <div class="practice-head">
+        <span class="eyebrow reveal">Comprehensive Legal Services</span>
+        <h2 class="section-title reveal">Areas of <em>Practice</em></h2>
+        <div class="rule center reveal"></div>
+        <p class="reveal"
+          style="font-family:var(--ff-u);font-size:.85rem;color:var(--muted);max-width:520px;margin:0 auto">From
+          preliminary counsel to full representation — Dhende Associates covers the complete spectrum of Indian law.</p>
+      </div>
+      <div class="practice-grid">
+        <div class="pa-card reveal reveal-d2">
+          <a href="cheque-bounce-lawyer-pune.html">
+            <div class="pa-icon-wrap">🎫</div>
+            <div class="pa-name">Negotiable Instruments Act and Payment and Settlement Act Matters</div>
+            <p class="pa-desc" style="text-align:justify;">Disputes related to cheque and EMI Bounce, 138 negotiable
+              instruments, payment and settlement matters, and other financial disputes, recovery proceedings, effective
+              prosection for recovery as well as lawful protection and defences for the accused.</p>
+            <p style="margin-top:0.9rem;font-size:0.82rem;font-weight:600;color:var(--accent,#6B50BE);">View full
+              negotiable instruments &amp; settlement services →</p>
+          </a>
+        </div>
+        <div class="pa-card reveal reveal-d2">
+          <a href="criminal-law.html" style="display:block;color:inherit;text-decoration:none;">
+            <div class="pa-icon-wrap">👮</div>
+            <div class="pa-name">Criminal Law</div>
+            <p class="pa-desc" style="text-align:justify;">Defence and prosecution in Criminal matters, urgent Bail
+              Applications, Anticipatory Bail, Transit bail, trial representation, and criminal appeals.</p>
+            <p style="margin-top:0.9rem;font-size:0.82rem;font-weight:600;color:var(--accent,#6B50BE);">View full
+              criminal law &amp; bail services →</p>
+          </a>
+        </div>
+
+        <div class="pa-card reveal reveal-d2">
+          <div class="pa-icon-wrap">⚖️</div>
+          <div class="pa-name">Civil Litigation</div>
+          <p class="pa-desc" style="text-align:justify;">Suits for recovery, injunctions, specific performance,
+            declaratory relief, partition suits, and civil appeals at Appellate Courts.</p>
+        </div>
+
+
+        <div class="pa-card reveal reveal-d2">
+          <a href="family-law.html" style="display:block;color:inherit;text-decoration:none;">
+            <div class="pa-icon-wrap">👨‍👩‍👧</div>
+            <div class="pa-name">Family Law</div>
+            <p class="pa-desc" style="text-align:justify;">Divorce, Judicial Separation, Child Custody, Maintenance and
+              Alimony, Domestic Violence, Adoption, Succession, HUF partition, and Testamentary matters including
+              probate.</p>
+            <p style="margin-top:0.9rem;font-size:0.82rem;font-weight:600;color:var(--accent,#6B50BE);">View full family
+              law services →</p>
+          </a>
+        </div>
+
+        <div class="pa-card reveal reveal-d2">
+          <div class="pa-icon-wrap">🛡️</div>
+          <div class="pa-name">Insurance Matters</div>
+          <p class="pa-desc" style="text-align:justify;">Policy disputes, claim rejections, insurance fraud defence
+            &amp; consumer matters against insurance companies.</p>
+        </div>
+        <div class="pa-card reveal reveal-d2">
+          <div class="pa-icon-wrap">🚗</div>
+          <div class="pa-name">Motor Accident Claims</div>
+          <p class="pa-desc" style="text-align:justify;">Motor Accident Compensation Claims before Tribunals.
+            Compensation for injury, property damages, disability, death, hit-and-run, and uninsured vehicle claims.</p>
+        </div>
+
+        <div class="pa-card reveal reveal-d4">
+          <div class="pa-icon-wrap">📜</div>
+          <div class="pa-name">Labour &amp; Employment</div>
+          <p class="pa-desc" style="text-align:justify;">Industrial disputes, Minimum wages compliance, retrenchment
+            disputes, and representation before Labour Courts and Industrial Tribunals.</p>
+        </div>
+      </div>
     </div>
-    <div class="practice-grid">
-      <div class="pa-card reveal reveal-d2">
-        <a href="cheque-bounce-lawyer-pune.html">
-          <div class="pa-icon-wrap">🎫</div>
-          <div class="pa-name">Negotiable Instruments Act and Payment and Settlement Act Matters</div>
-          <p class="pa-desc" style="text-align:justify;">Disputes related to cheque and EMI Bounce, 138 negotiable instruments, payment and settlement matters, and other financial disputes, recovery proceedings, effective prosection for recovery as well as lawful protection and defences for the accused.</p>
-          <p style="margin-top:0.9rem;font-size:0.82rem;font-weight:600;color:var(--accent,#6B50BE);">View full negotiable instruments &amp; settlement services →</p>
-        </a>
-      </div>
-      <div class="pa-card reveal reveal-d2">
-        <a href="criminal-law.html" style="display:block;color:inherit;text-decoration:none;">
-          <div class="pa-icon-wrap">👮</div>
-          <div class="pa-name">Criminal Law</div>
-          <p class="pa-desc" style="text-align:justify;">Defence and prosecution in Criminal matters, urgent Bail Applications, Anticipatory Bail, Transit bail, trial representation, and criminal appeals.</p>
-          <p style="margin-top:0.9rem;font-size:0.82rem;font-weight:600;color:var(--accent,#6B50BE);">View full criminal law &amp; bail services →</p>
-        </a>
-      </div>
-      
-    <div class="pa-card reveal reveal-d2">
-        <div class="pa-icon-wrap">⚖️</div>
-        <div class="pa-name">Civil Litigation</div>
-        <p class="pa-desc" style="text-align:justify;">Suits for recovery, injunctions, specific performance, declaratory relief, partition suits, and civil appeals at Appellate Courts.</p>
-      </div>
-     
+  </section>
 
-      <div class="pa-card reveal reveal-d2">
-        <a href="family-law.html" style="display:block;color:inherit;text-decoration:none;">
-          <div class="pa-icon-wrap">👨‍👩‍👧</div>
-          <div class="pa-name">Family Law</div>
-          <p class="pa-desc" style="text-align:justify;">Divorce, Judicial Separation, Child Custody, Maintenance and Alimony, Domestic Violence, Adoption, Succession, HUF partition, and Testamentary matters including probate.</p>
-          <p style="margin-top:0.9rem;font-size:0.82rem;font-weight:600;color:var(--accent,#6B50BE);">View full family law services →</p>
-        </a>
-      </div>
-
-      <div class="pa-card reveal reveal-d2">
-        <div class="pa-icon-wrap">🛡️</div>
-        <div class="pa-name">Insurance Matters</div>
-        <p class="pa-desc" style="text-align:justify;">Policy disputes, claim rejections, insurance fraud defence &amp; consumer matters against insurance companies.</p>
-      </div>
-      <div class="pa-card reveal reveal-d2">
-        <div class="pa-icon-wrap">🚗</div>
-        <div class="pa-name">Motor Accident Claims</div>
-        <p class="pa-desc" style="text-align:justify;">Motor Accident Compensation Claims before Tribunals. Compensation for injury, property damages, disability, death, hit-and-run, and uninsured vehicle claims.</p>
-      </div>
-
-      <div class="pa-card reveal reveal-d4">
-        <div class="pa-icon-wrap">📜</div>
-        <div class="pa-name">Labour &amp; Employment</div>
-        <p class="pa-desc" style="text-align:justify;">Industrial disputes, Minimum wages compliance, retrenchment disputes, and representation before Labour Courts and Industrial Tribunals.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      NOTARY PUBLIC
 ══════════════════════════════════ -->
-<section class="notary" id="notary">
-  <div class="container" style="padding:2rem 2rem">
-    <div class="notary-inner">
-      <div class="reveal">
-        <div><img src="notaryicon.webp" alt="Official notary public seal for Dhende Associates, featuring a red circular emblem with text reading Notary Government of India and the firm name, symbolizing legal authority and authentication services" style="width:220px;margin:15px;" loading="lazy" decoding="async"></div>
-        <span class="eyebrow">Authorised Notary Public</span>
-        <h2 class="section-title">Notarial Services</h2>
-        <div class="rule"></div>
-        
-        <p class="notary-text" style="text-align:justify;">Adv. Ashok Dhende has served as a Notary Public Government of India appointed under the Notaries Act, 1952. Notarial services are available for individuals, businesses, banks, and institutions across Pune and Maharashtra.</p>
-        <ul class="notary-services">
-          <li>Attestation of affidavits, declarations, and sworn statements</li>
-          <li>Authentication of documents for use abroad (apostille-ready)</li>
-          <li>Notarisation of power of attorney — general and special</li>
-          <li>Verification of copies, certificates, and academic documents</li>
-          <li>Official Translation of documents from English, Hindi, Marathi</li>
-          <li>Execution and notarisation of agreements and contracts</li>
-          <li>Notarial certificates for property and commercial transactions</li>
-          <li>Attestation of wills and testamentary documents</li>
-          <li>Documents for NRI matters and overseas submission</li>
-        </ul>
-      </div>
-      <div class="notary-stamp">
-        <div class="notary-stamp-icon">✒️</div>
-        <div class="notary-stamp-title">Adv. ASHOK D. DHENDE</div>
-        <div class="notary-stamp-title">Adv. AJINKYA A. DHENDE</div>
-        <div class="notary-stamp-sub">Advocate &amp; Notary Public</div>
-        <div class="notary-stamp-sub">Government of India</div>
-        <div class="notary-stamp-detail" style="margin-top:2rem">
-          <div style="margin-bottom:.25rem;color:rgba(255,255,255,0.745)">OFFICE ADDRESS:</div>
-          Office No 1, First Floor, MHADA Commercial Complex<br>
-          Gokhalenagar, Pune 411016<br>
-          <div style="margin-bottom:.25rem;margin-top:1.25rem;color:rgba(255,255,255,0.745)">Contact:</div>
-          <a href="tel:+919822335664" style="color:rgba(255,255,255,.8);">📞 +91 9822 335 664</a><br>
-          <a href="tel:+918149135283" style="color:rgba(255,255,255,.8);">📞 +91 8149 135 283</a>
+  <section class="notary" id="notary">
+    <div class="container" style="padding:2rem 2rem">
+      <div class="notary-inner">
+        <div class="reveal">
+          <div><img src="notaryicon.webp"
+              alt="Official notary public seal for Dhende Associates, featuring a red circular emblem with text reading Notary Government of India and the firm name, symbolizing legal authority and authentication services"
+              style="width:220px;margin:15px;" loading="lazy" decoding="async"></div>
+          <span class="eyebrow">Authorised Notary Public</span>
+          <h2 class="section-title">Notarial Services</h2>
+          <div class="rule"></div>
+
+          <p class="notary-text" style="text-align:justify;">Adv. Ashok Dhende has served as a Notary Public Government
+            of India appointed under the Notaries Act, 1952. Notarial services are available for individuals,
+            businesses, banks, and institutions across Pune and Maharashtra.</p>
+          <ul class="notary-services">
+            <li>Attestation of affidavits, declarations, and sworn statements</li>
+            <li>Authentication of documents for use abroad (apostille-ready)</li>
+            <li>Notarisation of power of attorney — general and special</li>
+            <li>Verification of copies, certificates, and academic documents</li>
+            <li>Official Translation of documents from English, Hindi, Marathi</li>
+            <li>Execution and notarisation of agreements and contracts</li>
+            <li>Notarial certificates for property and commercial transactions</li>
+            <li>Attestation of wills and testamentary documents</li>
+            <li>Documents for NRI matters and overseas submission</li>
+          </ul>
         </div>
-        <img src="Pin.png" alt="Office Location" width="12" height="12" style="width:12px;margin:0 auto;display:block;margin-top:1.5rem;" loading="lazy" decoding="async">
-        <a href="https://maps.app.goo.gl/FT5mNgG5bBRJW8A99" style="color:rgba(255,255,255,.8);animation:pulseGold 2s infinite;margin-top:3rem;display:block;text-align:center;">View on map</a>
-        <div class="notary-stamp-line"></div>
+        <div class="notary-stamp">
+          <div class="notary-stamp-icon">✒️</div>
+          <div class="notary-stamp-title">Adv. ASHOK D. DHENDE</div>
+          <div class="notary-stamp-title">Adv. AJINKYA A. DHENDE</div>
+          <div class="notary-stamp-sub">Advocate &amp; Notary Public</div>
+          <div class="notary-stamp-sub">Government of India</div>
+          <div class="notary-stamp-detail" style="margin-top:2rem">
+            <div style="margin-bottom:.25rem;color:rgba(255,255,255,0.745)">OFFICE ADDRESS:</div>
+            Office No 1, First Floor, MHADA Commercial Complex<br>
+            Gokhalenagar, Pune 411016<br>
+            <div style="margin-bottom:.25rem;margin-top:1.25rem;color:rgba(255,255,255,0.745)">Contact:</div>
+            <a href="tel:+919822335664" style="color:rgba(255,255,255,.8);">📞 +91 9822 335 664</a><br>
+            <a href="tel:+918149135283" style="color:rgba(255,255,255,.8);">📞 +91 8149 135 283</a>
+          </div>
+          <img src="Pin.png" alt="Office Location" width="12" height="12"
+            style="width:12px;margin:0 auto;display:block;margin-top:1.5rem;" loading="lazy" decoding="async">
+          <a href="https://maps.app.goo.gl/FT5mNgG5bBRJW8A99"
+            style="color:rgba(255,255,255,.8);animation:pulseGold 2s infinite;margin-top:3rem;display:block;text-align:center;">View
+            on map</a>
+          <div class="notary-stamp-line"></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      PROPERTY SERVICES
 ══════════════════════════════════ -->
-<section class="property" id="property">
-  <div class="container">
-    <div class="property-head">
-      <div>
-        <span class="eyebrow reveal">End-to-End Support</span>
-        <h2 class="section-title reveal">Property Transaction <em>Services</em></h2>
-        <div class="rule reveal"></div>
+  <section class="property" id="property">
+    <div class="container">
+      <div class="property-head">
+        <div>
+          <span class="eyebrow reveal">End-to-End Support</span>
+          <h2 class="section-title reveal">Property Transaction <em>Services</em></h2>
+          <div class="rule reveal"></div>
+        </div>
+        <p class="reveal"
+          style="max-width:380px;font-family:var(--ff-u);font-size:.83rem;color:var(--muted);line-height:1.7">From first
+          title search to final registration — Dhende Associates manages every stage of your property transaction in
+          Maharashtra.</p>
       </div>
-      <p class="reveal" style="max-width:380px;font-family:var(--ff-u);font-size:.83rem;color:var(--muted);line-height:1.7">From first title search to final registration — Dhende Associates manages every stage of your property transaction in Maharashtra.</p>
+      <!-- Transaction Flow -->
+      <div class="property-flow reveal">
+        <div class="flow-step">
+          <div class="flow-dot">🔍</div>
+          <span class="flow-label">Title Search &amp;<br>Due Diligence</span>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot">📋</div>
+          <span class="flow-label">Agreement<br>Drafting</span>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot">🏛️</div>
+          <span class="flow-label">IGR Valuation &amp;<br>Stamp Duty</span>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot">✍️</div>
+          <span class="flow-label">Registration<br>at SRO</span>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot">✅</div>
+          <span class="flow-label">Post-Registration<br>Handover</span>
+        </div>
+      </div>
+      <!-- Services grid -->
+      <div class="property-services-grid">
+        <div class="prop-service reveal reveal-d2">
+          <span class="prop-service-icon">🔎</span>
+          <div>
+            <div class="prop-service-title">Title Search &amp; Due Diligence</div>
+            <div class="prop-service-desc">Comprehensive 30-year title search, encumbrance checks, mutation records, and
+              legal opinion on Maharashtra properties before purchase.</div>
+          </div>
+        </div>
+        <div class="prop-service reveal reveal-d3">
+          <span class="prop-service-icon">📝</span>
+          <div>
+            <div class="prop-service-title">Property Registration</div>
+            <div class="prop-service-desc">End-to-end registration support at Sub-Registrar Office — sale deed, gift
+              deed, mortgage deed, and all property-related documents.</div>
+          </div>
+        </div>
+        <div class="prop-service reveal reveal-d4">
+          <span class="prop-service-icon">📜</span>
+          <div>
+            <div class="prop-service-title">Will Drafting &amp; Registration</div>
+            <div class="prop-service-desc">Legally sound Will drafting, registration guidance, and probate proceedings.
+              Codicil preparation and amendments also handled.</div>
+          </div>
+        </div>
+        <div class="prop-service reveal reveal-d2">
+          <span class="prop-service-icon">🤝</span>
+          <div>
+            <div class="prop-service-title">Partnership Firm Registration</div>
+            <div class="prop-service-desc">Drafting of Partnership Deeds, firm registration under Indian Partnership
+              Act, amendments, dissolution deeds, and reconstitution.</div>
+          </div>
+        </div>
+        <div class="prop-service reveal reveal-d3">
+          <span class="prop-service-icon">🏡</span>
+          <div>
+            <div class="prop-service-title">Agreement to Sell &amp; Conveyance</div>
+            <div class="prop-service-desc">Drafting and vetting of Agreement to Sell, Development Agreements, Leave
+              &amp; License deeds, and Conveyance Deeds per Maharashtra law.</div>
+          </div>
+        </div>
+        <div class="prop-service reveal reveal-d4">
+          <span class="prop-service-icon">💼</span>
+          <div>
+            <div class="prop-service-title">Property Dispute Resolution</div>
+            <div class="prop-service-desc">Title disputes, partition suits, RERA matters, adverse possession claims, and
+              injunctions for protection of property rights.</div>
+          </div>
+        </div>
+        <div class="prop-service reveal reveal-d4">
+          <span class="prop-service-icon">📜</span>
+          <div>
+            <a href="leave-license-service.html" class="prop-service-link">
+              <div class="prop-service-title">Leave &amp; License Agreements</div>
+              <div class="prop-service-desc">Drafting and registration of Leave & License agreements for residential and
+                non-residential purposes online through our legal experts.</div>
+              Learn More →
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Transaction Flow -->
-    <div class="property-flow reveal">
-      <div class="flow-step">
-        <div class="flow-dot">🔍</div>
-        <span class="flow-label">Title Search &amp;<br>Due Diligence</span>
-      </div>
-      <div class="flow-step">
-        <div class="flow-dot">📋</div>
-        <span class="flow-label">Agreement<br>Drafting</span>
-      </div>
-      <div class="flow-step">
-        <div class="flow-dot">🏛️</div>
-        <span class="flow-label">IGR Valuation &amp;<br>Stamp Duty</span>
-      </div>
-      <div class="flow-step">
-        <div class="flow-dot">✍️</div>
-        <span class="flow-label">Registration<br>at SRO</span>
-      </div>
-      <div class="flow-step">
-        <div class="flow-dot">✅</div>
-        <span class="flow-label">Post-Registration<br>Handover</span>
-      </div>
-    </div>
-    <!-- Services grid -->
-    <div class="property-services-grid">
-      <div class="prop-service reveal reveal-d2">
-        <span class="prop-service-icon">🔎</span>
-        <div>
-          <div class="prop-service-title">Title Search &amp; Due Diligence</div>
-          <div class="prop-service-desc">Comprehensive 30-year title search, encumbrance checks, mutation records, and legal opinion on Maharashtra properties before purchase.</div>
-        </div>
-      </div>
-      <div class="prop-service reveal reveal-d3">
-        <span class="prop-service-icon">📝</span>
-        <div>
-          <div class="prop-service-title">Property Registration</div>
-          <div class="prop-service-desc">End-to-end registration support at Sub-Registrar Office — sale deed, gift deed, mortgage deed, and all property-related documents.</div>
-        </div>
-      </div>
-      <div class="prop-service reveal reveal-d4">
-        <span class="prop-service-icon">📜</span>
-        <div>
-          <div class="prop-service-title">Will Drafting &amp; Registration</div>
-          <div class="prop-service-desc">Legally sound Will drafting, registration guidance, and probate proceedings. Codicil preparation and amendments also handled.</div>
-        </div>
-      </div>
-      <div class="prop-service reveal reveal-d2">
-        <span class="prop-service-icon">🤝</span>
-        <div>
-          <div class="prop-service-title">Partnership Firm Registration</div>
-          <div class="prop-service-desc">Drafting of Partnership Deeds, firm registration under Indian Partnership Act, amendments, dissolution deeds, and reconstitution.</div>
-        </div>
-      </div>
-      <div class="prop-service reveal reveal-d3">
-        <span class="prop-service-icon">🏡</span>
-        <div>
-          <div class="prop-service-title">Agreement to Sell &amp; Conveyance</div>
-          <div class="prop-service-desc">Drafting and vetting of Agreement to Sell, Development Agreements, Leave &amp; License deeds, and Conveyance Deeds per Maharashtra law.</div>
-        </div>
-      </div>
-      <div class="prop-service reveal reveal-d4">
-        <span class="prop-service-icon">💼</span>
-        <div>
-          <div class="prop-service-title">Property Dispute Resolution</div>
-          <div class="prop-service-desc">Title disputes, partition suits, RERA matters, adverse possession claims, and injunctions for protection of property rights.</div>
-        </div>
-      </div>
-          <div class="prop-service reveal reveal-d4">
-        <span class="prop-service-icon">📜</span>
-        <div>
-          <a href="leave-license-service.html" class="prop-service-link">
-          <div class="prop-service-title">Leave &amp; License Agreements</div>
-          <div class="prop-service-desc">Drafting and registration of Leave & License agreements for residential and non-residential purposes online through our legal experts.</div>
-          Learn More →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      LEGAL TOOLS
 ══════════════════════════════════ -->
-<section class="tools" id="tools">
-  <div class="container">
-    <div class="tools-head">
-      <div>
-        <span class="eyebrow reveal">Free Legal Resources for various legal processes</span>
-        <h2 class="section-title reveal">Legal Tools <em>&amp; Resources</em></h2>
-        <div class="rule center reveal"></div>
+  <section class="tools" id="tools">
+    <div class="container">
+      <div class="tools-head">
+        <div>
+          <span class="eyebrow reveal">Free Legal Resources for various legal processes</span>
+          <h2 class="section-title reveal">Legal Tools <em>&amp; Resources</em></h2>
+          <div class="rule center reveal"></div>
+        </div>
+        <p class="reveal"
+          style="font-family:var(--ff-u);font-size:.85rem;color:var(--muted);max-width:520px;margin:0 auto">Various
+          legal tools and templates useful for the best practices and practical use — prepared by our advocates.</p>
       </div>
-      <p class="reveal" style="font-family:var(--ff-u);font-size:.85rem;color:var(--muted);max-width:520px;margin:0 auto">Various legal tools and templates useful for the best practices and practical use — prepared by our advocates.</p>
-    </div>
-    <div class="tools-grid">
-      <a href="maharashtra-stampduty-estimator.html" class="tool-card reveal reveal-d2">
-        <div class="tool-icon">🏠</div>
-        <div class="tool-name">Stamp Duty &amp; Registration Fees Estimator</div>
-        <div class="tool-desc">Estimate stamp duty and registration fees for property transactions in Maharashtra as per current IGR rates.</div>
-        <div class="tool-arrow" style="color:var(--gold)">Let's Go →</div>
-      </a>
-      <a href="motor-accident-claim-estimator.html" class="tool-card reveal reveal-d3">
-        <div class="tool-icon">🚗</div>
-        <div class="tool-name">Motor Accident Claim Estimator</div>
-        <div class="tool-desc">Estimate MACT compensation for motor accident claims in Maharashtra using tribunal-approved calculation methodology.</div>
-        <div class="tool-arrow" style="color:var(--gold)">Let's Go →</div>
-      </a>
-      <a href="nia_138_limitation.html" class="tool-card reveal reveal-d3">
-        <div class="tool-icon">📝</div> 
-        <div class="tool-name">Negotiable Instrument Act Section 138 Limitation Period Calculator</div>
-        <div class="tool-desc">Calculate limitation periods and Court fees for filing complaint under NIA Section 138 for cheque bounce.</div>
-        <div class="tool-arrow" style="color:var(--gold)">Let's Go →</div>
-      </a>
-      <a href="hindu-succession-share-calculator.html" class="tool-card reveal reveal-d3">
-        <div class="tool-icon">📝</div> 
-        <div class="tool-name">Hindu Succession Share Calculator</div>
-        <div class="tool-desc">Calculate inheritance shares and rights under the Hindu Succession Act for property distribution.</div>
-        <div class="tool-arrow" style="color:var(--gold)">Let's Go →</div>
-      </a>
+      <div class="tools-grid">
+        <a href="maharashtra-stampduty-estimator.html" class="tool-card reveal reveal-d2">
+          <div class="tool-icon">🏠</div>
+          <div class="tool-name">Stamp Duty &amp; Registration Fees Estimator</div>
+          <div class="tool-desc">Estimate stamp duty and registration fees for property transactions in Maharashtra as
+            per current IGR rates.</div>
+          <div class="tool-arrow" style="color:var(--gold)">Let's Go →</div>
+        </a>
+        <a href="motor-accident-claim-estimator.html" class="tool-card reveal reveal-d3">
+          <div class="tool-icon">🚗</div>
+          <div class="tool-name">Motor Accident Claim Estimator</div>
+          <div class="tool-desc">Estimate MACT compensation for motor accident claims in Maharashtra using
+            tribunal-approved calculation methodology.</div>
+          <div class="tool-arrow" style="color:var(--gold)">Let's Go →</div>
+        </a>
+        <a href="nia_138_limitation.html" class="tool-card reveal reveal-d3">
+          <div class="tool-icon">📝</div>
+          <div class="tool-name">Negotiable Instrument Act Section 138 Limitation Period Calculator</div>
+          <div class="tool-desc">Calculate limitation periods and Court fees for filing complaint under NIA Section 138
+            for cheque bounce.</div>
+          <div class="tool-arrow" style="color:var(--gold)">Let's Go →</div>
+        </a>
+        <a href="hindu-succession-share-calculator.html" class="tool-card reveal reveal-d3">
+          <div class="tool-icon">📝</div>
+          <div class="tool-name">Hindu Succession Share Calculator</div>
+          <div class="tool-desc">Calculate inheritance shares and rights under the Hindu Succession Act for property
+            distribution.</div>
+          <div class="tool-arrow" style="color:var(--gold)">Let's Go →</div>
+        </a>
 
-      <div class="tool-card reveal reveal-d4" style="cursor:default;opacity:.75;">
-        <div class="tool-icon">📄</div>
-        <div class="tool-name">General Power of Attorney Template</div>
-        <div class="tool-desc">A comprehensive template for General Power of Attorney under Indian law, with instructions for use and execution.</div>
-        <div class="tool-arrow" style="color:var(--muted)">Coming Soon</div>
-      </div>
-      <div class="tool-card reveal reveal-d2" style="cursor:default;opacity:.75;">
-        <div class="tool-icon">📝</div>
-        <div class="tool-name">Affidavit Template</div>
-        <div class="tool-desc">A versatile affidavit template for various purposes — identity, residence, relationship, and more — compliant with Indian legal standards.</div>
-        <div class="tool-arrow" style="color:var(--muted)">Coming Soon</div>
-      </div>
-      <div class="tool-card reveal reveal-d3" style="cursor:default;opacity:.75;">
-        <div class="tool-icon">📑</div>
-        <div class="tool-name">Will Template</div>
-        <div class="tool-desc">A legally sound Will template for individuals to draft their testamentary documents in accordance with Indian succession laws.</div>
-        <div class="tool-arrow" style="color:var(--muted)">Coming Soon</div>
-      </div>
-      <div class="tool-card reveal reveal-d4" style="cursor:default;opacity:.75;">
-        <div class="tool-icon">📋</div>
-        <div class="tool-name">Rental Agreement Template</div>
-        <div class="tool-desc">A comprehensive rental agreement template for residential and commercial leases, compliant with Maharashtra Rent Control Act.</div>
-        <div class="tool-arrow" style="color:var(--muted)">Coming Soon</div>
-      </div>
-      <div class="tool-card reveal reveal-d2" style="cursor:default;opacity:.75;">
-        <div class="tool-icon">⚖️</div>
-        <div class="tool-name">Legal Notice Template</div>
-        <div class="tool-desc">A ready-to-use legal notice template for pre-litigation communication and dispute resolution.</div>
-        <div class="tool-arrow" style="color:var(--muted)">Coming Soon</div>
+        <div class="tool-card reveal reveal-d4" style="cursor:default;opacity:.75;">
+          <div class="tool-icon">📄</div>
+          <div class="tool-name">General Power of Attorney Template</div>
+          <div class="tool-desc">A comprehensive template for General Power of Attorney under Indian law, with
+            instructions for use and execution.</div>
+          <div class="tool-arrow" style="color:var(--muted)">Coming Soon</div>
+        </div>
+        <div class="tool-card reveal reveal-d2" style="cursor:default;opacity:.75;">
+          <div class="tool-icon">📝</div>
+          <div class="tool-name">Affidavit Template</div>
+          <div class="tool-desc">A versatile affidavit template for various purposes — identity, residence,
+            relationship, and more — compliant with Indian legal standards.</div>
+          <div class="tool-arrow" style="color:var(--muted)">Coming Soon</div>
+        </div>
+        <div class="tool-card reveal reveal-d3" style="cursor:default;opacity:.75;">
+          <div class="tool-icon">📑</div>
+          <div class="tool-name">Will Template</div>
+          <div class="tool-desc">A legally sound Will template for individuals to draft their testamentary documents in
+            accordance with Indian succession laws.</div>
+          <div class="tool-arrow" style="color:var(--muted)">Coming Soon</div>
+        </div>
+        <div class="tool-card reveal reveal-d4" style="cursor:default;opacity:.75;">
+          <div class="tool-icon">📋</div>
+          <div class="tool-name">Rental Agreement Template</div>
+          <div class="tool-desc">A comprehensive rental agreement template for residential and commercial leases,
+            compliant with Maharashtra Rent Control Act.</div>
+          <div class="tool-arrow" style="color:var(--muted)">Coming Soon</div>
+        </div>
+        <div class="tool-card reveal reveal-d2" style="cursor:default;opacity:.75;">
+          <div class="tool-icon">⚖️</div>
+          <div class="tool-name">Legal Notice Template</div>
+          <div class="tool-desc">A ready-to-use legal notice template for pre-litigation communication and dispute
+            resolution.</div>
+          <div class="tool-arrow" style="color:var(--muted)">Coming Soon</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      TEAM
 ══════════════════════════════════ -->
-<section class="team" id="team">
-  <div class="container">
-    <div class="team-head">
-      <span class="eyebrow reveal">Our Advocates</span>
-      <h2 class="section-title reveal">Meet the <em>Team</em></h2>
-      <div class="rule center reveal"></div>
+  <section class="team" id="team">
+    <div class="container">
+      <div class="team-head">
+        <span class="eyebrow reveal">Our Advocates</span>
+        <h2 class="section-title reveal">Meet the <em>Team</em></h2>
+        <div class="rule center reveal"></div>
+      </div>
+      <div class="team-grid">
+        <!-- Principal -->
+        <div class="team-card principal-card-team reveal">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar">AD</div>
+          </div>
+          <div class="team-body">
+            <div class="team-name">Adv. Ashok Dhende</div>
+            <div class="team-role">Principal Advocate</div>
+            <div class="team-since">Practising since 1984 · Notary since 1998</div>
+            <ul class="team-specs">
+              <li>Civil &amp; Criminal Litigation</li>
+              <li>Motor Accident Claims · MACT</li>
+              <li>Insurance Disputes</li>
+              <li>Notary Public</li>
+            </ul>
+            <div class="team-email">
+              <span>✉</span>
+              <a href="mailto:ashok.dhende@gmail.com" style="color:var(--p500)">ashok.dhende@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <!-- Ajinkya -->
+        <div class="team-card reveal reveal-d2">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar">AD</div>
+          </div>
+          <div class="team-body">
+            <div class="team-name">Adv. Ajinkya Dhende</div>
+            <div class="team-role">Associate Advocate</div>
+            <div class="team-since">Practising since 2011 · Notary since 2025</div>
+            <ul class="team-specs">
+              <li>Property Law &amp; Transactions</li>
+              <li>Labour &amp; Employment Law</li>
+              <li>Legal Technology &amp; Research</li>
+              <li>Insurance Disputes</li>
+              <li>Cyber Law</li>
+              <li>Notary Public</li>
+              <li>Co-operative Society Law</li>
+            </ul>
+            <div class="team-email">
+              <span>✉</span>
+              <a href="mailto:ajinkya.dhende@gmail.com" style="color:var(--p500)">ajinkya.dhende@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <!-- Vikram -->
+        <div class="team-card reveal reveal-d3">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar">VJ</div>
+          </div>
+          <div class="team-body">
+            <div class="team-name">Adv. Vikram Jambhale</div>
+            <div class="team-role">Associate Advocate</div>
+            <div class="team-since">Practising since 2013</div>
+            <ul class="team-specs">
+              <li>Criminal Litigation</li>
+              <li>Family Law Matters</li>
+              <li>Consumer Protection</li>
+              <li>Negotiable Instruments</li>
+              <li>Domestic Violence Matters</li>
+            </ul>
+            <div class="team-email">
+              <span>✉</span>
+              <a href="mailto:advvikramjambhale21@gmail.com" style="color:var(--p500)">advvikramjambhale21@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <!-- Nitin -->
+        <div class="team-card reveal reveal-d4">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar">ND</div>
+          </div>
+          <div class="team-body">
+            <div class="team-name">Adv. Nitin Dhere</div>
+            <div class="team-role">Associate Advocate</div>
+            <div class="team-since">Practising since 2022</div>
+            <ul class="team-specs">
+              <li>Criminal Law &amp; Bail Matters</li>
+              <li>Consumer Forum Disputes</li>
+              <li>Insurance Law</li>
+              <li>Revenue &amp; Land Matters</li>
+            </ul>
+            <div class="team-email">
+              <span>✉</span>
+              <a href="mailto:nitindherepune2@gmail.com" style="color:var(--p500)">nitindherepune2@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <!-- Gokul -->
+        <div class="team-card reveal reveal-d3">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar">GK</div>
+          </div>
+          <div class="team-body">
+            <div class="team-name">Adv. Gokul Kadam</div>
+            <div class="team-role">Associate Advocate</div>
+            <div class="team-since">Practising since 2020</div>
+            <ul class="team-specs">
+              <li>Criminal &amp; Civil Litigation</li>
+              <li>Registration of Documents</li>
+              <li>Land and Revenue Matters</li>
+              <li>Co-operative Society Law</li>
+              <li>Payment and Settlement Matters</li>
+            </ul>
+            <div class="team-email">
+              <span>✉</span>
+              <a href="mailto:advgokulkadam@gmail.com" style="color:var(--p500)">advgokulkadam@gmail.com</a>
+            </div>
+          </div>
+        </div>
+        <!-- Shivam -->
+        <div class="team-card reveal reveal-d3">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar">ST</div>
+          </div>
+          <div class="team-body">
+            <div class="team-name">Adv. Shivam Tilekar</div>
+            <div class="team-role">Associate Advocate</div>
+            <ul class="team-specs">
+              <li>Criminal &amp; Civil Litigation</li>
+              <li>Family Law Matters</li>
+              <li>Consumer Protection</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Aryan Ingole -->
+        <div class="team-card reveal reveal-d3">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar">AI</div>
+          </div>
+          <div class="team-body">
+            <div class="team-name">Adv. Aryan Ingole</div>
+            <div class="team-role">Associate Advocate</div>
+            <ul class="team-specs">
+              <li>Criminal &amp; Civil Litigation</li>
+              <li>Family Law Matters</li>
+              <li>Consumer Protection</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Raj -->
+        <div class="team-card reveal reveal-d3">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar">RJ</div>
+          </div>
+          <div class="team-body">
+            <div class="team-name">Adv. Raj Jagtap</div>
+            <div class="team-role">Associate Advocate</div>
+            <ul class="team-specs">
+              <li>Criminal &amp; Civil Litigation</li>
+              <li>Family Law Matters</li>
+              <li>Consumer Protection</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="team-grid">
-      <!-- Principal -->
-      <div class="team-card principal-card-team reveal">
-        <div class="team-avatar-wrap">
-          <div class="team-avatar">AD</div>
-        </div>
-        <div class="team-body">
-          <div class="team-name">Adv. Ashok Dhende</div>
-          <div class="team-role">Principal Advocate</div>
-          <div class="team-since">Practising since 1984 · Notary since 1998</div>
-          <ul class="team-specs">
-            <li>Civil &amp; Criminal Litigation</li>
-            <li>Motor Accident Claims · MACT</li>
-            <li>Insurance Disputes</li>
-            <li>Notary Public</li>
-          </ul>
-          <div class="team-email">
-            <span>✉</span>
-            <a href="mailto:ashok.dhende@gmail.com" style="color:var(--p500)">ashok.dhende@gmail.com</a>
-          </div>
-        </div>
-      </div>
-      <!-- Ajinkya -->
-      <div class="team-card reveal reveal-d2">
-        <div class="team-avatar-wrap">
-          <div class="team-avatar">AD</div>
-        </div>
-        <div class="team-body">
-          <div class="team-name">Adv. Ajinkya Dhende</div>
-          <div class="team-role">Associate Advocate</div>
-          <div class="team-since">Practising since 2011 · Notary since 2025</div>
-          <ul class="team-specs">
-            <li>Property Law &amp; Transactions</li>
-            <li>Labour &amp; Employment Law</li>
-            <li>Legal Technology &amp; Research</li>
-            <li>Insurance Disputes</li>
-            <li>Cyber Law</li>
-            <li>Notary Public</li>
-            <li>Co-operative Society Law</li>
-          </ul>
-          <div class="team-email">
-            <span>✉</span>
-            <a href="mailto:ajinkya.dhende@gmail.com" style="color:var(--p500)">ajinkya.dhende@gmail.com</a>
-          </div>
-        </div>
-      </div>
-      <!-- Vikram -->
-      <div class="team-card reveal reveal-d3">
-        <div class="team-avatar-wrap">
-          <div class="team-avatar">VJ</div>
-        </div>
-        <div class="team-body">
-          <div class="team-name">Adv. Vikram Jambhale</div>
-          <div class="team-role">Associate Advocate</div>
-          <div class="team-since">Practising since 2013</div>
-          <ul class="team-specs">
-            <li>Criminal Litigation</li>
-            <li>Family Law Matters</li>
-            <li>Consumer Protection</li>
-            <li>Negotiable Instruments</li>
-            <li>Domestic Violence Matters</li>
-          </ul>
-          <div class="team-email">
-            <span>✉</span>
-            <a href="mailto:advvikramjambhale21@gmail.com" style="color:var(--p500)">advvikramjambhale21@gmail.com</a>
-          </div>
-        </div>
-      </div>
-      <!-- Nitin -->
-      <div class="team-card reveal reveal-d4">
-        <div class="team-avatar-wrap">
-          <div class="team-avatar">ND</div>
-        </div>
-        <div class="team-body">
-          <div class="team-name">Adv. Nitin Dhere</div>
-          <div class="team-role">Associate Advocate</div>
-          <div class="team-since">Practising since 2022</div>
-          <ul class="team-specs">
-            <li>Criminal Law &amp; Bail Matters</li>
-            <li>Consumer Forum Disputes</li>
-            <li>Insurance Law</li>
-            <li>Revenue &amp; Land Matters</li>
-          </ul>
-          <div class="team-email">
-            <span>✉</span>
-            <a href="mailto:nitindherepune2@gmail.com" style="color:var(--p500)">nitindherepune2@gmail.com</a>
-          </div>
-        </div>
-      </div>
-      <!-- Gokul -->
-      <div class="team-card reveal reveal-d3">
-        <div class="team-avatar-wrap">
-          <div class="team-avatar">GK</div>
-        </div>
-        <div class="team-body">
-          <div class="team-name">Adv. Gokul Kadam</div>
-          <div class="team-role">Associate Advocate</div>
-          <div class="team-since">Practising since 2020</div>
-          <ul class="team-specs">
-            <li>Criminal &amp; Civil Litigation</li>
-            <li>Registration of Documents</li>
-            <li>Land and Revenue Matters</li>
-            <li>Co-operative Society Law</li>
-            <li>Payment and Settlement Matters</li>
-          </ul>
-          <div class="team-email">
-            <span>✉</span>
-            <a href="mailto:advgokulkadam@gmail.com" style="color:var(--p500)">advgokulkadam@gmail.com</a>
-          </div>
-        </div>
-      </div>
-      <!-- Shivam -->
-      <div class="team-card reveal reveal-d3">
-        <div class="team-avatar-wrap">
-          <div class="team-avatar">ST</div>
-        </div>
-        <div class="team-body">
-          <div class="team-name">Adv. Shivam Tilekar</div>
-          <div class="team-role">Associate Advocate</div>
-          <ul class="team-specs">
-            <li>Criminal &amp; Civil Litigation</li>
-            <li>Family Law Matters</li>
-            <li>Consumer Protection</li>
-          </ul>
-        </div>
-      </div>
-      <!-- Aryan Ingole -->
-      <div class="team-card reveal reveal-d3">
-        <div class="team-avatar-wrap">
-          <div class="team-avatar">AI</div>
-        </div>
-        <div class="team-body">
-          <div class="team-name">Adv. Aryan Ingole</div>
-          <div class="team-role">Associate Advocate</div>
-          <ul class="team-specs">
-            <li>Criminal &amp; Civil Litigation</li>
-            <li>Family Law Matters</li>
-            <li>Consumer Protection</li>
-          </ul>
-        </div>
-      </div>
-      <!-- Raj -->
-      <div class="team-card reveal reveal-d3">
-        <div class="team-avatar-wrap">
-          <div class="team-avatar">RJ</div>
-        </div>
-        <div class="team-body">
-          <div class="team-name">Adv. Raj Jagtap</div>
-          <div class="team-role">Associate Advocate</div>
-          <ul class="team-specs">
-            <li>Criminal &amp; Civil Litigation</li>
-            <li>Family Law Matters</li>
-            <li>Consumer Protection</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      BLOG  
 ══════════════════════════════════ -->
-<section class="practice" id="blog" style="background:var(--bg-alt,#F7F4EF);">
-  <div class="container">
-    <div class="practice-head">
-      <span class="eyebrow reveal">Legal Insights &amp; Updates</span>
-      <h2 class="section-title reveal">From Our <em>Blog</em></h2>
-      <div class="rule center reveal"></div>
-      <p class="reveal" style="font-family:var(--ff-u);font-size:.85rem;color:var(--muted);max-width:520px;margin:0 auto">Articles, guides, and legal commentary by our advocates on Motor Accident law, Insurance disputes, Property transactions, and more.</p>
+  <section class="practice" id="blog" style="background:var(--bg-alt,#F7F4EF);">
+    <div class="container">
+      <div class="practice-head">
+        <span class="eyebrow reveal">Legal Insights &amp; Updates</span>
+        <h2 class="section-title reveal">From Our <em>Blog</em></h2>
+        <div class="rule center reveal"></div>
+        <p class="reveal"
+          style="font-family:var(--ff-u);font-size:.85rem;color:var(--muted);max-width:520px;margin:0 auto">Articles,
+          guides, and legal commentary by our advocates on Motor Accident law, Insurance disputes, Property
+          transactions, and more.</p>
+      </div>
+      <div class="practice-grid" style="margin-top:2.5rem;">
+        <a href="blog.html" target="_blank" rel="noopener" class="pa-card reveal reveal-d2"
+          style="text-decoration:none;">
+          <div class="pa-icon-wrap">📰</div>
+          <div class="pa-name">Visit Our Blog</div>
+          <p class="pa-desc" style="text-align:justify;">In-depth articles on MACT compensation, insurance claim
+            disputes, property registration in Maharashtra, and practical legal guides for clients.</p>
+          <div style="color:var(--gold);font-family:var(--ff-u);font-size:.8rem;margin-top:1rem;">Read Articles →</div>
+        </a>
+        <a href="https://wa.me/918149135283?text=Hello%2C%20I%20would%20like%20to%20receive%20legal%20updates%20from%20Dhende%20Associates."
+          target="_blank" rel="noopener" class="pa-card reveal reveal-d3" style="text-decoration:none;">
+          <div class="pa-icon-wrap">💬</div>
+          <div class="pa-name">Subscribe for Updates</div>
+          <p class="pa-desc" style="text-align:justify;">Get timely legal updates, important court judgments, and
+            changes in Maharashtra law directly on WhatsApp from our team.</p>
+          <div style="color:var(--gold);font-family:var(--ff-u);font-size:.8rem;margin-top:1rem;">Subscribe via WhatsApp
+            →</div>
+        </a>
+        <a href="https://wa.me/918149135283?text=Hello%2C%20I%20have%20a%20legal%20question." target="_blank"
+          rel="noopener" class="pa-card reveal reveal-d4" style="text-decoration:none;">
+          <div class="pa-icon-wrap">❓</div>
+          <div class="pa-name">Ask a Legal Question</div>
+          <p class="pa-desc" style="text-align:justify;">Have a quick legal query? WhatsApp our advocates directly.
+            Initial responses within business hours for general guidance.</p>
+          <div style="color:var(--gold);font-family:var(--ff-u);font-size:.8rem;margin-top:1rem;">Ask on WhatsApp →
+          </div>
+        </a>
+      </div>
     </div>
-    <div class="practice-grid" style="margin-top:2.5rem;">
-      <a href="blog.html" target="_blank" rel="noopener" class="pa-card reveal reveal-d2" style="text-decoration:none;">
-        <div class="pa-icon-wrap">📰</div>
-        <div class="pa-name">Visit Our Blog</div>
-        <p class="pa-desc" style="text-align:justify;">In-depth articles on MACT compensation, insurance claim disputes, property registration in Maharashtra, and practical legal guides for clients.</p>
-        <div style="color:var(--gold);font-family:var(--ff-u);font-size:.8rem;margin-top:1rem;">Read Articles →</div>
-      </a>
-      <a href="https://wa.me/918149135283?text=Hello%2C%20I%20would%20like%20to%20receive%20legal%20updates%20from%20Dhende%20Associates." target="_blank" rel="noopener" class="pa-card reveal reveal-d3" style="text-decoration:none;">
-        <div class="pa-icon-wrap">💬</div>
-        <div class="pa-name">Subscribe for Updates</div>
-        <p class="pa-desc" style="text-align:justify;">Get timely legal updates, important court judgments, and changes in Maharashtra law directly on WhatsApp from our team.</p>
-        <div style="color:var(--gold);font-family:var(--ff-u);font-size:.8rem;margin-top:1rem;">Subscribe via WhatsApp →</div>
-      </a>
-      <a href="https://wa.me/918149135283?text=Hello%2C%20I%20have%20a%20legal%20question." target="_blank" rel="noopener" class="pa-card reveal reveal-d4" style="text-decoration:none;">
-        <div class="pa-icon-wrap">❓</div>
-        <div class="pa-name">Ask a Legal Question</div>
-        <p class="pa-desc" style="text-align:justify;">Have a quick legal query? WhatsApp our advocates directly. Initial responses within business hours for general guidance.</p>
-        <div style="color:var(--gold);font-family:var(--ff-u);font-size:.8rem;margin-top:1rem;">Ask on WhatsApp →</div>
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      KIDS  
 ══════════════════════════════════ -->
-<section class="practice" id="kids" style="background:var(--bg-alt,#2a1654);">
-  <div class="container">
-    <div class="practice-head">
-      <span class="eyebrow reveal" style="color:var(--gold);">Educational Resources for Kids</span>
-      <h2 class="section-title"style="color:var(--white);">Law for Kids</h2>
-      <div class="rule center reveal"></div>
-      <p class="reveal" style="font-family:var(--ff-u);font-size:.85rem;color:var(--muted);max-width:520px;margin:0 auto">Important features of the Indian Constitution explained in a simple way for children.</p>
-    </div> 
+  <section class="practice" id="kids" style="background:var(--bg-alt,#2a1654);">
+    <div class="container">
+      <div class="practice-head">
+        <span class="eyebrow reveal" style="color:var(--gold);">Educational Resources for Kids</span>
+        <h2 class="section-title" style="color:var(--white);">Law for Kids</h2>
+        <div class="rule center reveal"></div>
+        <p class="reveal"
+          style="font-family:var(--ff-u);font-size:.85rem;color:var(--muted);max-width:520px;margin:0 auto">Important
+          features of the Indian Constitution explained in a simple way for children.</p>
+      </div>
 
-    <div class="practice-grid" aligncenter style="margin-top:1.5rem;">
-      <a href="constitutionforkids_eng.html" class="tool-card reveal reveal-d2">
-        <div class="tool-icon">⚖️</div>
-        <div class="tool-name">The Constitution <em>for Kids</em> of India</div>
-        <div class="tool-desc">Important features of the Indian Constitution explained in a simple way for children.</div>
-        <div class="tool-arrow" style="color:var(--gold); animation:pulseGold 2s infinite">Lets Begin →</div>
-      </a>
-      <a href="constitutionforkids_mar.html" class="tool-card reveal reveal-d3">
-        <div class="tool-icon">⚖️</div>
-        <div class="tool-name">भारताचे संविधान (मुलांसाठी)</div>
-        <div class="tool-desc">भारतीय संविधानाची महत्त्वाची वैशिष्ट्ये भावी सजग नागरिक घडवण्यासाठी सोप्या मराठी भाषेत समजून घेण्या साठी.</div>
-        <div class="tool-arrow" style="color:var(--gold); animation:pulseGold 2s infinite">चला सुरू करू या !! →</div>
-      </a>
+      <div class="practice-grid" aligncenter style="margin-top:1.5rem;">
+        <a href="constitutionforkids_eng.html" class="tool-card reveal reveal-d2">
+          <div class="tool-icon">⚖️</div>
+          <div class="tool-name">The Constitution <em>for Kids</em> of India</div>
+          <div class="tool-desc">Important features of the Indian Constitution explained in a simple way for children.
+          </div>
+          <div class="tool-arrow" style="color:var(--gold); animation:pulseGold 2s infinite">Lets Begin →</div>
+        </a>
+        <a href="constitutionforkids_mar.html" class="tool-card reveal reveal-d3">
+          <div class="tool-icon">⚖️</div>
+          <div class="tool-name">भारताचे संविधान (मुलांसाठी)</div>
+          <div class="tool-desc">भारतीय संविधानाची महत्त्वाची वैशिष्ट्ये भावी सजग नागरिक घडवण्यासाठी सोप्या मराठी भाषेत
+            समजून घेण्या साठी.</div>
+          <div class="tool-arrow" style="color:var(--gold); animation:pulseGold 2s infinite">चला सुरू करू या !! →</div>
+        </a>
+      </div>
     </div>
-  </div>
   </section>
 
 
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      CONTACT
 ══════════════════════════════════ -->
-<section class="contact" id="contact">
-  <div class="container" style="padding-top:5rem;padding-bottom:5rem">
-    <div class="contact-inner">
-      <div>
-        <span class="eyebrow reveal">Get in Touch</span>
-        <h2 class="section-title reveal">Schedule a <em>Consultation</em></h2>
-        <div class="rule reveal" style="background:linear-gradient(to right,var(--p400),var(--gold))"></div>
-        <p class="contact-desc reveal">Reach us at our Gokhalenagar office in Pune, or connect via WhatsApp for a quicker response. Initial consultation available Mon–Sat.</p>
-        <div class="contact-items reveal">
-          <div class="contact-item">
-            <div class="c-icon"><img src="Pin.png" alt="Office Location" width="12" height="12" style="width:12px;margin:0;" loading="lazy" decoding="async"></div>
-            <div>
-              <div class="c-label">Office Address</div>
-              <div class="c-val">Office No 1, First Floor, MHADA Commercial Complex<br>Gokhalenagar, Pune 411016<br>Maharashtra, India</div>
-              <a class="c-val" href="https://maps.app.goo.gl/FT5mNgG5bBRJW8A99" style="color:rgba(255,255,255,.8);animation:pulseGold 2s infinite;margin-top:1rem;display:inline-block;" target="_blank" rel="noopener">View on map</a>
+  <section class="contact" id="contact">
+    <div class="container" style="padding-top:5rem;padding-bottom:5rem">
+      <div class="contact-inner">
+        <div>
+          <span class="eyebrow reveal">Get in Touch</span>
+          <h2 class="section-title reveal">Schedule a <em>Consultation</em></h2>
+          <div class="rule reveal" style="background:linear-gradient(to right,var(--p400),var(--gold))"></div>
+          <p class="contact-desc reveal">Reach us at our Gokhalenagar office in Pune, or connect via WhatsApp for a
+            quicker response. Initial consultation available Mon–Sat.</p>
+          <div class="contact-items reveal">
+            <div class="contact-item">
+              <div class="c-icon"><img src="Pin.png" alt="Office Location" width="12" height="12"
+                  style="width:12px;margin:0;" loading="lazy" decoding="async"></div>
+              <div>
+                <div class="c-label">Office Address</div>
+                <div class="c-val">Office No 1, First Floor, MHADA Commercial Complex<br>Gokhalenagar, Pune
+                  411016<br>Maharashtra, India</div>
+                <a class="c-val" href="https://maps.app.goo.gl/FT5mNgG5bBRJW8A99"
+                  style="color:rgba(255,255,255,.8);animation:pulseGold 2s infinite;margin-top:1rem;display:inline-block;"
+                  target="_blank" rel="noopener">View on map</a>
+              </div>
             </div>
-          </div>
-          <div class="contact-item">
-            <div class="c-icon">📞</div>
-            <div>
-              <div class="c-label">Phone / WhatsApp</div>
-              <div class="c-val">
-                <a href="tel:+918149135283">+91 81491 35283</a><br>
-                <a href="tel:+919822335664">+91 98223 35664</a>
+            <div class="contact-item">
+              <div class="c-icon">📞</div>
+              <div>
+                <div class="c-label">Phone / WhatsApp</div>
+                <div class="c-val">
+                  <a href="tel:+918149135283">+91 81491 35283</a><br>
+                  <a href="tel:+919822335664">+91 98223 35664</a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="c-icon">✉️</div>
+              <div>
+                <div class="c-label">Email</div>
+                <div class="c-val">
+                  <a href="mailto:ashok.dhende@gmail.com">ashok.dhende@gmail.com</a><br>
+                  <a href="mailto:ajinkya.dhende@gmail.com">ajinkya.dhende@gmail.com</a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="c-icon">⏰</div>
+              <div>
+                <div class="c-label">Office Hours</div>
+                <div class="c-val">Monday – Saturday · 09:00 am – 09:00 pm<br><span
+                    style="color:rgba(255,255,255,.4);font-size:.78rem">Sunday &amp; Public Holidays — by
+                    appointment</span></div>
               </div>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="c-icon">✉️</div>
-            <div>
-              <div class="c-label">Email</div>
-              <div class="c-val">
-                <a href="mailto:ashok.dhende@gmail.com">ashok.dhende@gmail.com</a><br>
-                <a href="mailto:ajinkya.dhende@gmail.com">ajinkya.dhende@gmail.com</a>
+          <div class="reveal">
+            <a class="wa-btn"
+              href="https://wa.me/918149135283?text=Hello%20Dhende%20Associates%2C%20I%20would%20like%20to%20book%20a%20consultation."
+              target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+              </svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+        <!-- Enquiry Form -->
+        <div class="contact-form-wrap reveal reveal-d3">
+          <div class="form-title">Send an Enquiry</div>
+          <div id="form-fields">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="f-name">Full Name</label>
+                <input class="form-input" id="f-name" type="text" placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="f-phone">Phone / WhatsApp</label>
+                <input class="form-input" id="f-phone" type="tel" placeholder="+91 …">
               </div>
             </div>
-          </div>
-          <div class="contact-item">
-            <div class="c-icon">⏰</div>
-            <div>
-              <div class="c-label">Office Hours</div>
-              <div class="c-val">Monday – Saturday · 09:00 am – 09:00 pm<br><span style="color:rgba(255,255,255,.4);font-size:.78rem">Sunday &amp; Public Holidays — by appointment</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="reveal">
-          <a class="wa-btn" href="https://wa.me/918149135283?text=Hello%20Dhende%20Associates%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-            Chat on WhatsApp
-          </a>
-        </div>
-      </div>
-      <!-- Enquiry Form -->
-      <div class="contact-form-wrap reveal reveal-d3">
-        <div class="form-title">Send an Enquiry</div>
-        <div id="form-fields">
-          <div class="form-row">
             <div class="form-group">
-              <label class="form-label" for="f-name">Full Name</label>
-              <input class="form-input" id="f-name" type="text" placeholder="Your name">
+              <label class="form-label" for="f-email">Email Address</label>
+              <input class="form-input" id="f-email" type="email" placeholder="you@email.com">
             </div>
             <div class="form-group">
-              <label class="form-label" for="f-phone">Phone / WhatsApp</label>
-              <input class="form-input" id="f-phone" type="tel" placeholder="+91 …">
+              <label class="form-label" for="f-matter">Type of Matter</label>
+              <select class="form-select" id="f-matter">
+                <option value="" disabled selected>Select matter type</option>
+                <option>Motor Accident Claim</option>
+                <option>Insurance Dispute</option>
+                <option>Civil Litigation</option>
+                <option>Criminal Matter</option>
+                <option>Property Transaction</option>
+                <option>Property Registration</option>
+                <option>Title Search / Due Diligence</option>
+                <option>Will Drafting</option>
+                <option>Partnership Firm</option>
+                <option>Family Law</option>
+                <option>Labour / Employment</option>
+                <option>Notarial Services</option>
+                <option>Other / General Enquiry</option>
+              </select>
             </div>
+            <div class="form-group">
+              <label class="form-label" for="f-msg">Brief Description</label>
+              <textarea class="form-textarea" id="f-msg" placeholder="Briefly describe your legal matter…"></textarea>
+            </div>
+            <button class="form-submit" onclick="submitForm()">Send Enquiry →</button>
+            <p
+              style="font-family:var(--ff-u);font-size:.68rem;color:rgba(255,255,255,.25);margin-top:.75rem;line-height:1.5">
+              Your information is confidential and used only to respond to your enquiry. Submitting this form does not
+              create an advocate-client relationship.</p>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="f-email">Email Address</label>
-            <input class="form-input" id="f-email" type="email" placeholder="you@email.com">
+          <div class="form-success" id="form-success" style="display:none;">
+            <div style="font-size:2.5rem;margin-bottom:1rem">✅</div>
+            <div style="font-family:var(--ff-d);font-size:1.4rem;color:rgba(255,255,255,.8);margin-bottom:.5rem">Thank
+              you for your enquiry</div>
+            <p style="color:rgba(255,255,255,.5)">We will get back to you within 24 hours. For urgent matters, please
+              WhatsApp us at <a href="https://wa.me/918149135283" style="color:var(--gold)">+91 81491 35283</a>.</p>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="f-matter">Type of Matter</label>
-            <select class="form-select" id="f-matter">
-              <option value="" disabled selected>Select matter type</option>
-              <option>Motor Accident Claim</option>
-              <option>Insurance Dispute</option>
-              <option>Civil Litigation</option>
-              <option>Criminal Matter</option>
-              <option>Property Transaction</option>
-              <option>Property Registration</option>
-              <option>Title Search / Due Diligence</option>
-              <option>Will Drafting</option>
-              <option>Partnership Firm</option>
-              <option>Family Law</option>
-              <option>Labour / Employment</option>
-              <option>Notarial Services</option>
-              <option>Other / General Enquiry</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="f-msg">Brief Description</label>
-            <textarea class="form-textarea" id="f-msg" placeholder="Briefly describe your legal matter…"></textarea>
-          </div>
-          <button class="form-submit" onclick="submitForm()">Send Enquiry →</button>
-          <p style="font-family:var(--ff-u);font-size:.68rem;color:rgba(255,255,255,.25);margin-top:.75rem;line-height:1.5">Your information is confidential and used only to respond to your enquiry. Submitting this form does not create an advocate-client relationship.</p>
-        </div>
-        <div class="form-success" id="form-success" style="display:none;">
-          <div style="font-size:2.5rem;margin-bottom:1rem">✅</div>
-          <div style="font-family:var(--ff-d);font-size:1.4rem;color:rgba(255,255,255,.8);margin-bottom:.5rem">Thank you for your enquiry</div>
-          <p style="color:rgba(255,255,255,.5)">We will get back to you within 24 hours. For urgent matters, please WhatsApp us at <a href="https://wa.me/918149135283" style="color:var(--gold)">+91 81491 35283</a>.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      FOOTER
 ══════════════════════════════════ -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <img src="favicon.png" alt="Dhende Associates Logo" width="150" height="150" style="width:150px;margin-bottom:1rem;" loading="lazy" decoding="async">
-        <div class="footer-firm">Dhende Associates</div>
-        <div class="footer-firm-sub">Advocates, Notary &amp; Legal Consultants</div>
-        <p class="footer-about">Serving clients across India and abroad with integrity and legal excellence since 1984. Four decades of trusted practice at Bombay High Court and District Courts.</p>
-        <div class="footer-addr">
-          Office No 1, First Floor, MHADA Commercial Complex,
-          Gokhalenagar, Pune 411016,
-          Maharashtra · India
-        </div>
-        <div class="footer-addr">
-          +91 81491 35283 · +91 98223 35664
-        </div>
-        <div class="footer-addr">
-          <a class="footer-addr" href="https://maps.app.goo.gl/FT5mNgG5bBRJW8A99" style="color:rgba(255,255,255,.8);animation:pulseGold 2s infinite;" target="_blank" rel="noopener">View on map</a>
-        </div>
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d674.005644921228!2d73.82680121409193!3d18.527522543664382!2m3!1f0!2f0.000029515797663748344!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf7629973f4f%3A0xea00cb8b7ee510a0!2sAdvocate%20Ashok%20Dhende%20and%20Associates!5e0!3m2!1sen!2sin!4v1775886261204!5m2!1sen!2sin"
-          class="footer-map"
-          height="300"
-          title="Dhende Associates Office Location on Google Maps"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-               
-      </div>
-      
-
-
-      <div>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
         <div>
-          <div class="footer-col-title">Quick Links</div>
+          <img src="favicon.png" alt="Dhende Associates Logo" width="150" height="150"
+            style="width:150px;margin-bottom:1rem;" loading="lazy" decoding="async">
+          <div class="footer-firm">Dhende Associates</div>
+          <div class="footer-firm-sub">Advocates, Notary &amp; Legal Consultants</div>
+          <p class="footer-about">Serving clients across India and abroad with integrity and legal excellence since
+            1984. Four decades of trusted practice at Bombay High Court and District Courts.</p>
+          <div class="footer-addr">
+            Office No 1, First Floor, MHADA Commercial Complex,
+            Gokhalenagar, Pune 411016,
+            Maharashtra · India
+          </div>
+          <div class="footer-addr">
+            +91 81491 35283 · +91 98223 35664
+          </div>
+          <div class="footer-addr">
+            <a class="footer-addr" href="https://maps.app.goo.gl/FT5mNgG5bBRJW8A99"
+              style="color:rgba(255,255,255,.8);animation:pulseGold 2s infinite;" target="_blank" rel="noopener">View on
+              map</a>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d674.005644921228!2d73.82680121409193!3d18.527522543664382!2m3!1f0!2f0.000029515797663748344!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf7629973f4f%3A0xea00cb8b7ee510a0!2sAdvocate%20Ashok%20Dhende%20and%20Associates!5e0!3m2!1sen!2sin!4v1775886261204!5m2!1sen!2sin"
+            class="footer-map" height="300" title="Dhende Associates Office Location on Google Maps" allowfullscreen=""
+            loading="lazy"></iframe>
+
         </div>
-        <ul class="footer-links">
-          <li><a href="#principal">About the Firm</a></li>
-          <li><a href="criminal-law.html">Criminal Law</a></li>
-          <li><a href="#team">Our Team</a></li>
-          <li><a href="#tools">Legal Tools</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-          <li><a href="https://wa.me/918149135283" target="_blank" rel="noopener">WhatsApp</a></li>
-          <li><a href="#disclaimer-overlay" onclick="document.getElementById('disclaimer-overlay').classList.remove('hidden');return false;">Legal Disclaimer</a></li>
-        </ul>
-      </div>
+
+
+
+        <div>
+          <div>
+            <div class="footer-col-title">Quick Links</div>
+          </div>
+          <ul class="footer-links">
+            <li><a href="#principal">About the Firm</a></li>
+            <li><a href="criminal-law.html">Criminal Law</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#tools">Legal Tools</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="https://wa.me/918149135283" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="#disclaimer-overlay"
+                onclick="document.getElementById('disclaimer-overlay').classList.remove('hidden');return false;">Legal
+                Disclaimer</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="footer-addr" style="text-align:center;margin-top:2rem;">© 2025 Dhende Associates. All rights reserved. · Adv. Ashok Dhende, Notary Public since 1998.</div>
-    <div class="footer-addr" style="text-align:center;">Disclaimer: Content on this website is for general information only and does not constitute legal advice. Accessing this site does not create an advocate-client relationship. Compliant with Bar Council of India Rules, 1975.</div>
-  </div>
-</footer>
+    <div class="footer-addr" style="text-align:center;margin-top:2rem;">© 2025 Dhende Associates. All rights reserved. ·
+      Adv. Ashok Dhende, Notary Public since 1998.</div>
+    <div class="footer-addr" style="text-align:center;">Disclaimer: Content on this website is for general information
+      only and does not constitute legal advice. Accessing this site does not create an advocate-client relationship.
+      Compliant with Bar Council of India Rules, 1975.</div>
+    </div>
+  </footer>
 
-<script defer>
-/* ── Disclaimer ── */
-function toggleAccept(cb){
-  document.getElementById('disc-accept-btn').classList.toggle('active', cb.checked);
-}
-function acceptDisclaimer(){
-  const btn = document.getElementById('disc-accept-btn');
-  if(!btn.classList.contains('active')) return;
-  document.getElementById('disclaimer-overlay').classList.add('hidden');
-  document.body.style.overflow = 'auto';
-  sessionStorage.setItem('da-disc', '1');
-}
-if(sessionStorage.getItem('da-disc')){
-  document.getElementById('disclaimer-overlay').classList.add('hidden');
-} else {
-  document.body.style.overflow = 'hidden';
-}
+  <script defer>
+    /* ── Disclaimer ── */
+    function toggleAccept(cb) {
+      document.getElementById('disc-accept-btn').classList.toggle('active', cb.checked);
+    }
+    function acceptDisclaimer() {
+      const btn = document.getElementById('disc-accept-btn');
+      if (!btn.classList.contains('active')) return;
+      document.getElementById('disclaimer-overlay').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+      sessionStorage.setItem('da-disc', '1');
+    }
+    if (sessionStorage.getItem('da-disc')) {
+      document.getElementById('disclaimer-overlay').classList.add('hidden');
+    } else {
+      document.body.style.overflow = 'hidden';
+    }
 
-/* ── Scroll reveal ── */
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if(e.isIntersecting){ e.target.classList.add('vis'); obs.unobserve(e.target); }
-  });
-}, {threshold: 0.1});
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    /* ── Scroll reveal ── */
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-/* ── Navbar ── */
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 60);
-}, { passive: true });
+    /* ── Navbar ── */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
 
-/* ── Mobile menu ── */
-function toggleMob(){
-  document.getElementById('mobMenu').classList.toggle('open');
-}
+    /* ── Mobile menu ── */
+    function toggleMob() {
+      document.getElementById('mobMenu').classList.toggle('open');
+    }
 
-/* ── Form — FIX 6: Now sends enquiry via WhatsApp with all form data ── */
-function submitForm(){
-  const name    = document.getElementById('f-name').value.trim();
-  const phone   = document.getElementById('f-phone').value.trim();
-  const email   = document.getElementById('f-email').value.trim();
-  const matter  = document.getElementById('f-matter').value;
-  const msg     = document.getElementById('f-msg').value.trim();
+    /* ── Form — FIX 6: Now sends enquiry via WhatsApp with all form data ── */
+    function submitForm() {
+      const name = document.getElementById('f-name').value.trim();
+      const phone = document.getElementById('f-phone').value.trim();
+      const email = document.getElementById('f-email').value.trim();
+      const matter = document.getElementById('f-matter').value;
+      const msg = document.getElementById('f-msg').value.trim();
 
-  if(!name || !phone){
-    alert('Please enter your name and phone number.');
-    return;
-  }
+      if (!name || !phone) {
+        alert('Please enter your name and phone number.');
+        return;
+      }
 
-  // Build WhatsApp message with all form fields
-  const waText = encodeURIComponent(
-    'Hello Dhende Associates,\n\n' +
-    'New Enquiry from Website:\n' +
-    'Name: ' + name + '\n' +
-    'Phone: ' + phone + '\n' +
-    (email  ? 'Email: ' + email + '\n'  : '') +
-    (matter && matter !== '' ? 'Matter: ' + matter + '\n' : '') +
-    (msg    ? '\nDetails:\n' + msg       : '')
-  );
+      // Build WhatsApp message with all form fields
+      const waText = encodeURIComponent(
+        'Hello Dhende Associates,\n\n' +
+        'New Enquiry from Website:\n' +
+        'Name: ' + name + '\n' +
+        'Phone: ' + phone + '\n' +
+        (email ? 'Email: ' + email + '\n' : '') +
+        (matter && matter !== '' ? 'Matter: ' + matter + '\n' : '') +
+        (msg ? '\nDetails:\n' + msg : '')
+      );
 
-  // Open WhatsApp with pre-filled message, then show success
-  window.open('https://wa.me/918149135283?text=' + waText, '_blank', 'noopener');
+      // Open WhatsApp with pre-filled message, then show success
+      window.open('https://wa.me/918149135283?text=' + waText, '_blank', 'noopener');
 
-  document.getElementById('form-fields').style.display = 'none';
-  document.getElementById('form-success').style.display = 'block';
-}
-</script>
+      document.getElementById('form-fields').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+  </script>
 </body>
+
 </html>
