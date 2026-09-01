@@ -3,88 +3,84 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Homepage - Main landing page -->
+  <!-- Homepage -->
   <url>
     <loc>https://www.dhendeassociates.com/</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://www.dhendeassociates.com/og-image.png</image:loc>
-      <image:title>Dhende Associates — Advocates, Notary &amp; Legal Consultants, Pune</image:title>
-    </image:image>
   </url>
 
-  <!-- Legal Practice & Service Pages -->
+  <!-- Core legal practice pages -->
   <url>
     <loc>https://www.dhendeassociates.com/criminal-law.html</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://www.dhendeassociates.com/family-law.html</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://www.dhendeassociates.com/cheque-bounce-lawyer-pune.html</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.94</priority>
   </url>
 
   <url>
     <loc>https://www.dhendeassociates.com/leave-license-service.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.92</priority>
   </url>
 
   <!-- Blog -->
   <url>
     <loc>https://www.dhendeassociates.com/blog.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.82</priority>
   </url>
 
-  <!-- Interactive Legal Calculators & Tools -->
+  <!-- Legal calculators and tools -->
   <url>
     <loc>https://www.dhendeassociates.com/motor-accident-claim-estimator.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.88</priority>
   </url>
 
   <url>
     <loc>https://www.dhendeassociates.com/maharashtra-stampduty-estimator.html</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.88</priority>
   </url>
 
   <url>
     <loc>https://www.dhendeassociates.com/hindu-succession-share-calculator.html</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.86</priority>
   </url>
 
   <url>
     <loc>https://www.dhendeassociates.com/nia_138_limitation.html</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.86</priority>
   </url>
 
-  <!-- Educational Resources (Bilingual) -->
+  <!-- Bilingual educational resources -->
   <url>
     <loc>https://www.dhendeassociates.com/constitutionforkids_eng.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dhendeassociates.com/constitutionforkids_eng.html"/>
@@ -94,7 +90,7 @@
 
   <url>
     <loc>https://www.dhendeassociates.com/constitutionforkids_mar.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dhendeassociates.com/constitutionforkids_eng.html"/>
