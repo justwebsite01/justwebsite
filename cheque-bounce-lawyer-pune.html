@@ -350,22 +350,24 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
     <div class="enquiry-form" id="enquiry-form">
       <h3>Section 138 Case Enquiry</h3>
       <div class="form-row">
-        <div class="fg"><label>Your Name</label><input type="text" id="f-name" name="name" placeholder="Full name" required></div>
-        <div class="fg"><label>Phone / WhatsApp</label><input type="tel" id="f-phone" name="phone" placeholder="+91 XXXXX XXXXX" required></div>
+        <div class="fg"><label for="f-name">Your Name</label><input type="text" id="f-name" name="name" placeholder="Full name" title="Your Name" required></div>
+        <div class="fg"><label for="f-phone">Phone / WhatsApp</label><input type="tel" id="f-phone" name="phone" placeholder="+91 XXXXX XXXXX" title="Phone / WhatsApp" required></div>
       </div>
-      <div class="fg"><label>Your Role in This Matter</label>
-        <select id="f-role" name="role">
+      <div class="fg">
+        <label for="f-role" id="f-role-label">Your Role in This Matter</label>
+        <select id="f-role" name="role" aria-labelledby="f-role-label" title="Your Role in This Matter">
           <option value="">— Select —</option>
           <option>Complainant — My cheque was dishonoured</option>
           <option>Accused — I received a Section 138 notice / complaint</option>
         </select>
       </div>
       <div class="form-row">
-        <div class="fg"><label>Cheque Amount (₹)</label><input type="text" id="f-amount" name="amount" placeholder="e.g. ₹5,00,000"></div>
-        <div class="fg"><label>Cheque Return Date</label><input type="date" id="f-date" name="cheque_date"></div>
+        <div class="fg"><label for="f-amount">Cheque Amount (₹)</label><input type="text" id="f-amount" name="amount" placeholder="e.g. ₹5,00,000" title="Cheque Amount (₹)"></div>
+        <div class="fg"><label for="f-date">Cheque Return Date</label><input type="date" id="f-date" name="cheque_date" placeholder="DD/MM/YYYY" title="Cheque Return Date"></div>
       </div>
-      <div class="fg"><label>Reason for Dishonour</label>
-        <select id="f-reason" name="reason">
+      <div class="fg">
+        <label for="f-reason" id="f-reason-label">Reason for Dishonour</label>
+        <select id="f-reason" name="reason" aria-labelledby="f-reason-label" title="Reason for Dishonour">
           <option value="">— Select reason —</option>
           <option>Insufficient Funds</option>
           <option>Account Closed</option>
@@ -374,8 +376,9 @@ section{padding:72px 48px}section.alt{background:var(--surface)}.inner{max-width
           <option>Other / Unknown</option>
         </select>
       </div>
-      <div class="fg"><label>Current Status</label>
-        <select id="f-status" name="status">
+      <div class="fg">
+        <label for="f-status" id="f-status-label">Current Status</label>
+        <select id="f-status" name="status" aria-labelledby="f-status-label" title="Current Status">
           <option value="">— Select status —</option>
           <option>Just received return memo — notice not sent yet</option>
           <option>Legal notice sent — awaiting 15-day period</option>
