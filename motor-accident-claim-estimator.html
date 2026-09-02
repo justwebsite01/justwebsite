@@ -19,6 +19,10 @@
   <!-- Performance Optimizations -->
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap">
   <title>Motor Accident Claim Calculator | MACT Compensation | Dhende Associates Pune</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <meta name="description"
@@ -95,6 +99,123 @@
 }
 </script>
   <style>
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 500;
+      background: rgba(26, 13, 59, .95);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, .07);
+    }
+
+    .nav-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 1rem;
+      height: 66px;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav-logo { width: 40px; height: 40px; flex-shrink: 0; cursor: pointer; }
+    .nav-brand { display: flex; flex-direction: column; line-height: 1.15; }
+    .nav-firm {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: .02em;
+      cursor: pointer;
+    }
+    .nav-tagline {
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-size: .62rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #b8a4e5;
+      margin-top: 1px;
+      cursor: pointer;
+    }
+    .nav-links { display: flex; align-items: center; gap: .1rem; margin-left: auto; }
+    .nav-links a {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-size: .78rem;
+      color: rgba(255, 255, 255, .72);
+      padding: .45rem .82rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255, 255, 255, .08); }
+    .nav-wa {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      background: #c9a84c;
+      color: #1a0d3b;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-size: .78rem;
+      font-weight: 500;
+      padding: .48rem 1.1rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    .nav-wa:hover { background: #e8c97a; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: .5rem;
+      background: none;
+      border: none;
+    }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: rgba(255, 255, 255, .8); }
+    .mob-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 499;
+      background: #1a0d3b;
+      padding: 5.5rem 2rem 2rem;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+    .mob-menu.open { display: flex; }
+    .mob-menu a {
+      min-height: 44px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #fff;
+      padding: .8rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+      text-decoration: none;
+    }
+    .mob-menu .mob-wa {
+      margin-top: 1.5rem;
+      background: #c9a84c;
+      color: #1a0d3b;
+      text-align: center;
+      padding: .9rem;
+      border-radius: 6px;
+      font-family: 'DM Sans', Arial, sans-serif;
+      font-weight: 500;
+      border: none;
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-wa { display: none; }
+      .hamburger { display: flex; margin-left: auto; }
+    }
+
     /* ── WHATSAPP FLOAT ── */
     .wa-float {
       position: fixed;
@@ -290,10 +411,45 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <img width="40" height="40" src="favicon.png" alt="Dhende Associates Logo" class="nav-logo"
+        onclick="window.location.href='index.html#home'" />
+      <div class="nav-brand">
+        <span class="nav-firm" onclick="window.location.href='index.html#home'">Dhende Associates</span>
+        <span class="nav-tagline" onclick="window.location.href='index.html#home'">Advocates &amp; Notary Public</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html#principal">About</a>
+        <a href="index.html#practice">Practice Areas</a>
+        <a href="index.html#notary">Notary</a>
+        <a href="index.html#property">Property</a>
+        <a href="index.html#tools">Legal Tools</a>
+        <a href="index.html#team">Team</a>
+        <a href="index.html#blog">Blog</a>
+        <a href="index.html#kids">Law for Kids</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <a class="nav-wa" href="https://wa.me/918149135283" target="_blank" rel="noopener">WhatsApp</a>
+      <button class="hamburger" type="button" title="Toggle mobile menu" aria-label="Toggle mobile menu"
+        onclick="toggleMob()"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mob-menu" id="mobMenu">
+    <a href="index.html#principal" onclick="toggleMob()">About the Firm</a>
+    <a href="index.html#practice" onclick="toggleMob()">Practice Areas</a>
+    <a href="index.html#notary" onclick="toggleMob()">Notary Public</a>
+    <a href="index.html#property" onclick="toggleMob()">Property Services</a>
+    <a href="index.html#tools" onclick="toggleMob()">Legal Tools</a>
+    <a href="index.html#team" onclick="toggleMob()">Our Team</a>
+    <a href="index.html#blog" onclick="toggleMob()">Blog</a>
+    <a href="index.html#kids" onclick="toggleMob()">Law for Kids</a>
+    <a href="index.html#contact" onclick="toggleMob()">Contact</a>
+    <a class="mob-wa" href="https://wa.me/918149135283" target="_blank" rel="noopener">WhatsApp Us</a>
+  </div>
 
-  <h1 style="font-size: 1.5rem; color: var(--p900); margin-bottom: 1.5rem; margin-top: 80px; text-align: center; font-family: 'Cormorant Garamond', Georgia, serif;">Motor Accident Claim Estimate Calculator for MACT and MV Act 1988</h1>
 
-  <!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+ <!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
   <div class="app-header">
     <div class="hdr-inner">
       <div class="hdr-badge"><img width="40" height="40" src="favicon.png" alt="Dhende Associates Logo" class="nav-logo"
@@ -317,21 +473,6 @@
         <span class="breadcrumb-sep">›</span>
         <span class="breadcrumb-current">🚗 Motor Accident Claims</span>
       </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════════════════════════════
-     NAVIGATION BUTTONS
-═══════════════════════════════════════════════════════════════ -->
-    <div class="nav-buttons-center">
-      <a href="/#home" class="nav-btn nav-home" title="Go to Home Page">Home
-      </a>
-      <a href="criminal-law.html" class="nav-btn" title="Criminal Law & Bail">Criminal Law</a>
-      <a href="/#notary" class="nav-btn" title="Notary Public Services">Notary</a>
-      <a href="cheque-bounce-lawyer-pune.html" class="nav-btn" title="Cheque Bounce Law">Cheque Bounce</a>
-      <a href="leave-license-service.html" class="nav-btn" title="Leave License Service">Leave License Service</a>
-      <a href="hindu-succession-share-calculator.html" class="nav-btn" title="Hindu Succession Share Calculator">Hindu
-        Succession</a>
-      <a href="/#notary" class="nav-btn" title="Notary Public Services">Notary</a>
     </div>
 
     <!-- ═══════════════════════════════════════════════════════════════
@@ -1874,6 +2015,10 @@
       /* ─── SHOW REPORT ─── */
       el('rpt').classList.add('show');
       setTimeout(() => el('rpt').scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
+    }
+
+    function toggleMob() {
+      document.getElementById('mobMenu').classList.toggle('open');
     }
 
     /* ═══ INITIALISE ═══════════════════════════════════════════ */
