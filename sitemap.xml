@@ -40,14 +40,6 @@
     <priority>0.92</priority>
   </url>
 
-  <!-- Blog -->
-  <url>
-    <loc>https://www.dhendeassociates.com/blog.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.82</priority>
-  </url>
-
   <!-- Legal calculators and tools -->
   <url>
     <loc>https://www.dhendeassociates.com/motor-accident-claim-estimator.html</loc>
