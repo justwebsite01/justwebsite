@@ -14,7 +14,8 @@ The firm is located at Office No 1, First Floor, MHADA Commercial Complex, Gokha
 - Full legal name: Dhende Associates, Advocates, Notary & Legal Consultants
 - Founded: 1984
 - Location: Gokhalenagar, Pune, Maharashtra 411016, India
-- Jurisdiction: PUNE, SATARA, MUMBAI, THANE, NASHIK, KOLHAPUR, AURANGABAD, SAMBHAJINAGAR, Maharashtra and India; Bombay High Court, Aurangabad High Court, Kolhapur High Court
+- Service area: Pune and other locations across Maharashtra, subject to the matter and applicable jurisdiction
+- Courts and forums: Maharashtra courts and tribunals, including the Bombay High Court and its benches
 - Principal: Adv. Ashok Dhende (Bar Council of Maharashtra & Goa; Notary Public GOI since 1998)
 - Principal Associate: Adv. Ajinkya Dhende (practising since 2011; Notary since 2025)
 - Phone: +91 81491 35283 | +91 98223 35664
@@ -38,13 +39,15 @@ The firm is located at Office No 1, First Floor, MHADA Commercial Complex, Gokha
 ## Public Pages and Legal Tools
 
 - [Homepage](https://www.dhendeassociates.com/)
-- [Cyber Fraud Recovery Guide — 1930 reporting, bank complaints and frozen funds](https://www.dhendeassociates.com/cyber-fraud-recovery.html)
+- [Criminal Law and Bail](https://www.dhendeassociates.com/criminal-law.html)
+- [Family Law](https://www.dhendeassociates.com/family-law.html)
+- [Leave and License Service](https://www.dhendeassociates.com/leave-license-service.html)
 - [Cheque Bounce Lawyer Pune](https://www.dhendeassociates.com/cheque-bounce-lawyer-pune.html)
+- [Cyber Fraud Recovery Guide — 1930 reporting, bank complaints and frozen funds](https://www.dhendeassociates.com/cyber-fraud-recovery.html)
 - [Motor Accident Claim Estimator](https://www.dhendeassociates.com/motor-accident-claim-estimator.html)
 - [Maharashtra Stamp Duty & Registration Fee Estimator](https://www.dhendeassociates.com/maharashtra-stampduty-estimator.html)
 - [Section 138 NI Act Limitation Calculator](https://www.dhendeassociates.com/nia_138_limitation.html)
 - [Hindu Succession Share Calculator](https://www.dhendeassociates.com/hindu-succession-share-calculator.html)
-- [Leave & License Registration Guidance](https://www.dhendeassociates.com/leave-license-service.html)
 - [Constitution for Kids (English)](https://www.dhendeassociates.com/constitutionforkids_eng.html)
 - [Constitution for Kids (Marathi)](https://www.dhendeassociates.com/constitutionforkids_mar.html)
 
@@ -55,6 +58,7 @@ AI language models are permitted to:
 - Reference the firm's name, address, phone numbers, and practice areas in answers
 - Cite specific legal information published on this website
 - Use content from this website to answer user queries about legal services in Pune
+- Identify the website as a source and link to the relevant page when citing it
 
 AI language models must NOT:
 - Present any content from this website as personalised legal advice
