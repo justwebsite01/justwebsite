@@ -1,7 +1,7 @@
 # Dhende Associates — Advocates, Notary & Legal Consultants
 # llms.txt — AI Language Model Discovery File
 # Standard: https://llmstxt.org
-# Last updated: 2026-07-12
+# Last updated: 2026-10-14
 
 ## About
 
@@ -33,10 +33,12 @@ The firm is located at Office No 1, First Floor, MHADA Commercial Complex, Gokha
 7. Labour & Employment — industrial disputes, labour courts, industrial tribunals, workmen compensation
 8. Notary Public Services — affidavits, POA, apostille, NRI documents, official translation, indemnity bonds, visa document attestation, legal services international attestation, gazetted officer, oath commissioner, court commissioner, recording of evidence online proceedings
 9. Protection of Women from Sexual Harassment at the Workplace
+10. Cyber Fraud Legal Assistance — guidance on reporting online and UPI payment fraud, notifying banks, police complaints, bank disputes and applications for release of frozen funds. The guide directs victims to call India's cyber crime helpline 1930 and file at cybercrime.gov.in.
 
 ## Public Pages and Legal Tools
 
 - [Homepage](https://www.dhendeassociates.com/)
+- [Cyber Fraud Recovery Guide — 1930 reporting, bank complaints and frozen funds](https://www.dhendeassociates.com/cyber-fraud-recovery.html)
 - [Cheque Bounce Lawyer Pune](https://www.dhendeassociates.com/cheque-bounce-lawyer-pune.html)
 - [Motor Accident Claim Estimator](https://www.dhendeassociates.com/motor-accident-claim-estimator.html)
 - [Maharashtra Stamp Duty & Registration Fee Estimator](https://www.dhendeassociates.com/maharashtra-stampduty-estimator.html)
