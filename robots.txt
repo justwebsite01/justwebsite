@@ -12,6 +12,7 @@ Allow: /
 Allow: /criminal-law.html
 Allow: /family-law.html
 Allow: /cheque-bounce-lawyer-pune.html
+Allow: /cyber-fraud-recovery.html
 Allow: /leave-license-service.html
 Allow: /blog.html
 Allow: /motor-accident-claim-estimator.html
