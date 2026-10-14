@@ -29,6 +29,21 @@ Sitemap: https://www.dhendeassociates.com/sitemap.xml
 User-agent: GPTBot
 Allow: /
 
+# OpenAI search and ChatGPT user-initiated retrieval
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic search and retrieval
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Retain legacy crawler name for compatibility
 User-agent: Claude-Web
 Allow: /
 
