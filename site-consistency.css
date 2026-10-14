@@ -1,0 +1,16 @@
+:root {
+  --site-brand-gold: #C9A84C;
+}
+
+:where(#navbar, .navbar) {
+  border-bottom: 1px solid rgba(201, 168, 76, 0.45) !important;
+}
+
+:where(footer, .footer) {
+  border-top: 1px solid rgba(201, 168, 76, 0.45);
+}
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid var(--site-brand-gold);
+  outline-offset: 3px;
+}
