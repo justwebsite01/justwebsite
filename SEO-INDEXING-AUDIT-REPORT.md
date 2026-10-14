@@ -9,8 +9,9 @@
 - Corrected the Marathi Constitution page's duplicate English description and added reciprocal `x-default` hreflang references for its English/Marathi versions.
 - Added OpenAI and Anthropic search/retrieval crawler declarations to robots.txt while retaining the existing crawler rules.
 - Completed the AI-readable public-page directory in llms.txt and replaced unsupported court/jurisdiction labels with a qualified Maharashtra service-area description.
+- Tightened overlong page titles and descriptions and corrected the Constitution-for-kids English description.
 - Removed structured review and rating claims from four service pages where those reviews were schema-only and not displayed as page content.
-- Added a shared brand-consistency stylesheet across public HTML pages to give site navigation and footers a consistent gold accent and keyboard focus treatment. Page-specific layouts, including the child-focused Constitution lessons, remain intact.
+- Linked the shared brand-consistency stylesheet across public HTML pages to give site navigation and footers a consistent gold accent and keyboard focus treatment. Page-specific layouts, including the child-focused Constitution lessons, remain intact.
 - Added a visible semantic H1 to the Section 138 limitation calculator, which previously had no H1.
 
 ## Existing strengths retained
