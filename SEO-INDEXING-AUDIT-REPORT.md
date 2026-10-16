@@ -3,6 +3,12 @@
 **Reviewed:** October 14, 2026
 **Scope:** Public HTML pages, robots.txt, sitemap.xml, llms.txt, and shared styles.
 
+## Follow-up improvements — October 16, 2026
+
+- Refined the homepage title and aligned its meta description, Open Graph/Twitter descriptions, and WebSite/WebPage structured data around the firm's Pune location and established practice areas.
+- Retained the existing `keywords` meta tags as requested and removed the unsupported `revisit-after` directive from the HTML pages.
+- Removed the WebSite `SearchAction` that pointed to a nonexistent on-site search, the self-referential `sameAs` URL, and unrelated or search-phrase-stuffed `knowsAbout` values.
+
 ## Changes made
 
 - Kept the blog and offline fallback out of search results: the blog is a coming-soon placeholder with `noindex`, and the offline page is a utility page with `noindex`. Neither is included in the sitemap.
