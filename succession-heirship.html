@@ -35,6 +35,9 @@
 /* ═══ Page-specific layer on top of style.css (same tokens, same fonts) ═══ */
 :root{--soft:#554A73;--line:#E4DDF2}
 .sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.nav-brand{flex-direction:row;align-items:center;gap:.65rem}
+.nav-brand-icon{width:40px;height:40px;object-fit:contain;flex:none}
+.nav-brand-copy{display:flex;flex-direction:column;line-height:1.15}
 .skip{position:absolute;left:-9999px;top:0;z-index:10000;background:var(--gold);color:var(--p900);padding:.7rem 1.1rem;font-family:var(--ff-u);border-radius:0 0 6px 0}
 .skip:focus{left:0}
 h1,h2,h3,h4{font-weight:600}
@@ -573,8 +576,11 @@ a.pa-card{display:block}
 <header id="navbar">
   <div class="nav-inner">
     <a class="nav-brand" href="/" aria-label="Dhende Associates, home">
-      <span class="nav-firm">Dhende Associates</span>
-      <span class="nav-tagline">Advocates · Notary &amp; Legal Consultants — Est. 1984</span>
+      <img class="nav-brand-icon" src="favicon.png" width="40" height="40" alt="" decoding="async">
+      <span class="nav-brand-copy">
+        <span class="nav-firm">Dhende Associates</span>
+        <span class="nav-tagline">Advocates · Notary &amp; Legal Consultants — Est. 1984</span>
+      </span>
     </a>
     <nav class="nav-links" aria-label="On this page" style="margin-left:auto">
       <a href="#finder">Route finder</a>
