@@ -1,60 +1,47 @@
 # robots.txt — Dhende Associates
 # https://www.dhendeassociates.com/
-# Last updated: 2026-10-14
+# Last updated: 2026-10-18
 
 User-agent: *
 Allow: /
 Disallow: /cgi-bin/
 Disallow: /private/
 
-# Public pages eligible for indexing
-Allow: /
-Allow: /criminal-law.html
-Allow: /family-law.html
-Allow: /cheque-bounce-lawyer-pune.html
-Allow: /cyber-fraud-recovery.html
-Allow: /leave-license-service.html
-Allow: /blog.html
-Allow: /motor-accident-claim-estimator.html
-Allow: /maharashtra-stampduty-estimator.html
-Allow: /hindu-succession-share-calculator.html
-Allow: /nia_138_limitation.html
-Allow: /constitutionforkids_eng.html
-Allow: /constitutionforkids_mar.html
-
 # Sitemap location
 Sitemap: https://www.dhendeassociates.com/sitemap.xml
 
-# AI / LLM crawlers — allow discoverability and indexing
+# AI search, retrieval, and training crawlers
+# Keep private and non-public paths excluded for these specific user-agent groups too.
 User-agent: GPTBot
-Allow: /
-
-# OpenAI search and ChatGPT user-initiated retrieval
 User-agent: OAI-SearchBot
-Allow: /
-
 User-agent: ChatGPT-User
-Allow: /
-
-# Anthropic search and retrieval
 User-agent: ClaudeBot
-Allow: /
-
 User-agent: Claude-SearchBot
-Allow: /
-
-# Retain legacy crawler name for compatibility
-User-agent: Claude-Web
-Allow: /
-
-User-agent: Anthropic-AI
-Allow: /
-
+User-agent: Claude-User
 User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: GoogleOther
+User-agent: Applebot-Extended
+User-agent: Meta-ExternalAgent
+User-agent: Amazonbot
+User-agent: cohere-ai
+Disallow: /cgi-bin/
+Disallow: /private/
 Allow: /
 
+# Search crawlers used by AI assistants and other discovery systems
 User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
+Disallow: /cgi-bin/
+Disallow: /private/
 Allow: /
 
-User-agent: Bingbot
+# Retain legacy Anthropic crawler name for compatibility
+User-agent: Claude-Web
+Disallow: /cgi-bin/
+Disallow: /private/
 Allow: /
+
+# AI-readable site overview and content index
+# https://www.dhendeassociates.com/llms.txt
