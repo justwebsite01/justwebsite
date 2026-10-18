@@ -73,7 +73,6 @@
 
   <!-- Preconnect & DNS Prefetch -->
   <link rel="dns-prefetch" href="https://www.dhendeassociates.com">
-  <link rel="dns-prefetch" href="https://formspree.io">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link rel="preconnect" href="https://www.google.com">
   <link rel="sitemap" href="https://www.dhendeassociates.com/sitemap.xml">
@@ -2825,8 +2824,7 @@
 
           <div class="contact-form-wrap reveal">
             <div class="form-title">Request a Callback</div>
-            <form action="https://formspree.io/f/xdkqvenb" method="POST" onsubmit="handleSubmit(event)"
-              aria-label="Leave and License registration form">
+            <form onsubmit="handleSubmit(event)" aria-label="Leave and License registration form">
               <div class="form-row">
                 <div class="form-group">
                   <label class="form-label" for="licensor_name">Licensor (Owner) Name</label>
@@ -2879,10 +2877,11 @@
                 <textarea class="form-textarea" id="message" name="message"
                   placeholder="Special clauses, preferred biometric date, or any questions…"></textarea>
               </div>
-              <button type="submit" class="form-submit" aria-label="Submit enquiry form">Submit Enquiry — We Will Call
-                You</button>
-              <p class="form-note">🔒 Your information is strictly confidential. We do not share personal data with any
-                third party.</p>
+              <button type="submit" class="form-submit" aria-label="Continue to WhatsApp">Continue to WhatsApp</button>
+              <p class="form-note">Your details will be added to a WhatsApp message to Dhende Associates. Review it
+                before sending; the message is sent only if you press Send in WhatsApp. Please do not include sensitive
+                identity, banking or legal documents.</p>
+              <p class="form-note" id="form-submit-status" role="status" aria-live="polite" hidden></p>
             </form>
           </div>
         </div>
@@ -3079,16 +3078,33 @@
       // Form submit
       function handleSubmit(e) {
         e.preventDefault();
-        const btn = e.target.querySelector('.form-submit');
-        const originalText = btn.textContent;
-        btn.textContent = '✓ Submitted — We Will Call You Shortly!';
-        btn.style.background = '#2a8a4e';
-        btn.disabled = true;
+        const form = e.target;
+        const formData = new FormData(form);
+        const fields = [
+          ['Licensor (Owner) Name', 'licensor_name'],
+          ['Licensee (Tenant) Name', 'licensee_name'],
+          ['Contact Number', 'contact_number'],
+          ['Email Address', 'email_address'],
+          ['Property Location', 'property_location'],
+          ['Monthly License Fee', 'monthly_rent'],
+          ['Agreement Duration', 'agreement_duration'],
+          ['Message / Special Requirements', 'message']
+        ];
+        const details = fields
+          .map(([label, name]) => {
+            const value = String(formData.get(name) || '').trim();
+            return value ? `${label}: ${value}` : '';
+          })
+          .filter(Boolean)
+          .join('\n');
+        const whatsappUrl = `https://wa.me/918149135283?text=${encodeURIComponent(
+          `Hello Dhende Associates, I would like to enquire about Leave and License services.\n\n${details}`
+        )}`;
 
-        // Submit the form to Formspree after showing success message
-        setTimeout(() => {
-          e.target.submit();
-        }, 1500);
+        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        const status = document.getElementById('form-submit-status');
+        status.textContent = 'WhatsApp should open with your details. Review the message and press Send there to submit your enquiry.';
+        status.hidden = false;
       }
     </script>
 
