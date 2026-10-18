@@ -72,6 +72,13 @@
 .cf-bg-white{background:var(--white)}
 .cf-bg-cream{background:var(--cream)}
 @media(max-width:768px){.cf-quick{grid-template-columns:1fr}.cf-steps>li{padding-left:3.2rem}}
+.cf-inquiry-note{font-family:var(--ff-u);font-size:.76rem;color:rgba(255,255,255,.55);line-height:1.6;margin:.9rem 0 0}
+.cf-inquiry-form .form-row{margin-bottom:1rem}
+.cf-inquiry-form .form-row .form-group{margin-bottom:0}
+.cf-inquiry-form .form-label{letter-spacing:.03em}
+.cf-inquiry-form .form-submit{background:#25D366;color:#102d1c}
+.cf-inquiry-form .form-submit:hover{background:#4be17d}
+@media(max-width:560px){.cf-inquiry-form .form-row{grid-template-columns:1fr;gap:0}.cf-inquiry-form .form-row .form-group{margin-bottom:1rem}}
 .nav-brand{flex-direction:row;align-items:center;gap:.65rem}
 .nav-logo-img{width:40px;height:40px;object-fit:contain;flex-shrink:0}
 .nav-logo-copy{display:flex;flex-direction:column}
@@ -225,7 +232,7 @@
 
 <section class="contact" id="contact">
 <div class="container">
-<div class="contact-inner" style="grid-template-columns:1fr">
+<div class="contact-inner">
 <div>
 <span class="eyebrow">Legal help</span>
 <h2 class="section-title">Need a lawyer for a <em>cyber fraud</em>?</h2>
@@ -237,8 +244,86 @@
 <div class="contact-item"><div class="c-icon">✉️</div><div><div class="c-label">Email</div><div class="c-val"><a href="mailto:ajinkya.dhende@gmail.com">ajinkya.dhende@gmail.com</a></div></div></div>
 <div class="contact-item"><div class="c-icon">⏰</div><div><div class="c-label">Office hours</div><div class="c-val">Monday – Saturday · 9:00 AM – 9:00 PM</div></div></div>
 </div>
-<a class="wa-btn" href="https://wa.me/918149135283?text=Hello%20Dhende%20Associates%2C%20I%20need%20help%20with%20an%20online%20fraud." target="_blank" rel="noopener">WhatsApp us about a cyber fraud</a>
+<a class="wa-btn" href="https://wa.me/918149135283?text=Hello%20Dhende%20Associates%2C%20I%20need%20help%20with%20an%20online%20fraud." target="_blank" rel="noopener">WhatsApp us without filling the form</a>
 </div>
+<form class="contact-form-wrap cf-inquiry-form" id="cyber-inquiry-form">
+<h3 class="form-title">Send a detailed inquiry on WhatsApp</h3>
+<div class="form-row">
+<div class="form-group">
+<label class="form-label" for="inquiry-name">Your name *</label>
+<input class="form-input" id="inquiry-name" name="name" type="text" autocomplete="name" maxlength="80" required>
+</div>
+<div class="form-group">
+<label class="form-label" for="inquiry-phone">Your phone number *</label>
+<input class="form-input" id="inquiry-phone" name="phone" type="tel" autocomplete="tel" maxlength="25" required>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label class="form-label" for="inquiry-type">Type of fraud *</label>
+<select class="form-select" id="inquiry-type" name="fraudType" required>
+<option value="">Select one</option>
+<option>UPI or QR code payment</option>
+<option>Online banking or card</option>
+<option>Investment, trading or task scam</option>
+<option>Phishing, link or fake website</option>
+<option>Loan, job or impersonation scam</option>
+<option>Other online fraud</option>
+</select>
+</div>
+<div class="form-group">
+<label class="form-label" for="inquiry-date">When did it happen?</label>
+<input class="form-input" id="inquiry-date" name="incidentDate" type="date">
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label class="form-label" for="inquiry-amount">Approximate amount lost (INR)</label>
+<input class="form-input" id="inquiry-amount" name="amount" type="number" min="0" step="0.01" inputmode="decimal" placeholder="e.g. 25000">
+</div>
+<div class="form-group">
+<label class="form-label" for="inquiry-payment">Payment method</label>
+<select class="form-select" id="inquiry-payment" name="paymentMethod">
+<option value="">Select if known</option>
+<option>UPI</option>
+<option>Bank transfer / IMPS / NEFT</option>
+<option>Debit or credit card</option>
+<option>Wallet</option>
+<option>Other / not sure</option>
+</select>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label class="form-label" for="inquiry-1930">Reported to helpline 1930?</label>
+<select class="form-select" id="inquiry-1930" name="reported1930">
+<option value="">Select</option>
+<option>Yes</option>
+<option>No</option>
+<option>Not sure</option>
+</select>
+</div>
+<div class="form-group">
+<label class="form-label" for="inquiry-bank">Informed your bank?</label>
+<select class="form-select" id="inquiry-bank" name="informedBank">
+<option value="">Select</option>
+<option>Yes</option>
+<option>No</option>
+<option>Not sure</option>
+</select>
+</div>
+</div>
+<div class="form-group">
+<label class="form-label" for="inquiry-reference">Transaction reference / UTR (optional)</label>
+<input class="form-input" id="inquiry-reference" name="transactionReference" type="text" maxlength="80" autocomplete="off">
+</div>
+<div class="form-group">
+<label class="form-label" for="inquiry-details">Briefly describe what happened and what help you need *</label>
+<textarea class="form-textarea" id="inquiry-details" name="details" maxlength="1200" required placeholder="Share the sequence of events, any complaint or acknowledgement status, and the assistance you are seeking."></textarea>
+</div>
+<button class="form-submit" type="submit">Continue to WhatsApp</button>
+<p class="cf-inquiry-note">This opens a WhatsApp draft for you to review and send. Do not include OTPs, PINs, passwords, full account or card numbers, or identity documents. For an active fraud, call 1930 immediately.</p>
+</form>
 </div>
 </div>
 </section>
@@ -299,6 +384,27 @@ var nav=document.getElementById('navbar'),ham=document.getElementById('ham'),mob
 window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>10)},{passive:true});
 ham.addEventListener('click',function(){var o=mob.classList.toggle('open');ham.setAttribute('aria-expanded',o)});
 mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mob.classList.remove('open');ham.setAttribute('aria-expanded','false')})});
+var inquiryForm=document.getElementById('cyber-inquiry-form');
+inquiryForm.addEventListener('submit',function(event){
+event.preventDefault();
+var formData=new FormData(inquiryForm);
+var message=[
+'Hello Dhende Associates, I would like legal help with an online/cyber fraud.',
+'',
+'Name: '+formData.get('name'),
+'Phone: '+formData.get('phone'),
+'Fraud type: '+formData.get('fraudType'),
+'Incident date: '+(formData.get('incidentDate')||'Not provided'),
+'Approximate amount lost (INR): '+(formData.get('amount')||'Not provided'),
+'Payment method: '+(formData.get('paymentMethod')||'Not provided'),
+'Reported to 1930: '+(formData.get('reported1930')||'Not provided'),
+'Bank informed: '+(formData.get('informedBank')||'Not provided'),
+'Transaction reference / UTR: '+(formData.get('transactionReference')||'Not provided'),
+'',
+'Details: '+formData.get('details')
+].join('\n');
+window.open('https://wa.me/918149135283?text='+encodeURIComponent(message),'_blank','noopener,noreferrer');
+});
 var els=document.querySelectorAll('.reveal');
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vis');io.unobserve(x.target)}})},{threshold:.12});els.forEach(function(el){io.observe(el)})}else{els.forEach(function(el){el.classList.add('vis')})}
 })();
