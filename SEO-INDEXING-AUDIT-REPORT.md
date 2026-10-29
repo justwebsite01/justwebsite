@@ -9,6 +9,10 @@
 - Retained the existing `keywords` meta tags as requested and removed the unsupported `revisit-after` directive from the HTML pages.
 - Removed the WebSite `SearchAction` that pointed to a nonexistent on-site search, the self-referential `sameAs` URL, and unrelated or search-phrase-stuffed `knowsAbout` values.
 
+## Follow-up improvements — October 29, 2026
+
+- Added immediate HTML redirects from three legacy stamp-duty calculator URLs to the current Maharashtra stamp-duty estimator URL. Where the hosting provider supports it, use permanent HTTP redirects for these aliases.
+
 ## Changes made
 
 - Kept the blog and offline fallback out of search results: the blog is a coming-soon placeholder with `noindex`, and the offline page is a utility page with `noindex`. Neither is included in the sitemap.
