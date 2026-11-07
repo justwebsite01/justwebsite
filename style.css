@@ -1002,3 +1002,28 @@ footer{background:var(--p900);border-top:1px solid rgba(255,255,255,.06);padding
   .principal-highlights{grid-template-columns:1fr}
   .tools-grid{grid-template-columns:1fr 1fr}
 }
+
+.service-page{padding-top:66px;background:var(--p050);color:var(--text-dark)}
+.service-page-breadcrumb{padding:.8rem 1rem;background:var(--p900);color:var(--p200);font:500 .78rem var(--ff-u)}
+.service-page-breadcrumb a{color:var(--gold-lt);text-decoration:underline;text-underline-offset:3px}
+.service-page-hero{padding:4rem 0 3.5rem;background:linear-gradient(140deg,#170933 0%,#1e0a4a 55%,#0f1538 100%);color:var(--white)}
+.service-page-hero .eyebrow{color:var(--gold-lt)}
+.service-page-hero h1{max-width:900px;font:600 clamp(2.2rem,5vw,4rem)/1.08 var(--ff-d);color:var(--white)}
+.service-page-hero p{max-width:760px;margin:1.2rem 0 0;color:rgba(255,255,255,.82);font:400 1rem/1.8 var(--ff-s)}
+.service-page-hero .service-page-cta{display:inline-flex;margin-top:1.35rem;padding:.75rem 1rem;border:1px solid var(--gold);border-radius:4px;color:var(--p900);background:var(--gold);font:500 .85rem var(--ff-u)}
+.service-page-main{max-width:980px;margin:0 auto;padding:2.5rem 1.5rem 4rem}
+.service-page-main h2{margin:2rem 0 .65rem;color:var(--p900);font:600 clamp(1.45rem,3vw,2rem)/1.2 var(--ff-d)}
+.service-page-main h3{margin:1.4rem 0 .45rem;color:var(--p800);font:600 1.2rem/1.3 var(--ff-d)}
+.service-page-main p,.service-page-main li{font:400 1rem/1.8 var(--ff-s);color:var(--text-mid)}
+.service-page-main ul,.service-page-main ol{padding-left:1.35rem;margin:.75rem 0 1.3rem}
+.service-page-faq{padding:1.25rem 1.4rem;margin:1rem 0;background:#fff;border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:var(--r)}
+.service-page-faq h2{margin:0 0 .55rem;font-size:1.45rem}
+.service-page-faq p{margin:0}
+.service-page-note{padding:1rem 1.2rem;background:var(--gold-bg);border-radius:var(--r);font-size:.92rem!important}
+.service-page-links{display:flex;flex-wrap:wrap;gap:.55rem;margin:1rem 0}
+.service-page-links a{padding:.5rem .75rem;border:1px solid var(--border);border-radius:4px;color:var(--p700);font:500 .84rem var(--ff-u);text-decoration:underline;text-underline-offset:3px}
+.service-page-footer{padding:2.5rem 1.5rem;background:var(--p900);color:rgba(255,255,255,.8);font:400 .9rem/1.8 var(--ff-u)}
+.service-page-footer a{color:var(--gold-lt);text-decoration:underline;text-underline-offset:3px}
+.service-page-footer h2{margin:0 0 .5rem;color:var(--white);font:600 1.4rem var(--ff-d)}
+.service-page-footer .service-page-links a{color:var(--gold-lt);border-color:rgba(255,255,255,.18)}
+@media(max-width:600px){.service-page-hero{padding:3rem 0 2.5rem}.service-page-main{padding:2rem 1rem 3rem}.service-page-faq{padding:1rem}}
