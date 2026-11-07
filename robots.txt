@@ -1,6 +1,6 @@
 # robots.txt — Dhende Associates
 # https://www.dhendeassociates.com/
-# Last updated: 2026-10-18
+# Last updated: 2026-11-07
 
 User-agent: *
 Allow: /
@@ -45,3 +45,4 @@ Allow: /
 
 # AI-readable site overview and content index
 # https://www.dhendeassociates.com/llms.txt
+# https://www.dhendeassociates.com/llms-full.txt
