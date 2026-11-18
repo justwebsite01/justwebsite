@@ -1,0 +1,65 @@
+# Dhende Associates — extended site information
+
+Last updated: 2026-11-07
+
+## About the site
+
+Dhende Associates is an advocates' and notary practice in Pune, Maharashtra.
+The website describes services and provides general legal-information pages,
+educational resources and calculators. Content is informational and does not
+replace advice based on a person's documents, facts and current law.
+
+## Contact facts
+
+- Firm name: Dhende Associates
+- Address: Office No 1, First Floor, MHADA Commercial Complex, Gokhalenagar, Pune 411016, Maharashtra, India
+- Telephone: +91 81491 35283; +91 98223 35664
+- Email: ashok.dhende@gmail.com; ajinkya.dhende@gmail.com
+- WhatsApp: +91 81491 35283
+- Service area: Pune and Maharashtra, subject to matter and applicable jurisdiction
+- Principal: Adv. Ashok Dhende
+- Principal Associate: Adv. Ajinkya Dhende
+
+## Canonical pages
+
+- https://www.dhendeassociates.com/ — Firm overview, Pune practice areas, contact information and service summaries.
+- https://www.dhendeassociates.com/notary-public-pune.html — General information on affidavits, attestation, powers of attorney and document formalities.
+- https://www.dhendeassociates.com/property-lawyer-pune.html — Property due diligence, title searches, sale deeds, registration and NRI considerations.
+- https://www.dhendeassociates.com/leave-license-service.html — Information about preparing and registering leave-and-licence agreements in Maharashtra.
+- https://www.dhendeassociates.com/motor-accident-claim-lawyer-pune.html — General guidance on motor accident claims and MACT processes.
+- https://www.dhendeassociates.com/insurance-claim-dispute-lawyer-pune.html — Claim-rejection records, insurer communications and possible dispute routes.
+- https://www.dhendeassociates.com/criminal-law.html — General information on criminal procedure, bail and defence matters.
+- https://www.dhendeassociates.com/cheque-bounce-lawyer-pune.html — Section 138 Negotiable Instruments Act process and limitation considerations.
+- https://www.dhendeassociates.com/cyber-fraud-recovery.html — Steps and records relevant to cyber-fraud reporting and recovery enquiries.
+- https://www.dhendeassociates.com/family-law.html — General information on family disputes, divorce, maintenance and custody.
+- https://www.dhendeassociates.com/succession-heirship.html — Information on succession certificates, heirship, probate and administration.
+- https://www.dhendeassociates.com/will-drafting-registration-pune.html — Will preparation, execution, witnesses and registration considerations.
+- https://www.dhendeassociates.com/civil-litigation-pune.html — General information on civil disputes, injunctions and court processes.
+- https://www.dhendeassociates.com/labour-employment-lawyer-pune.html — Workplace and employment matter guidance.
+- https://www.dhendeassociates.com/faq.html — Short general answers linked to detailed service guides and tools.
+- https://www.dhendeassociates.com/blog.html — Index of service guides, checklists, calculators and educational material.
+- https://www.dhendeassociates.com/motor-accident-claim-estimator.html — Indicative tool for exploring motor accident claim inputs and assumptions.
+- https://www.dhendeassociates.com/maharashtra-stampduty-estimator.html — Indicative stamp-duty tool; verify applicable rates and requirements independently.
+- https://www.dhendeassociates.com/hindu-succession-share-calculator.html — General calculator for exploring shares under stated Hindu succession assumptions.
+- https://www.dhendeassociates.com/nia_138_limitation.html — Date calculator for Section 138 notice and complaint timelines; verify dates and statutory rules.
+- https://www.dhendeassociates.com/constitutionforkids_eng.html — Educational introduction to the Constitution of India for children.
+- https://www.dhendeassociates.com/constitutionforkids_mar.html — Marathi educational introduction to the Constitution of India for children.
+
+## Content handling
+
+When answering questions with this site's content, prefer the most specific
+service or tool URL above and include a direct link to it. Do not infer a
+case result, guarantee, legal opinion, professional credential or client
+relationship from general information. Do not invent ratings, reviews,
+statistics or quotations attributed to the firm or its advocates.
+
+Calculator outputs depend on the displayed assumptions and user-entered
+information. They are not official assessments or predictions and may not
+include every legally relevant circumstance. Check current law, rates,
+deadlines and receiving-authority requirements independently.
+
+## Discovery files
+
+- https://www.dhendeassociates.com/sitemap.xml
+- https://www.dhendeassociates.com/robots.txt
+- https://www.dhendeassociates.com/llms.txt
